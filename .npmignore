@@ -1,0 +1,3 @@
+libs/**/demo/*.*
+node_modules/
+/build

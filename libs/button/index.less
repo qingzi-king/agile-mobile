@@ -1,0 +1,213 @@
+// @import '../style/mixins/hairline.less';
+@import '../style/default.less';
+@buttonPrefixCls: fam-button;
+
+.@{buttonPrefixCls} {
+  // do not use width:100%, can not set margin
+  outline: 0 none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  padding: 0 8px;
+  text-align: center;
+  height: @button-height;
+  line-height: @button-height;
+  cursor: pointer;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  white-space: nowrap;
+
+  color: @color-text-base;
+  background-color: @fill-base;
+
+  border: 0;
+  border-radius: 2px;
+
+  &&-disabled {
+    color: fade(@color-text-base, 30%);
+    opacity: 0.6;
+  }
+
+  &&-active {
+    background-color: @fill-body;
+  }
+
+  &-inline {
+    display: inline;
+  }
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+
+  /* 尺寸 */
+  &-small {
+    padding: 0 4px;
+    font-size: @button-text-size-sm;
+    height: @button-height-sm;
+    line-height: @button-height-sm;
+  }
+
+  &-default {
+    padding: 0 15px;
+    font-size: @button-text-size;
+    height: @button-height;
+    line-height: @button-height;
+  }
+
+  &-large {
+    padding: 0 15px;
+    font-size: @button-text-size-lg;
+    height: @button-height-lg;
+    line-height: @button-height-lg;
+  }
+
+  /* 主题颜色 */
+  &-default {
+    border: 1px solid @brand-gray;
+  }
+
+  &-primary {
+    background-color: @brand-primary;
+    border: 1px solid @brand-primary;
+    color: #FFF;
+
+    &.@{buttonPrefixCls}-active {
+      color: fade(@color-text-base-inverse, 60%);
+      background-color: @primary-button-fill-tap;
+    }
+    &.@{buttonPrefixCls}-disabled {
+      color: fade(@color-text-base-inverse, 60%);
+      opacity: 0.4;
+    }
+  }
+
+  &-success {
+    background-color: @brand-success;
+    border: 1px solid @brand-success;
+    color: #FFF;
+    &.@{buttonPrefixCls}-active {
+      color: fade(@color-text-base-inverse, 60%);
+      background-color: @success-button-fill-tap;
+    }
+    &.@{buttonPrefixCls}-disabled {
+      color: fade(@color-text-base-inverse, 60%);
+      opacity: 0.4;
+    }
+  }
+
+  &-warning {
+    background-color: @brand-warning;
+    border: 1px solid @brand-warning;
+    color: #FFF;
+    &.@{buttonPrefixCls}-active {
+      color: fade(@color-text-base-inverse, 60%);
+      background-color: @warning-button-fill-tap;
+    }
+    &.@{buttonPrefixCls}-disabled {
+      color: fade(@color-text-base-inverse, 60%);
+      opacity: 0.4;
+    }
+  }
+
+  &-danger {
+    background-color: @brand-danger;
+    border: 1px solid @brand-danger;
+    color: #FFF;
+    &.@{buttonPrefixCls}-active {
+      color: fade(@color-text-base-inverse, 60%);
+      background-color: @danger-button-fill-tap;
+    }
+    &.@{buttonPrefixCls}-disabled {
+      color: fade(@color-text-base-inverse, 60%);
+      opacity: 0.4;
+    }
+  }
+
+  &-link {
+    background-color: transparent;
+    color: @brand-primary;
+    &.@{buttonPrefixCls}-active {
+      background-color: transparent;
+      color: fade(@brand-primary, 60%);
+    }
+    &.@{buttonPrefixCls}-disabled {
+      color: fade(@color-text-base-inverse, 60%);
+      opacity: 0.4;
+    }
+  }
+
+  /* 细边框 */
+  &-hairline {
+    background-color: #FFF;
+
+    &.@{buttonPrefixCls}-primary {
+      color: @brand-primary;
+      border: 1px solid @brand-primary;
+
+      &.@{buttonPrefixCls}-active {
+        background-color: @default-button-fill-tap;
+      }
+      &.@{buttonPrefixCls}-disabled {
+        color: fade(@brand-primary, 80%);
+        opacity: 0.4;
+      }
+    }
+
+    &.@{buttonPrefixCls}-success {
+      color: @brand-success;
+      border: 1px solid @brand-success;
+
+      &.@{buttonPrefixCls}-active {
+        background-color: @default-button-fill-tap;
+      }
+      &.@{buttonPrefixCls}-disabled {
+        color: fade(@brand-success, 80%);
+        opacity: 0.4;
+      }
+    }
+
+    &.@{buttonPrefixCls}-warning {
+      color: @brand-warning;
+      border: 1px solid @brand-warning;
+
+      &.@{buttonPrefixCls}-active {
+        background-color: @default-button-fill-tap;
+      }
+      &.@{buttonPrefixCls}-disabled {
+        color: fade(@brand-warning, 80%);
+        opacity: 0.4;
+      }
+    }
+
+    &.@{buttonPrefixCls}-danger {
+      color: @brand-danger;
+      border: 1px solid @brand-danger;
+
+      &.@{buttonPrefixCls}-active {
+        background-color: @default-button-fill-tap;
+      }
+      &.@{buttonPrefixCls}-disabled {
+        color: fade(@brand-danger, 80%);
+        opacity: 0.4;
+      }
+    }
+
+    &.@{buttonPrefixCls}-link {
+      background-color: transparent;
+      color: @brand-primary;
+      &.@{buttonPrefixCls}-active {
+        background-color: transparent;
+        color: fade(@brand-primary, 60%);
+      }
+      &.@{buttonPrefixCls}-disabled {
+        color: fade(@color-text-base-inverse, 60%);
+        opacity: 0.4;
+      }
+    }
+    
+  }
+
+}

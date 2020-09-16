@@ -1,0 +1,100 @@
+.d-layout {
+  width: 100%;
+  height: 100%;
+}
+
+.d-layout-header-container {
+  width: 100%;
+  height: 66px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #FFF;
+  padding: 0;
+}
+
+.d-layout-body-container {
+  width: 100%;
+  height: 100%;
+  padding-top: 66px;
+  overflow-y: hidden;
+}
+
+.d-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .ant-menu-horizontal {
+    border-bottom: 1px solid #FFF;
+  }
+
+  .d-logo {
+    img {
+      max-width: 100px;
+      max-height: 36px;
+    }
+  }
+
+  .d-header-title {
+    font-size: 24px;
+    font-weight: 600;
+    padding-left: 15px;
+  }
+
+  .d-header-company {
+    font-size: 12px;
+    padding-left: 10px;
+    color: gray;
+  }
+}
+
+.d-header-left {
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 1;
+  /* flex-basis: 50vw; */
+  flex-direction: row;
+  z-index: 5;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+.d-header-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: right;
+  z-index: 4;
+}
+
+.d-header-nav {
+  margin-right: 30px;
+}
+
+.d-navigation-custom-avatar {
+  min-width: 150px;
+
+  .d-navigation-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    .d-navigation-menu-item {
+      height: 40px;
+      line-height: 40px;
+
+      &:hover {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  }
+}

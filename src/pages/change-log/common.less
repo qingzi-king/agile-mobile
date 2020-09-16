@@ -1,0 +1,19 @@
+.d-changelog {
+  ul {
+    list-style-type: none;
+    li {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: -15px;
+        box-sizing: border-box;
+        width: 6px;
+        height: 6px;
+        border: 1px solid #666;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@hd: 1px; // 基本单位
+
+// 调色板
+@gray-1: #f7f8fa;
+@gray-2: #f2f3f5;
+@gray-3: #ebedf0;
+@gray-4: #dcdee0;
+@gray-5: #c8c9cc;
+@gray-6: #969799;
+@gray-7: #646566;
+@gray-8: #323233;
+
+// 全局-品牌色
+@brand-primary: #268AF0; // 05f
+@brand-primary-tap: #0e80d2;
+@brand-success: #6FC643;
+@brand-success-tap: #65b63c;
+@brand-warning: #F59A23; // f60
+@brand-warning-tap: #df8c20;
+@brand-danger: #F85C5C;
+@brand-danger-tap: #e05353;
+@brand-important: #ff5b05; // 用于小红点
+@brand-wait: #108ee9;
+@brand-gray: #dcdee0;
+
+// 文字
+@color-text-base: #000; // 基本
+@color-text-base-inverse: #fff; // 基本 - 反色
+@color-text-secondary: #a4a9b0; // 辅助色
+@color-text-placeholder: #bbb; // 文本框提示
+@color-text-disabled: #bbb; // 失效
+@color-text-caption: #888; // 辅助描述
+@color-text-paragraph: #333; // 段落
+@color-link: @brand-primary; // 链接
+
+// 字体尺寸
+@font-size-icontext: 10 * @hd;
+@font-size-caption-sm: 12 * @hd;
+@font-size-base: 14 * @hd;
+@font-size-subhead: 15 * @hd;
+@font-size-caption: 16 * @hd;
+@font-size-heading: 17 * @hd;
+
+// 背景色
+@fill-base: #fff; // 组件默认背景
+@fill-body: #f5f5f9; // 页面背景
+@fill-tap: #ddd; // 组件默认背景 - 按下
+@fill-disabled: #ddd; // 通用失效背景
+@fill-mask: rgba(0, 0, 0, 0.4); // 遮罩背景
+@color-icon-base: #ccc; // 许多小图标的背景，比如一些小圆点，加减号
+@fill-grey: #f7f7f7;
+
+// 圆角
+@radius-xs: 2 * @hd;
+@radius-sm: 3 * @hd;
+@radius-md: 5 * @hd;
+@radius-lg: 7 * @hd;
+@radius-circle: 50%;
+
+// 图标尺寸 Icon
+@icon-size-xxs: 16 * @hd;
+@icon-size-xs: 18 * @hd;
+@icon-size-sm: 22 * @hd;
+@icon-size-md: 28 * @hd;
+@icon-size-lg: 36 * @hd;
+
+@button-text-size: 16 * @hd;
+@button-text-size-sm: 12 * @hd;
+@button-text-size-lg: 18 * @hd;
+
+// Animation
+@animation-duration-base: 0.3s;
+@animation-duration-fast: 0.2s;
+@animation-timing-function-enter: ease-out;
+@animation-timing-function-leave: ease-in;
+
+// 水平间距
+@h-spacing-sm: 5 * @hd;
+@h-spacing-md: 8 * @hd;
+@h-spacing-lg: 15 * @hd;
+
+// 垂直间距
+@v-spacing-xs: 3 * @hd;
+@v-spacing-sm: 6 * @hd;
+@v-spacing-md: 9 * @hd;
+@v-spacing-lg: 15 * @hd;
+@v-spacing-xl: 21 * @hd;
+
+// 高度
+@line-height-base: 1;           // 单行行高
+@line-height-paragraph: 1.5;    // 多行行高
+
+// Popup（未使用）
+@popup-background-color: @fill-base;
+@popup-transition: transform @animation-duration-base;
+@popup-round-border-radius: 20px;
+@popup-close-icon-size: 22px;
+@popup-close-icon-color: @gray-5;
+@popup-close-icon-active-color: @gray-6;
+@popup-close-icon-margin: 16px;
+@popup-close-icon-z-index: 1;
+
+// 按钮 Button
+@button-height: 45 * @hd;
+@button-font-size: 18 * @hd;
+
+@button-height-lg: 50 * @hd;
+@button-font-size-lg: 18 * @hd;
+
+@button-height-sm: 30 * @hd;
+@button-font-size-sm: 13 * @hd;
+
+@primary-button-fill: @brand-primary;
+@primary-button-fill-tap: @brand-primary-tap;
+
+@warning-button-fill: @brand-warning;
+@warning-button-fill-tap: @brand-warning-tap;
+
+@success-button-fill: @brand-success;
+@success-button-fill-tap: @brand-success-tap;
+
+@danger-button-fill: @brand-danger;
+@danger-button-fill-tap: @brand-danger-tap;
+
+@default-button-fill-tap: @gray-1;
+
+@link-button-fill-tap: #ddd;
+@link-button-font-size: 16 * @hd;
+
+// toast
+@toast-fill: rgba(58, 58, 58, 0.9); // toast, activity-indicator 的背景颜色
+
+// z-index
+@progress-zindex: 2000;
+@popover-zindex: 1999;
+@toast-zindex: 1999;
+@action-sheet-zindex: 1000; // actonsheet 会放到 popup / modal 中
+@picker-zindex: 1000;
+@popup-zindex: 999;
+@modal-zindex: 999; // modal.alert 应该最大，其他应该较小
+@tabs-pagination-zindex: 999;
+
+
+/************************ 以上必须 ************************/
+
+
+
+
+// 渐变色
+@gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+@gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
