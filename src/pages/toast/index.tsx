@@ -1,7 +1,7 @@
 import React from 'react';
 import MarkdownView from '../../components/markdownView';
 
-const markdownDoc = require('../../../libs/toast/README.md');
+const markdownDoc = require('../../../lib/toast/README.md');
 
 export default (props: any) => {
   const content = { __html: markdownDoc };
