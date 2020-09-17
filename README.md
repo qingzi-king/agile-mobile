@@ -36,6 +36,27 @@ const App = () => (
 yarn start
 ```
 
+## 按需加载
+`babel-plugin-import`是一个用于按需加载组件代码和样式的 babel 插件。新建`.babelrc`或直接在`package.json`中引入如下配置。
+```
+{
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "agile-mobile",
+          "libraryDirectory": "es",
+          "style": true
+        },
+        "agile-mobile"
+      ]
+    ]
+  }
+```
+
 ## 目录结构
 
 ```
