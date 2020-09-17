@@ -40,26 +40,45 @@ yarn start
 
 ```
 .
+├── CHANGELOG.zh-CN.md        # 变更日志
+├── LICENSE
 ├── README.md
-├── build                     # 构建后文件
-├── config                    # 构建配置
-├── libs                      # 组件库
+├── build                     # 文档构建目录
+├── config                    # 文档构建配置目录
 ├── package.json
-├── public                    # 公共入口
-├── scripts                   # 构建启动配置
-├── src
-│   ├── assets                # 资源目录
-│   ├── components            # 公共组件目录
-│   ├── index.tsx             # 入口文件
-│   ├── pages                 # 页面目录
+├── public                    # 文档入口
+├── scripts                   # 文档构建启动配置
+├── src                       # 组件库源文件
+├── site                      # 文档内容目录
+│   ├── assets                # 文档资源目录
+│   ├── components            # 文档公共组件
+│   ├── index.tsx
+│   ├── pages
+│   │   ├── app.tsx           # 文档应用入口组件
+│   │   ├── browseIndex.tsx   # 示例预览入口
+│   │   ├── change-log        # 变更日志页面
+│   │   ├── *
 │   ├── react-app-env.d.ts
-│   ├── routes                # 路由目录
+│   ├── routes                # 文档路由
 │   ├── serviceWorker.ts
 │   └── setupTests.ts
-├── tsconfig.json
 ├── agile.config.ts           # 组件配置文件
+├── tsconfig.json
 └── yarn.lock
 ```
+
+## 组件结构
+```
+.
+├── src
+│   ├── button
+│   │   ├── PropsType.tsx
+│   │   ├── README.md
+│   │   ├── demo
+│   │   ├── index.tsx
+│   │   └── style
+```
+
 ## 示例
 
 ![演示](http://docs.antjob.ink/agile-ui/qr-demo.png)
