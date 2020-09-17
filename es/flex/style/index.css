@@ -1,0 +1,234 @@
+/************************ 以上必须 ************************/
+/* flexbox */
+.fam-flexbox {
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-flex;
+  /* Safari */
+  align-items: center;
+}
+.fam-flexbox-dir-row {
+  flex-direction: row;
+}
+.fam-flexbox-dir-row-reverse {
+  flex-direction: row-reverse;
+}
+.fam-flexbox-dir-column {
+  flex-direction: column;
+}
+.fam-flexbox-dir-column .fam-flexbox-item {
+  margin-left: 0;
+}
+.fam-flexbox-dir-column-reverse {
+  flex-direction: column-reverse;
+}
+.fam-flexbox-dir-column-reverse .fam-flexbox-item {
+  margin-left: 0;
+}
+.fam-flexbox-nowrap {
+  flex-wrap: nowrap;
+}
+.fam-flexbox-wrap {
+  flex-wrap: wrap;
+}
+.fam-flexbox-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+.fam-flexbox-justify-start {
+  justify-content: flex-start;
+}
+.fam-flexbox-justify-end {
+  justify-content: flex-end;
+}
+.fam-flexbox-justify-center {
+  justify-content: center;
+}
+.fam-flexbox-justify-between {
+  justify-content: space-between;
+}
+.fam-flexbox-justify-around {
+  justify-content: space-around;
+}
+.fam-flexbox-align-start {
+  align-items: flex-start;
+}
+.fam-flexbox-align-end {
+  align-items: flex-end;
+}
+.fam-flexbox-align-center {
+  align-items: center;
+}
+.fam-flexbox-align-stretch {
+  align-items: stretch;
+}
+.fam-flexbox-align-baseline {
+  align-items: baseline;
+}
+.fam-flexbox-align-content-start {
+  align-content: flex-start;
+}
+.fam-flexbox-align-content-end {
+  align-content: flex-end;
+}
+.fam-flexbox-align-content-center {
+  align-content: center;
+}
+.fam-flexbox-align-content-between {
+  align-content: space-between;
+}
+.fam-flexbox-align-content-around {
+  align-content: space-around;
+}
+.fam-flexbox-align-content-stretch {
+  align-content: stretch;
+}
+.fam-flexbox-item {
+  box-sizing: border-box;
+  flex: 1;
+  min-width: 10px;
+}
+.fam-flexbox-col--1 {
+  width: 4.16666667%;
+}
+.fam-flexbox-col--offset-1 {
+  margin-left: 4.16666667%;
+}
+.fam-flexbox-col--2 {
+  width: 8.33333333%;
+}
+.fam-flexbox-col--offset-2 {
+  margin-left: 8.33333333%;
+}
+.fam-flexbox-col--3 {
+  width: 12.5%;
+}
+.fam-flexbox-col--offset-3 {
+  margin-left: 12.5%;
+}
+.fam-flexbox-col--4 {
+  width: 16.66666667%;
+}
+.fam-flexbox-col--offset-4 {
+  margin-left: 16.66666667%;
+}
+.fam-flexbox-col--5 {
+  width: 20.83333333%;
+}
+.fam-flexbox-col--offset-5 {
+  margin-left: 20.83333333%;
+}
+.fam-flexbox-col--6 {
+  width: 25%;
+}
+.fam-flexbox-col--offset-6 {
+  margin-left: 25%;
+}
+.fam-flexbox-col--7 {
+  width: 29.16666667%;
+}
+.fam-flexbox-col--offset-7 {
+  margin-left: 29.16666667%;
+}
+.fam-flexbox-col--8 {
+  width: 33.33333333%;
+}
+.fam-flexbox-col--offset-8 {
+  margin-left: 33.33333333%;
+}
+.fam-flexbox-col--9 {
+  width: 37.5%;
+}
+.fam-flexbox-col--offset-9 {
+  margin-left: 37.5%;
+}
+.fam-flexbox-col--10 {
+  width: 41.66666667%;
+}
+.fam-flexbox-col--offset-10 {
+  margin-left: 41.66666667%;
+}
+.fam-flexbox-col--11 {
+  width: 45.83333333%;
+}
+.fam-flexbox-col--offset-11 {
+  margin-left: 45.83333333%;
+}
+.fam-flexbox-col--12 {
+  width: 50%;
+}
+.fam-flexbox-col--offset-12 {
+  margin-left: 50%;
+}
+.fam-flexbox-col--13 {
+  width: 54.16666667%;
+}
+.fam-flexbox-col--offset-13 {
+  margin-left: 54.16666667%;
+}
+.fam-flexbox-col--14 {
+  width: 58.33333333%;
+}
+.fam-flexbox-col--offset-14 {
+  margin-left: 58.33333333%;
+}
+.fam-flexbox-col--15 {
+  width: 62.5%;
+}
+.fam-flexbox-col--offset-15 {
+  margin-left: 62.5%;
+}
+.fam-flexbox-col--16 {
+  width: 66.66666667%;
+}
+.fam-flexbox-col--offset-16 {
+  margin-left: 66.66666667%;
+}
+.fam-flexbox-col--17 {
+  width: 70.83333333%;
+}
+.fam-flexbox-col--offset-17 {
+  margin-left: 70.83333333%;
+}
+.fam-flexbox-col--18 {
+  width: 75%;
+}
+.fam-flexbox-col--offset-18 {
+  margin-left: 75%;
+}
+.fam-flexbox-col--19 {
+  width: 79.16666667%;
+}
+.fam-flexbox-col--offset-19 {
+  margin-left: 79.16666667%;
+}
+.fam-flexbox-col--20 {
+  width: 83.33333333%;
+}
+.fam-flexbox-col--offset-20 {
+  margin-left: 83.33333333%;
+}
+.fam-flexbox-col--21 {
+  width: 87.5%;
+}
+.fam-flexbox-col--offset-21 {
+  margin-left: 87.5%;
+}
+.fam-flexbox-col--22 {
+  width: 91.66666667%;
+}
+.fam-flexbox-col--offset-22 {
+  margin-left: 91.66666667%;
+}
+.fam-flexbox-col--23 {
+  width: 95.83333333%;
+}
+.fam-flexbox-col--offset-23 {
+  margin-left: 95.83333333%;
+}
+.fam-flexbox-col--24 {
+  width: 100%;
+}
+.fam-flexbox-col--offset-24 {
+  margin-left: 100%;
+}

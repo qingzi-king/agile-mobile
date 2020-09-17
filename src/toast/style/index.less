@@ -1,0 +1,106 @@
+@import '../../style/default.less';
+@toastPrefixCls: fam-toast;
+
+.@{toastPrefixCls} {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: @toast-zindex;
+  font-size: @font-size-base;
+  text-align: center;
+
+  &-text {
+    max-width: 60%;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, .6);
+    animation: fadeInAnimation ease .2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  &-icon {
+    min-width: 100px;
+    min-height: 100px;
+    i {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+
+  &-remove {
+    animation: fadeOutAnimation ease-out .2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  &-mask {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    transform: translateZ(1px);
+  }
+
+  &-top {
+    &:extend(&-mask);
+    height: auto;
+    margin-top: 10%;
+  }
+
+  &-bottom {
+    &:extend(&-mask);
+    height: inherit;
+    top: auto;
+    align-items: flex-end;
+    padding-bottom: 30%;
+  }
+
+  > span {
+    max-width: 50%;
+  }
+
+  &-notice-content {
+    .@{toastPrefixCls}-text {
+      min-width: 60 * @hd;
+      border-radius: @radius-sm;
+      color: @color-text-base-inverse;
+      background-color: @toast-fill;
+      line-height: @line-height-paragraph;
+      padding: @v-spacing-md @h-spacing-lg;
+
+      &.@{toastPrefixCls}-text-icon {
+        border-radius: @radius-md;
+        padding: @v-spacing-lg @h-spacing-lg;
+
+        .@{toastPrefixCls}-text-info {
+          margin-top: @v-spacing-sm;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

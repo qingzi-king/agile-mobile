@@ -1,0 +1,82 @@
+/************************ 以上必须 ************************/
+.fam-modal {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  width: 320px;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: #fff;
+  border-radius: 16px;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 9999;
+}
+.fam-modal-header {
+  padding-top: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+}
+.fam-modal-content {
+  color: #646566;
+  max-height: 60vh;
+  padding: 24px;
+  overflow-y: auto;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  text-align: center;
+  word-wrap: break-word;
+  -webkit-overflow-scrolling: touch;
+}
+.fam-modal-footer-horizontal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+  border-top: 1px solid #F4F4F4;
+}
+.fam-modal-footer-horizontal .fam-modal-footer-button {
+  flex: 1;
+  border-bottom: 1px solid #F4F4F4;
+  border-right: 1px solid #F4F4F4;
+}
+.fam-modal-footer-vertical {
+  display: block;
+  border-top: 1px solid #F4F4F4;
+}
+.fam-modal-footer-vertical .fam-modal-footer-button {
+  border-bottom: 1px solid #F4F4F4;
+  border-right: 1px solid #F4F4F4;
+}
+.fam-modal-footer-vertical .fam-modal-footer-button:last-child {
+  border: 0;
+}
+.fam-modal-confirm {
+  color: #F85C5C;
+}
+.fam-modal-boxshadow {
+  box-shadow: 0 0 30px #D8D8D8;
+}
+.fam-modal-mask,
+.fam-modal-mask-transparent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeInAnimation ease 0.3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.fam-modal-mask-transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+.fam-overfow-hidden {
+  overflow: hidden;
+}
