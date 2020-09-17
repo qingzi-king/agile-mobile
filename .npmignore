@@ -1,6 +1,8 @@
 libs/**/demo/*.*
 node_modules/
 /build
+/public
+/config
 /src
 /site
 /packages

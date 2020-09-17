@@ -19,6 +19,8 @@ node_modules/
 npm-debug.log
 /dist
 /build
+/es
+/lib
 .vscode
 yarn.lock
 npm-debug.log*
