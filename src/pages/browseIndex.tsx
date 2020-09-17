@@ -1,13 +1,13 @@
 import React from 'react';
 import agileConfig from '../../agile.config';
-import ButtonView from '../../lib/button/demo/index';
-import IconView from '../../lib/icon/demo/index';
-import ModalView from '../../lib/modal/demo/index';
-import PopupView from '../../lib/popup/demo/index';
-import FlexView from '../../lib/flex/demo/index';
-import ToastView from '../../lib/toast/demo/index';
+import ButtonView from '../../packages/button/demo/index';
+import IconView from '../../packages/icon/demo/index';
+import ModalView from '../../packages/modal/demo/index';
+import PopupView from '../../packages/popup/demo/index';
+import FlexView from '../../packages/flex/demo/index';
+import ToastView from '../../packages/toast/demo/index';
 
-import { Button } from '../../lib/index';
+import { Button } from '../../packages/index';
 
 declare var global: any;
 

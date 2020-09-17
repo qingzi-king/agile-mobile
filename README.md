@@ -57,7 +57,7 @@ yarn start
 │   ├── serviceWorker.ts
 │   └── setupTests.ts
 ├── tsconfig.json
-├── agile.config.js           # 组件配置文件
+├── agile.config.ts           # 组件配置文件
 └── yarn.lock
 ```
 ## 示例
