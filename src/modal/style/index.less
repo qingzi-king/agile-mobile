@@ -1,7 +1,7 @@
 @import '../../style/default.less';
-@buttonPrefixCls: fam-modal;
+@modalPrefixCls: fam-modal;
 
-.@{buttonPrefixCls} {
+.@{modalPrefixCls} {
   position: fixed;
   top: 45%;
   left: 50%;
@@ -42,7 +42,7 @@
     -webkit-user-select: none;
     user-select: none;
     border-top: 1px solid #F4F4F4;
-    .@{buttonPrefixCls}-footer-button {
+    .@{modalPrefixCls}-footer-button {
       flex: 1;
       border-bottom: 1px solid #F4F4F4;
       border-right: 1px solid #F4F4F4;
@@ -52,7 +52,7 @@
   &-footer-vertical {
     display: block;
     border-top: 1px solid #F4F4F4;
-    .@{buttonPrefixCls}-footer-button {
+    .@{modalPrefixCls}-footer-button {
       border-bottom: 1px solid #F4F4F4;
       border-right: 1px solid #F4F4F4;
       &:last-child {

@@ -1,0 +1,30 @@
+@import '../../style/default.less';
+@progressPrefixCls: fam-progress;
+
+.@{progressPrefixCls} {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  &-outer {
+    background-color: @border-color-base;
+    width: inherit;
+    border-radius: 10px;
+  }
+
+  &-hide-outer {
+    background-color: transparent;
+  }
+
+  &-text {
+    flex: 1 auto;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  &-bar {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: @brand-primary;
+    transition: all .3s linear 0s;
+  }
+}
