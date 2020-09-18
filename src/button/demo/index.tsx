@@ -18,32 +18,34 @@ const LogContent = () => {
           <Button className="d-demo-margin" type="danger" inline>Danger</Button>
           <Button className="d-demo-margin" type="default" inline>Default</Button>
           <Button className="d-demo-margin" type="link" inline>Link</Button>
+        </div>
 
-          <h2 className="d-demo-block__title">尺寸</h2>
-
+        <h2 className="d-demo-block__title">尺寸</h2>
+        <div className="d-demo-block">
           <Button className="d-demo-margin" type="primary" size="large" inline>Primary Large</Button>
           <Button className="d-demo-margin" type="primary" size="default" inline>Primary Default</Button>
           <Button className="d-demo-margin" type="primary" size="small" inline>Primary Small</Button>
           <Button className="d-demo-margin" type="primary" block>Primary block</Button>
+        </div>
 
-          <h2 className="d-demo-block__title">细边框</h2>
-
+        <h2 className="d-demo-block__title">细边框</h2>
+        <div className="d-demo-block">
           <Button className="d-demo-margin" type="primary" inline hairline>Primary Hairline</Button>
           <Button className="d-demo-margin" type="success" inline hairline>Success Hairline</Button>
           <Button className="d-demo-margin" type="warning" inline hairline>Warning Hairline</Button>
           <Button className="d-demo-margin" type="danger" inline hairline>Danger Hairline</Button>
           <Button className="d-demo-margin" type="default" inline hairline>Default Hairline</Button>
           <Button className="d-demo-margin" type="link" inline hairline>Link Hairline</Button>
+        </div>
 
-          <h2 className="d-demo-block__title">禁用</h2>
-
+        <h2 className="d-demo-block__title">禁用</h2>
+        <div className="d-demo-block">
           <Button className="d-demo-margin" type="primary" inline disabled>Primary</Button>
           <Button className="d-demo-margin" type="success" inline disabled>Success</Button>
           <Button className="d-demo-margin" type="warning" inline disabled>Warning</Button>
           <Button className="d-demo-margin" type="danger" inline disabled hairline>Danger</Button>
           <Button className="d-demo-margin" type="default" inline disabled>Default</Button>
           <Button className="d-demo-margin" inline loading>Default</Button>
-
         </div>
       </section>
     </div>

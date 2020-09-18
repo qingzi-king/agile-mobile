@@ -6,6 +6,7 @@ import ModalView from '../../src/modal/demo/index';
 import PopupView from '../../src/popup/demo/index';
 import FlexView from '../../src/flex/demo/index';
 import ToastView from '../../src/toast/demo/index';
+import ProgressView from '../../src/progress/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -18,6 +19,7 @@ const docComponents: any = {
   'popup': <PopupView />,
   'flex': <FlexView />,
   'toast': <ToastView />,
+  'progress': <ProgressView />,
 };
 
 const BrowseIndex = (props: any) => {

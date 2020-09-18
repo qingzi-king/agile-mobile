@@ -21,3 +21,4 @@ export { default as Modal } from './modal/index';
 export { default as Popup } from './popup/index';
 export { default as Flex } from './flex/index';
 export { default as Toast } from './toast/index';
+export { default as Progress } from './progress/index';
