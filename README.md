@@ -7,13 +7,15 @@
 
 富能通移动端组件库（agile mobile） —— 一个灵活、精巧的react移动端组件库
 
+[中文文档](http://mobile.agile.antjob.ink/)
+
 ## 📦 安装
 
 ```
 npm install agile-mobile
 ```
 ```
-yarn agile-mobile
+yarn add agile-mobile
 ```
 
 ## 🔨 使用
@@ -40,21 +42,21 @@ yarn start
 `babel-plugin-import`是一个用于按需加载组件代码和样式的 babel 插件。新建`.babelrc`或直接在`package.json`中引入如下配置。
 ```
 {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      [
-        "import",
-        {
-          "libraryName": "agile-mobile",
-          "libraryDirectory": "es",
-          "style": true
-        },
-        "agile-mobile"
-      ]
+  "presets": [
+    "react-app"
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "agile-mobile",
+        "libraryDirectory": "es",
+        "style": true
+      },
+      "agile-mobile"
     ]
-  }
+  ]
+}
 ```
 
 ## 目录结构
@@ -93,11 +95,14 @@ yarn start
 .
 ├── src
 │   ├── button
-│   │   ├── PropsType.tsx
-│   │   ├── README.md
-│   │   ├── demo
-│   │   ├── index.tsx
-│   │   └── style
+│   │   ├── PropsType.tsx   # 类型定义
+│   │   ├── README.md       # 文档
+│   │   ├── index.tsx       # 入口
+│   │   ├── demo            # 示例
+│   │   │   ├── index.tsx
+│   │   └── style           # 样式
+│   │   │   ├── index.ts
+│   │   │   ├── index.less
 ```
 
 ## 示例

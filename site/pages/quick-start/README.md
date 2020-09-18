@@ -2,18 +2,61 @@
 
 [React风格指南](http://rsk.book.jasperxu.com/ReactStyleGuide.html)
 
+## 📦 安装
+
+```
+npm install agile-mobile
+```
+```
+yarn add agile-mobile
+```
+
+## 🔨 使用
+
+```
+import { Button } from 'agile-mobile';
+
+const App = () => (
+  <>
+    <Button type="primary">Hello Agile！</Button>
+  </>
+);
+```
+
+## 按需加载
+`babel-plugin-import`是一个用于按需加载组件代码和样式的 babel 插件。新建`.babelrc`或直接在`package.json`中引入如下配置。
+```
+{
+  "presets": [
+    "react-app"
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "agile-mobile",
+        "libraryDirectory": "es",
+        "style": true
+      },
+      "agile-mobile"
+    ]
+  ]
+}
+```
+
 ## 添加新组件
 添加新组件时，请按照下面的目录结构组织文件，并在 `agile.config.ts` 中配置组件信息。
 
 ```
-lib
-└─ button
-   ├─ test             # 单元测试
-   ├─ demo             # 示例代码
-   ├─ index.tsx        # 组件入口
-   ├─ index.less       # 组件样式
-   ├─ README.md        # 中文文档
-   └─ README.en-US.md  # 英文文档
+src
+│   ├── button
+│   │   ├── index.tsx         # 组件入口
+│   │   ├── PropsType.tsx     # 类型定义
+│   │   ├── demo              # 组件示例
+│   │   ├── style             # 组件样式
+│   │   ├── test              # 单元测试
+│   │   ├── README.md         # 中文文档
+│   │   ├── README.en-US.md   # 英文文档
 ```
 
 ## 样式
