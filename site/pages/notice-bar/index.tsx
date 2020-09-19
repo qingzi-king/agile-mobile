@@ -1,7 +1,7 @@
 import React from 'react';
 import MarkdownView from '../../components/markdownView';
 
-const markdownDoc = require('../../../src/navbar/README.md');
+const markdownDoc = require('../../../src/notice-bar/README.md');
 
 export default (props: any) => {
   const content = { __html: markdownDoc };

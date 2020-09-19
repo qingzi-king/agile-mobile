@@ -1,8 +1,12 @@
 import React from 'react';
-import { NavBar, Icon } from '../../index';
+import { NavBar, Icon, Toast } from '../../index';
 import '../style/index.less';
 
 const Demo = () => {
+
+  const handleToast = (content: string) => {
+    Toast.info({ content, duration: 500 });
+  }
 
   return (
     <div className="d-phone-simulator__content">
@@ -16,7 +20,7 @@ const Demo = () => {
           <NavBar
             mode="light"
             icon={<Icon type="arrow_left" />}
-            onLeftClick={() => console.log('onLeftClick')}
+            onLeftClick={() => handleToast('点击了返回按钮！')}
             leftContent={<span>返回</span>}
             rightContent={[
               <Icon key="1" type="ellipsis" />
@@ -28,7 +32,7 @@ const Demo = () => {
         <div style={{margin:'15px 0'}}>
           <NavBar
             icon={<Icon type="arrow_left" />}
-            onLeftClick={() => console.log('onLeftClick')}
+            onLeftClick={() => handleToast('点击了返回按钮！')}
             rightContent={[
               <Icon key="1" type="ellipsis" />,
             ]}
@@ -40,7 +44,7 @@ const Demo = () => {
           <NavBar
             mode="light"
             icon={<Icon type="arrow_left" />}
-            onLeftClick={() => console.log('onLeftClick')}
+            onLeftClick={() => handleToast('点击了返回按钮！')}
             rightContent={[
               <Icon key="1" type="ellipsis" />,
             ]}
