@@ -55,6 +55,7 @@ export default class NoticeBar extends React.Component<NoticeBarPropsType, any> 
       onClick,
       children,
       className,
+      style = {},
       action,
       multiLine = false,
       animateLoop = false,
@@ -96,7 +97,7 @@ export default class NoticeBar extends React.Component<NoticeBarPropsType, any> 
     const wrapCls = classnames(prefixCls, className);
 
     return this.state.show ? (
-      <div className={wrapCls} {...restProps} {...extraProps} role="alert">
+      <div className={wrapCls} style={style} {...restProps} {...extraProps} role="alert">
         {
           icon && (
             <div className={`${prefixCls}-icon`} aria-hidden="true">

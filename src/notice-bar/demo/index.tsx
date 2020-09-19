@@ -37,7 +37,10 @@ const Demo = () => {
         </div>
         <h2 className="d-demo-block__title">链接</h2>
         <div>
-          <NoticeBar mode="link" action={<Icon type="close-o" size="sm" />}>
+          <NoticeBar mode="link">
+            古人云: 绊脚石乃是进身之阶。
+          </NoticeBar>
+          <NoticeBar mode="closable" action={<span>去看看</span>} style={{marginTop:15}}>
             古人云: 绊脚石乃是进身之阶。
           </NoticeBar>
         </div>
