@@ -154,6 +154,10 @@ const LogContent = () => {
               <Icon type="ellipsis" />
               <span>ellipsis</span>
             </div>
+            <div className="d-demo-grid__item">
+              <Icon type="notice" />
+              <span>notice</span>
+            </div>
           </div>
 
         </div>

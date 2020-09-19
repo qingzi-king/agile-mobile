@@ -17,7 +17,7 @@
 
 ### 基础按钮
 
-`time-o` `search-o` `refresh-o` `close` `check-o` `close-o` `check` `forbidden-o` `forbidden` `info` `info-o` `like-o` `like` `star-o` `star` `arrow_up` `arrow_left` `arrow_down` `arrow_right` `turning_left` `turning_right` `turning_up` `turning_down` `loading` `success` `plus` `cross` `offline` `abnormal` `ellipsis`
+`time-o` `search-o` `refresh-o` `close` `check-o` `close-o` `check` `forbidden-o` `forbidden` `info` `info-o` `like-o` `like` `star-o` `star` `arrow_up` `arrow_left` `arrow_down` `arrow_right` `turning_left` `turning_right` `turning_up` `turning_down` `loading` `success` `plus` `cross` `offline` `abnormal` `ellipsis` `notice`
 
 ## API
 

@@ -91,7 +91,7 @@ export default {
             disabled: true,
           },
           {
-            key: "navbar",
+            key: "nav-bar",
             name: "导航栏 NavBar",
             disabled: false,
           },
@@ -157,8 +157,8 @@ export default {
             disabled: false,
           },
           {
-            key: "notic-bar",
-            name: "通告栏 NoticBar",
+            key: "notice-bar",
+            name: "通告栏 NoticeBar",
             disabled: false,
           },
           {
@@ -180,7 +180,7 @@ export default {
       },
       {
         key: "g5",
-        name: "展示",
+        name: "数据录入",
         items: [
           {
             key: "radio",

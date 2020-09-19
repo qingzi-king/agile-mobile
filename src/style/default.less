@@ -1,4 +1,4 @@
-@hd: 1px; // 基本单位
+@su: 1px; // 基准单位
 
 // 调色板
 @gray-1: #f7f8fa;
@@ -34,12 +34,12 @@
 @color-link: @brand-primary; // 链接
 
 // 字体尺寸
-@font-size-icontext: 10 * @hd;
-@font-size-caption-sm: 12 * @hd;
-@font-size-base: 14 * @hd;
-@font-size-subhead: 15 * @hd;
-@font-size-caption: 16 * @hd;
-@font-size-heading: 17 * @hd;
+@font-size-icontext: 10 * @su;
+@font-size-caption-sm: 12 * @su;
+@font-size-base: 14 * @su;
+@font-size-subhead: 15 * @su;
+@font-size-caption: 16 * @su;
+@font-size-heading: 17 * @su;
 
 // 背景色
 @fill-base: #fff; // 组件默认背景
@@ -51,22 +51,22 @@
 @fill-grey: #f7f7f7;
 
 // 圆角
-@radius-xs: 2 * @hd;
-@radius-sm: 3 * @hd;
-@radius-md: 5 * @hd;
-@radius-lg: 7 * @hd;
+@radius-xs: 2 * @su;
+@radius-sm: 3 * @su;
+@radius-md: 5 * @su;
+@radius-lg: 7 * @su;
 @radius-circle: 50%;
 
 // 图标尺寸 Icon
-@icon-size-xxs: 16 * @hd;
-@icon-size-xs: 18 * @hd;
-@icon-size-sm: 22 * @hd;
-@icon-size-md: 28 * @hd;
-@icon-size-lg: 36 * @hd;
+@icon-size-xxs: 16 * @su;
+@icon-size-xs: 18 * @su;
+@icon-size-sm: 22 * @su;
+@icon-size-md: 28 * @su;
+@icon-size-lg: 36 * @su;
 
-@button-text-size: 16 * @hd;
-@button-text-size-sm: 12 * @hd;
-@button-text-size-lg: 18 * @hd;
+@button-text-size: 16 * @su;
+@button-text-size-sm: 12 * @su;
+@button-text-size-lg: 18 * @su;
 
 // Animation
 @animation-duration-base: 0.3s;
@@ -75,21 +75,21 @@
 @animation-timing-function-leave: ease-in;
 
 // 水平间距
-@h-spacing-sm: 5 * @hd;
-@h-spacing-md: 8 * @hd;
-@h-spacing-lg: 15 * @hd;
+@h-spacing-sm: 5 * @su;
+@h-spacing-md: 8 * @su;
+@h-spacing-lg: 15 * @su;
 
 // 垂直间距
-@v-spacing-xs: 3 * @hd;
-@v-spacing-sm: 6 * @hd;
-@v-spacing-md: 9 * @hd;
-@v-spacing-lg: 15 * @hd;
-@v-spacing-xl: 21 * @hd;
+@v-spacing-xs: 3 * @su;
+@v-spacing-sm: 6 * @su;
+@v-spacing-md: 9 * @su;
+@v-spacing-lg: 15 * @su;
+@v-spacing-xl: 21 * @su;
 
 // 边框尺寸
 @border-width-sm: 1PX;
 @border-width-md: 1PX;
-@border-width-lg: 2 * @hd;
+@border-width-lg: 2 * @su;
 
 // 边框色
 @border-color-base: #ebedf0;
@@ -109,14 +109,14 @@
 @popup-close-icon-z-index: 1;
 
 // 按钮 Button
-@button-height: 45 * @hd;
-@button-font-size: 18 * @hd;
+@button-height: 45 * @su;
+@button-font-size: 18 * @su;
 
-@button-height-lg: 50 * @hd;
-@button-font-size-lg: 18 * @hd;
+@button-height-lg: 50 * @su;
+@button-font-size-lg: 18 * @su;
 
-@button-height-sm: 30 * @hd;
-@button-font-size-sm: 13 * @hd;
+@button-height-sm: 30 * @su;
+@button-font-size-sm: 13 * @su;
 
 @primary-button-fill: @brand-primary;
 @primary-button-fill-tap: @brand-primary-tap;
@@ -133,10 +133,15 @@
 @default-button-fill-tap: @gray-1;
 
 @link-button-fill-tap: #ddd;
-@link-button-font-size: 16 * @hd;
+@link-button-font-size: 16 * @su;
 
 // toast
 @toast-fill: rgba(58, 58, 58, 0.9); // toast, activity-indicator 的背景颜色
+
+// notice-bar
+@notice-bar-fill: #fefcec;
+@notice-bar-height: 36 * @su;
+@notice-bar-color: #f76a24;
 
 // z-index
 @progress-zindex: 2000;
@@ -148,11 +153,7 @@
 @modal-zindex: 999; // modal.alert 应该最大，其他应该较小
 @tabs-pagination-zindex: 999;
 
-
 /************************ 以上必须 ************************/
-
-
-
 
 // 渐变色
 @gradient-red: linear-gradient(to right, #ff6034, #ee0a24);

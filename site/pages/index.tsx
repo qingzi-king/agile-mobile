@@ -9,7 +9,8 @@ import PopupUnit from './popup/index';
 import FlexUnit from './flex/index';
 import ToastUnit from './toast/index';
 import ProgressUnit from './progress/index';
-import NavBarUnit from './navbar/index';
+import NavBarUnit from './nav-bar/index';
+import NoticeBarUnit from './notice-bar/index';
 
 declare var global: any;
 export interface IProps {
@@ -24,7 +25,8 @@ const docComponents: any = {
   'flex': <FlexUnit />,
   'toast': <ToastUnit />,
   'progress': <ProgressUnit />,
-  'navbar': <NavBarUnit />,
+  'nav-bar': <NavBarUnit />,
+  'notice-bar': <NoticeBarUnit />,
 }
 
 const Home = (props: any) => {

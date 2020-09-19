@@ -7,7 +7,8 @@ import PopupView from '../../src/popup/demo/index';
 import FlexView from '../../src/flex/demo/index';
 import ToastView from '../../src/toast/demo/index';
 import ProgressView from '../../src/progress/demo/index';
-import NavBarView from '../../src/navbar/demo/index';
+import NavBarView from '../../src/nav-bar/demo/index';
+import NoticeBarView from '../../src/notice-bar/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -21,7 +22,8 @@ const docComponents: any = {
   'flex': <FlexView />,
   'toast': <ToastView />,
   'progress': <ProgressView />,
-  'navbar': <NavBarView />,
+  'nav-bar': <NavBarView />,
+  'notice-bar': <NoticeBarView />,
 };
 
 const BrowseIndex = (props: any) => {
