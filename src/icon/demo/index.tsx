@@ -150,6 +150,10 @@ const LogContent = () => {
               <Icon type="abnormal" />
               <span>abnormal</span>
             </div>
+            <div className="d-demo-grid__item">
+              <Icon type="ellipsis" />
+              <span>ellipsis</span>
+            </div>
           </div>
 
         </div>

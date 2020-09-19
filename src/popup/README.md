@@ -3,6 +3,7 @@
 
 支持 `top` `bottom` `left` `right` 四个方向和多层的弹出层。
 
+## 代码示例
 ```jsx
 const handleVisiblePopup = (
   visible: boolean = true,

@@ -86,14 +86,14 @@ export default {
         name: "导航",
         items: [
           {
-            key: "menu",
-            name: "菜单 Menu",
+            key: "DropdownMenu",
+            name: "下拉菜单 DropdownMenu",
             disabled: true,
           },
           {
-            key: "nav-bar",
+            key: "navbar",
             name: "导航栏 NavBar",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "popover",
@@ -108,12 +108,12 @@ export default {
           {
             key: "tabBar",
             name: "标签栏 TabBar",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "tabs",
             name: "标签页 Tabs",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "drawer",
@@ -129,12 +129,12 @@ export default {
           {
             key: "collapse",
             name: "折叠 Collapse",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "badge",
             name: "微标数 Badge",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "card",
@@ -149,17 +149,17 @@ export default {
           {
             key: "list",
             name: "列表 List",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "notify",
             name: "消息通知 Notify",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "notic-bar",
             name: "通告栏 NoticBar",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "steps",
@@ -169,7 +169,7 @@ export default {
           {
             key: "tag",
             name: "标签 Tag",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "empty",
@@ -277,7 +277,7 @@ export default {
           {
             key: "sticky",
             name: "粘性布局 Sticky",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "count-down",

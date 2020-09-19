@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "9974429",
+      "name": "省略号",
+      "font_class": "ellipsis",
+      "unicode": "e708",
+      "unicode_decimal": 59144
+    },
+    {
       "icon_id": "5257307",
       "name": "儿童耳鼻喉-声音异常",
       "font_class": "offline",

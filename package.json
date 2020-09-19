@@ -12,6 +12,17 @@
     "compile": "NODE_ENV=production father-build && cp src/index.d.ts es/",
     "test": "node scripts/test.js"
   },
+  "keywords": [
+    "agile",
+    "react",
+    "react-component",
+    "component",
+    "components",
+    "ui",
+    "framework",
+    "frontend",
+    "mobile"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
