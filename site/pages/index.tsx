@@ -11,6 +11,7 @@ import ToastUnit from './toast/index';
 import ProgressUnit from './progress/index';
 import NavBarUnit from './nav-bar/index';
 import NoticeBarUnit from './notice-bar/index';
+import TagUnit from './tag/index';
 
 declare var global: any;
 export interface IProps {
@@ -27,6 +28,7 @@ const docComponents: any = {
   'progress': <ProgressUnit />,
   'nav-bar': <NavBarUnit />,
   'notice-bar': <NoticeBarUnit />,
+  'tag': <TagUnit />,
 }
 
 const Home = (props: any) => {

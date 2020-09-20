@@ -24,3 +24,4 @@ export { default as Toast } from './toast/index';
 export { default as Progress } from './progress/index';
 export { default as NavBar } from './nav-bar/index';
 export { default as NoticeBar } from './notice-bar/index';
+export { default as Tag } from './tag/index';

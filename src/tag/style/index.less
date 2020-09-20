@@ -1,0 +1,98 @@
+@import '../../style/default.less';
+@tagPrefixCls: fam-tag;
+
+@tag-padding: 0 5px;
+
+.@{tagPrefixCls} {
+  display: inline-flex;
+  padding: @tag-padding;
+  font-size: 12px;
+  border-radius: 2px;
+
+  // 整体填充
+  &-fill {
+    &-primary {
+      background-color: @brand-primary;
+      border: 1px solid @brand-primary;
+      color: #FFF;
+    }
+    &-success {
+      background-color: @brand-success;
+      border: 1px solid @brand-success;
+      color: #FFF;
+    }
+    &-warning {
+      background-color: @brand-warning;
+      border: 1px solid @brand-warning;
+      color: #FFF;
+    }
+    &-danger {
+      background-color: @brand-danger;
+      border: 1px solid @brand-danger;
+      color: #FFF;
+    }
+    &-disabled {
+      background-color: @brand-gray;
+      border: 1px solid @brand-gray;
+      color: #FFF;
+    }
+  }
+
+  // 细边框
+  &-hairline {
+    &-primary {
+      background-color: #FFF;
+      border: 1px solid @brand-primary;
+      color: @brand-primary;
+    }
+    &-success {
+      background-color: #FFF;
+      border: 1px solid @brand-success;
+      color: @brand-success;
+    }
+    &-warning {
+      background-color: #FFF;
+      border: 1px solid @brand-warning;
+      color: @brand-warning;
+    }
+    &-danger {
+      background-color: #FFF;
+      border: 1px solid @brand-danger;
+      color: @brand-danger;
+    }
+    &-disabled {
+      background-color: #FFF;
+      border: 1px solid @brand-gray;
+      color: @brand-gray;
+    }
+  }
+
+  &-round {
+    border-radius: 999px;
+  }
+
+  &-icon {
+    display: inline;
+    margin-right: 2px;
+  }
+
+  &-icon-close {
+    display: inline;
+    margin-left: 2px;
+    cursor: pointer;
+  }
+
+  &-lg {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  &-md {
+    padding: 1px 6px;
+  }
+
+  &-xs {
+    
+  }
+
+}
