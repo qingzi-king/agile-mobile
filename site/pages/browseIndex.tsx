@@ -9,6 +9,7 @@ import ToastView from '../../src/toast/demo/index';
 import ProgressView from '../../src/progress/demo/index';
 import NavBarView from '../../src/nav-bar/demo/index';
 import NoticeBarView from '../../src/notice-bar/demo/index';
+import TagView from '../../src/tag/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -24,6 +25,7 @@ const docComponents: any = {
   'progress': <ProgressView />,
   'nav-bar': <NavBarView />,
   'notice-bar': <NoticeBarView />,
+  'tag': <TagView />,
 };
 
 const BrowseIndex = (props: any) => {
