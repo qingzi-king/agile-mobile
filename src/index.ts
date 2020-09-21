@@ -25,3 +25,4 @@ export { default as Progress } from './progress/index';
 export { default as NavBar } from './nav-bar/index';
 export { default as NoticeBar } from './notice-bar/index';
 export { default as Tag } from './tag/index';
+export { default as Badge } from './badge/index';
