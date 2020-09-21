@@ -123,3 +123,6 @@ html-loader
 
 ```
 -->
+
+## License
+Agile Mobile UI is MIT licensed, as found in the [LICENSE](https://github.com/qingzi-king/agile-mobile/blob/master/LICENSE) file.
