@@ -39,3 +39,4 @@ text | 展示的数字或文案，当为数字时候，大于 overflowCount <br/
 corner | 置于角落（右上角） | Boolean | `false`
 dot | 不展示数字，只有一个小红点 | Boolean | `false`
 overflowCount | 展示封顶的数字值 | Number | `99`
+style | 自定义样式 | Object | {}

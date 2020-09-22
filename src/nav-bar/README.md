@@ -76,4 +76,4 @@
 | onLeftClick   | 导航左边点击回调 | Function | 无 |
 | fixed   | 是否固定在顶部 | Boolean | false |
 | placeholder   | 固定在顶部时，是否在标签位置生成一个等高的占位元素 | Boolean | false |
-| zIndex   | 元素 z-index | Number | 1 |
+| zIndex   | 元素 z-index（fixed下有效） | Number | 1 |
