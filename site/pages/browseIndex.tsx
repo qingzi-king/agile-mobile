@@ -11,6 +11,7 @@ import NavBarView from '../../src/nav-bar/demo/index';
 import NoticeBarView from '../../src/notice-bar/demo/index';
 import TagView from '../../src/tag/demo/index';
 import BadgeView from '../../src/badge/demo/index';
+import ListView from '../../src/list/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -28,6 +29,7 @@ const docComponents: any = {
   'notice-bar': <NoticeBarView />,
   'tag': <TagView />,
   'badge': <BadgeView />,
+  'list': <ListView />,
 };
 
 const BrowseIndex = (props: any) => {

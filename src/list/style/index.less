@@ -1,0 +1,106 @@
+@import '../../style/default.less';
+@listPrefixCls: fam-list;
+
+.@{listPrefixCls} {
+  &-header {
+    padding: @v-spacing-lg @h-spacing-lg @v-spacing-md @h-spacing-lg;
+    font-size: @font-size-base;
+    color: @color-text-caption;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &-footer {
+    padding: @v-spacing-md @h-spacing-lg @v-spacing-lg @h-spacing-lg;
+    font-size: @font-size-base;
+    color: @color-text-caption;
+  }
+
+  &-body {
+    position: relative;
+    background-color: @fill-base;
+    border-top: 1px solid @fill-gray;
+    border-bottom: 1px solid @fill-gray;
+    div:not(:last-child) {
+      .@{listPrefixCls}-line {
+        border-bottom: 1px solid @fill-gray;
+      }
+    }
+  }
+
+  &-thumb {
+    padding-right: 5px;
+  }
+}
+
+.@{listPrefixCls}-item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  padding: 0 @h-spacing-lg;
+  min-height: @list-item-height;
+  background-color: @fill-base;
+  vertical-align: middle;
+  // overflow: hidden;
+  transition: background-color 200ms;
+  align-items: center;
+  flex: 1 1;
+
+  &-active:active {
+    background-color: @fill-body;
+  }
+
+  .@{listPrefixCls}-line {
+    position: relative;
+    display: flex;
+    flex: 1;
+    width: inherit;
+    // flex: 1;
+    // align-self: stretch;
+    // padding-right: @h-spacing-lg;
+    // overflow: hidden;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .@{listPrefixCls}-title {
+      flex: 1;
+      color: @color-text-base;
+      padding: 7 * @su 0;
+      font-size: @font-size-caption;
+      line-height: 1.5;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .@{listPrefixCls}-extra {
+      flex: 1;
+      padding: 7 * @su 0;
+      text-align: right;
+    }
+
+    .@{listPrefixCls}-describe {
+      width: inherit;
+      padding: 7 * @su 0;
+      color: @gray-6;
+    }
+  }
+
+  .@{listPrefixCls}-arrow {
+    color: #A8A8A8;
+    &-horizontal {
+      visibility: visible;
+    }
+
+    &-vertical {
+      visibility: visible;
+      transform: rotate(90deg);
+    }
+
+    &-vertical-up {
+      visibility: visible;
+      transform: rotate(270deg);
+    }
+  }
+
+}
