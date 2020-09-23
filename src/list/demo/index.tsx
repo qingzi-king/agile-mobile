@@ -21,7 +21,9 @@ const Demo = () => {
           <Item extra={'这是值内容'}>这是标题</Item>
           <Item extra={'这是值内容'} arrow="horizontal" onClick={() => handleToast('这是列表链接')}>这是标题</Item>
           <Item extra={'这是值内容'} describe={'这里是描述内容区域....'}>这是标题</Item>
-          <Item thumb={<Icon type="check" style={{color:'#65b63c'}} />} extra={'这是值内容'} describe={'这里是描述内容区域....这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容'}>Title</Item>
+          <Item thumb={<Icon type="check" style={{color:'#268AF0'}} />} extra={'这是值内容'}>Title</Item>
+          <Item thumb={<Icon type="check" style={{color:'#268AF0'}} />} extra={'这是值内容'} describe={'这里是描述内容区域....'}>Title</Item>
+          <Item thumb={<Icon type="check" style={{color:'#268AF0'}} />} extra={'这是值内容'} describe={'这里是描述内容区域....这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容这里是描述内容'}>Title</Item>
         </List>
         <List renderHeader={() => '案例'}>
           <Item

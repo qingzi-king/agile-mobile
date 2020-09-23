@@ -277,7 +277,7 @@ export default {
           {
             key: "sticky",
             name: "粘性布局 Sticky",
-            disabled: false,
+            disabled: true,
           },
           {
             key: "count-down",
