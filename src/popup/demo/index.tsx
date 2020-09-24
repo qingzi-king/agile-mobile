@@ -38,6 +38,11 @@ const Demo = () => {
 
   const handleOncallback = (e: any) => {
     console.log('关闭了popup：', e);
+    if (count < 1) {
+      count = 0;
+    } else {
+      count--;
+    }
   }
 
   return (
