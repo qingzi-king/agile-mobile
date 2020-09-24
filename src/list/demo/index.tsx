@@ -32,7 +32,7 @@ const Demo = () => {
             onClick={() => handleToast('点击了李白')}
             describe={(
               <div>
-                <div><b>行程：</b>重庆 -> 峨眉山</div>
+                <div><b>行程：</b>重庆 -&gt; 峨眉山</div>
                 <div><b>特殊需求：</b>建议当天晚上18:30 国航CU2345</div>
               </div>
             )}
