@@ -16,6 +16,7 @@ const Demo = () => {
 
         <List renderHeader={() => '基础样式'}>
           <Item extra={<Badge dot><div style={{ width: '30px', height: '30px', background: '#ddd' }} /></Badge>}>实心微标</Item>
+          <Item extra={<Badge text={7}><div style={{ width: '30px', height: '30px', background: '#ddd' }} /></Badge>}>右上角微标</Item>
           <Item extra={<Badge text={77} />} arrow="horizontal" onClick={() => Toast.info({ content: '这是列表链接', duration: 500 })}>数字</Item>
           <Item extra={<Badge text={'new'} />}>文本1</Item>
           <Item extra={<Badge text={'减'} />}>文本2</Item>

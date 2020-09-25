@@ -106,7 +106,7 @@ export default {
             disabled: true,
           },
           {
-            key: "tabBar",
+            key: "tab-bar",
             name: "标签栏 TabBar",
             disabled: false,
           },

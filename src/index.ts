@@ -28,3 +28,4 @@ export { default as Tag } from './tag/index';
 export { default as Badge } from './badge/index';
 export { default as List } from './list/index';
 export { default as Collapse } from './collapse/index';
+export { default as TabBar } from './tab-bar/index';

@@ -15,6 +15,7 @@ import TagUnit from './tag/index';
 import BadgeUnit from './badge/index';
 import ListUnit from './list/index';
 import CollapseUnit from './collapse/index';
+import TabBarUnit from './tab-bar/index';
 
 declare var global: any;
 export interface IProps {
@@ -35,6 +36,7 @@ const docComponents: any = {
   'badge': <BadgeUnit />,
   'list': <ListUnit />,
   'collapse': <CollapseUnit />,
+  'tab-bar': <TabBarUnit />,
 }
 
 const Home = (props: any) => {
