@@ -107,7 +107,7 @@ const Item: React.FC<CollapseItemPropsTypes> = props => {
         {
           showArrow && (
             <div className={`${prefixCls}-item-header-icon`}>
-              <Icon type="arrow_down" size="sm" />
+              <Icon type="arrow-down" size="sm" />
             </div>
           )
         }

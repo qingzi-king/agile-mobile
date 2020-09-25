@@ -66,9 +66,9 @@ const Item: React.FC<ListItemPropsTypes> = props => {
           <div className={`${prefixCls}-describe`}>{describe}</div>
           )
         }
-        { arrow && !describe && <Icon type="arrow_right" size="md" className={arrowCls} aria-hidden="true" /> }
+        { arrow && !describe && <Icon type="arrow-right" size="md" className={arrowCls} aria-hidden="true" /> }
       </div>
-      { arrow && describe && <Icon type="arrow_right" size="md" className={arrowCls} aria-hidden="true" /> }
+      { arrow && describe && <Icon type="arrow-right" size="md" className={arrowCls} aria-hidden="true" /> }
     </div>
   )
 }

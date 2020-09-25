@@ -87,7 +87,7 @@ export default class NoticeBar extends React.Component<NoticeBarPropsType, any> 
             role="button"
             aria-label="go to detail"
           >
-            { action ? action : <Icon type="arrow_right" size="md" /> }
+            { action ? action : <Icon type="arrow-right" size="md" /> }
           </div>
         );
       }

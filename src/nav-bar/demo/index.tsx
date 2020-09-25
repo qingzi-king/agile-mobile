@@ -19,7 +19,7 @@ const Demo = () => {
         <div style={{margin:'15px 0'}}>
           <NavBar
             mode="light"
-            icon={<Icon type="arrow_left" />}
+            icon={<Icon type="arrow-left" />}
             onLeftClick={() => handleToast('点击了返回按钮！')}
             leftContent={<span>返回</span>}
             rightContent={[
@@ -31,7 +31,7 @@ const Demo = () => {
         <h2 className="d-demo-block__title">深色 dark</h2>
         <div style={{margin:'15px 0'}}>
           <NavBar
-            icon={<Icon type="arrow_left" />}
+            icon={<Icon type="arrow-left" />}
             onLeftClick={() => handleToast('点击了返回按钮！')}
             rightContent={[
               <Icon key="1" type="ellipsis" />,
@@ -43,7 +43,7 @@ const Demo = () => {
         <div style={{margin:'15px 0'}}>
           <NavBar
             mode="light"
-            icon={<Icon type="arrow_left" />}
+            icon={<Icon type="arrow-left" />}
             onLeftClick={() => handleToast('点击了返回按钮！')}
             rightContent={[
               <Icon key="1" type="ellipsis" />,

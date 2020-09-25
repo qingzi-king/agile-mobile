@@ -1,0 +1,45 @@
+@import '../../style/default.less';
+@tabBarPrefixCls: fam-tab-bar;
+
+.@{tabBarPrefixCls} {
+
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-item {
+
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 2px;
+
+    &-icon {
+      text-rendering: auto;
+      line-height: 1.2;
+      i {
+        height: 18px;
+      }
+    }
+
+    &-title {
+      width: 100%;
+      font-size: @font-size-caption-sm;
+      line-height: 1.5;
+    }
+
+    &-active {
+      color: @brand-primary;
+    }
+
+  }
+
+  &-rotate .@{tabBarPrefixCls}-item-active .@{tabBarPrefixCls}-item-icon {
+    transform: rotate(360deg);
+    -moz-transform-origin: 100% 50%;
+    transition: transform .2s ease-in-out;
+  }
+
+}

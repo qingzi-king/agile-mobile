@@ -18,7 +18,7 @@
   <div style={{margin:'15px 0'}}>
     <NavBar
       mode="light"
-      icon={<Icon type="arrow_left" />}
+      icon={<Icon type="arrow-left" />}
       onLeftClick={() => console.log('onLeftClick')}
       leftContent={<span>返回</span>}
       rightContent={[
@@ -30,7 +30,7 @@
   <h2 className="d-demo-block__title">深色 dark</h2>
   <div style={{margin:'15px 0'}}>
     <NavBar
-      icon={<Icon type="arrow_left" />}
+      icon={<Icon type="arrow-left" />}
       onLeftClick={() => console.log('onLeftClick')}
       rightContent={[
         <Icon key="1" type="ellipsis" />,
@@ -42,7 +42,7 @@
   <div style={{margin:'15px 0'}}>
     <NavBar
       mode="light"
-      icon={<Icon type="arrow_left" />}
+      icon={<Icon type="arrow-left" />}
       onLeftClick={() => console.log('onLeftClick')}
       rightContent={[
         <Icon key="1" type="ellipsis" />,

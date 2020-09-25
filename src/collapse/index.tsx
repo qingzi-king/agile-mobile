@@ -30,10 +30,6 @@ export default class Collapse extends React.Component<CollapsePropsTypes, any> {
 
   static Item = Item;
 
-  componentDidMount() {
-    this.renderChildren();
-  }
-
   handleActiveKeyChange = (k: string) => {
     const { onChange, accordion } = this.props;
     let activeKeys = this.state.activeKeys;
@@ -73,11 +69,6 @@ export default class Collapse extends React.Component<CollapsePropsTypes, any> {
 
     return (
       <div className={wrapCls} style={style}>
-        {/*
-          children &&
-          React.isValidElement(children) &&
-          React.cloneElement<{defaultActiveKey?: any}>(children, { defaultActiveKey })
-        */}
         {
           this.renderChildren()
         }
@@ -85,34 +76,3 @@ export default class Collapse extends React.Component<CollapsePropsTypes, any> {
     )
   }
 }
-
-// const Collapse: React.FC<CollapsePropsTypes> & {
-//   Item: typeof Item
-// } = props => {
-
-//   const {
-//     children,
-//     className,
-//     style,
-//     onChange,
-//     bordered,
-//     activeKey,
-//     defaultActiveKey,
-//     expandIcon,
-//     ...restProps
-//   } = props;
-
-//   const wrapCls = classnames(prefixCls, className, {
-//     [`${prefixCls}-border`]: bordered,
-//   });
-
-//   return (
-//     <div className={wrapCls} style={style} {...restProps}>
-//       { children }
-//     </div>
-//   )
-// }
-
-// Collapse.Item = Item;
-
-// export default Collapse;

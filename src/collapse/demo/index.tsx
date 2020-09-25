@@ -32,7 +32,7 @@ const Demo = () => {
         <h2 className="d-demo-block__title">手风琴模式</h2>
         <Collapse
           accordion
-          activeKeys={['2']}
+          activeKeys={[]}
           onChange={handleOnChange}
         >
           <Item key="1" title="标题1" extra="这是值" showArrow>
@@ -40,15 +40,6 @@ const Demo = () => {
           </Item>
           <Item key="2" title="标题2" extra="这是值" showArrow>这里是描述...</Item>
           <Item key="3" title="标题3" extra="罗曼.罗兰" showArrow>人们常觉得准备的阶段是在浪费时间，只有当真正机会来临，而自己没有能力把握的时候，才能觉悟自己平时没有准备才是浪费了时间。</Item>
-          <Collapse
-            accordion
-            onChange={handleOnChange}
-          >
-            <Item key="1" title="标题4-1" extra="这是值" showArrow>
-              <div>嵌套面板1，这里是描述...</div>
-            </Item>
-            <Item key="2" title="标题4-2" extra="这是值" showArrow>嵌套面板1，这里是描述...</Item>
-          </Collapse>
         </Collapse>
       </section>
     </div>
