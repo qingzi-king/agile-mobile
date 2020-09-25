@@ -101,14 +101,20 @@
     }
 
     &-active {
-      transition: height .3s ease-in-out;
       overflow: hidden;
+      transition: height .3s ease-in-out;
+      -moz-transition: height .3s ease-in-out;
+      -webkit-transition: height .3s ease-in-out;
+      -o-transition: height .3s ease-in-out;
     }
 
     &-inactive {
       height: 0;
       overflow: hidden;
       transition: height .3s ease-in-out;
+      -moz-transition: height .3s ease-in-out;
+      -webkit-transition: height .3s ease-in-out;
+      -o-transition: height .3s ease-in-out;
     }
 
   }
