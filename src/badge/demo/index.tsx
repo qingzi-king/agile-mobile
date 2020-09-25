@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, List, Icon, Toast } from '../../index';
+import { Badge, List, Toast } from '../../index';
 import '../style/index.less';
 
 const Item = List.Item;

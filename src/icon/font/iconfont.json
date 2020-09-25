@@ -6,6 +6,34 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "7216348",
+      "name": "设置",
+      "font_class": "setting",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "10455054",
+      "name": "部门考勤",
+      "font_class": "persons",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "11641861",
+      "name": "部门设置",
+      "font_class": "department",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "12270782",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
       "icon_id": "908585",
       "name": "通知",
       "font_class": "notice",
@@ -169,56 +197,56 @@
     {
       "icon_id": "8777509",
       "name": "arrow_up",
-      "font_class": "arrow_up",
+      "font_class": "arrow-up",
       "unicode": "e65d",
       "unicode_decimal": 58973
     },
     {
       "icon_id": "8777510",
       "name": "arrow_left",
-      "font_class": "arrow_left",
+      "font_class": "arrow-left",
       "unicode": "e65e",
       "unicode_decimal": 58974
     },
     {
       "icon_id": "8777511",
       "name": "arrow_down",
-      "font_class": "arrow_down",
+      "font_class": "arrow-down",
       "unicode": "e65f",
       "unicode_decimal": 58975
     },
     {
       "icon_id": "8777512",
       "name": "arrow_right",
-      "font_class": "arrow_right",
+      "font_class": "arrow-right",
       "unicode": "e660",
       "unicode_decimal": 58976
     },
     {
       "icon_id": "8777600",
       "name": "page_turning_left",
-      "font_class": "turning_left",
+      "font_class": "turning-left",
       "unicode": "e661",
       "unicode_decimal": 58977
     },
     {
       "icon_id": "8777601",
       "name": "page_turning_right",
-      "font_class": "turning_right",
+      "font_class": "turning-right",
       "unicode": "e662",
       "unicode_decimal": 58978
     },
     {
       "icon_id": "8777602",
       "name": "show_less",
-      "font_class": "turning_up",
+      "font_class": "turning-up",
       "unicode": "e663",
       "unicode_decimal": 58979
     },
     {
       "icon_id": "8777603",
       "name": "show_more",
-      "font_class": "turning_down",
+      "font_class": "turning-down",
       "unicode": "e664",
       "unicode_decimal": 58980
     }

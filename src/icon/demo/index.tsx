@@ -90,39 +90,39 @@ const LogContent = () => {
 
           <div className="d-demo-grid">
             <div className="d-demo-grid__item">
-              <Icon type="arrow_up" />
-              <span>arrow_up</span>
+              <Icon type="arrow-up" />
+              <span>arrow-up</span>
             </div>
             <div className="d-demo-grid__item">
-              <Icon type="arrow_left" />
-              <span>arrow_left</span>
+              <Icon type="arrow-left" />
+              <span>arrow-left</span>
             </div>
             <div className="d-demo-grid__item">
-              <Icon type="arrow_down" />
-              <span>arrow_down</span>
+              <Icon type="arrow-down" />
+              <span>arrow-down</span>
             </div>
             <div className="d-demo-grid__item">
-              <Icon type="arrow_right" />
-              <span>arrow_right</span>
+              <Icon type="arrow-right" />
+              <span>arrow-right</span>
             </div>
           </div>
 
           <div className="d-demo-grid">
             <div className="d-demo-grid__item">
-              <Icon type="turning_left" />
-              <span>turning_left</span>
+              <Icon type="turning-left" />
+              <span>turning-left</span>
             </div>
             <div className="d-demo-grid__item">
-              <Icon type="turning_right" />
-              <span>turning_right</span>
+              <Icon type="turning-right" />
+              <span>turning-right</span>
             </div>
             <div className="d-demo-grid__item">
-              <Icon type="turning_up" />
-              <span>turning_up</span>
+              <Icon type="turning-up" />
+              <span>turning-up</span>
             </div>
             <div className="d-demo-grid__item">
-              <Icon type="turning_down" />
-              <span>turning_down</span>
+              <Icon type="turning-down" />
+              <span>turning-down</span>
             </div>
           </div>
 
@@ -157,6 +157,25 @@ const LogContent = () => {
             <div className="d-demo-grid__item">
               <Icon type="notice" />
               <span>notice</span>
+            </div>
+            <div className="d-demo-grid__item">
+              <Icon type="setting" />
+              <span>setting</span>
+            </div>
+          </div>
+
+          <div className="d-demo-grid">
+            <div className="d-demo-grid__item">
+              <Icon type="persons" />
+              <span>persons</span>
+            </div>
+            <div className="d-demo-grid__item">
+              <Icon type="department" />
+              <span>department</span>
+            </div>
+            <div className="d-demo-grid__item">
+              <Icon type="home" />
+              <span>home</span>
             </div>
           </div>
 
