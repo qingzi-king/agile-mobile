@@ -47,13 +47,13 @@ const Item: React.FC<TabBarItemPropsTypes> = props => {
 
   if (badge) {
     content = (
-      <Badge text={badge}>
+      <Badge text={badge} className="fam-tab-bar-badge">
         { initContent }
       </Badge>
     )
   } else if (dot) {
     content = (
-      <Badge dot>
+      <Badge dot className="fam-tab-bar-badge">
         { initContent }
       </Badge>
     )
