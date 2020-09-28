@@ -55,9 +55,9 @@ const handleChange = (e: any) => {
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | activeKey | 当前激活面板的 | String | - |
-| accordion | 是否为`手风琴`模式 | Boolean | `false`  |
 | rotate | 选中时图标是否旋转 | Boolean | `false`  |
 | selectedColor | 选中状态的颜色 | String | `#268AF0`  |
+| barBgColor | 背景颜色 | String | `#FFF`  |
 | onClick | 切换面板的回调 | (keys: string): void |  -  |
 
 ### TabBar.Item
