@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classnames from 'classnames';
 import { TabBarPropsTypes } from './PropsType';
 import Item from './Item';

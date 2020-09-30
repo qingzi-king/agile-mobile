@@ -1,13 +1,9 @@
 import React from 'react';
 import { StickyContainer, Sticky } from 'react-sticky';
-import { Tabs, Toast, Icon, Badge } from '../../index';
+import { Tabs, Badge } from '../../index';
 import '../style/index.less';
 
 const Demo = () => {
-
-  const handleClose = () => {
-    Toast.info({ content: '', duration: 500 });
-  }
 
   const tabs1 = [
     { title: <Badge text={3}>标签1</Badge> },
