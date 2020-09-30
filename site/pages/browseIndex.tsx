@@ -14,6 +14,7 @@ import BadgeView from '../../src/badge/demo/index';
 import ListView from '../../src/list/demo/index';
 import CollapseView from '../../src/collapse/demo/index';
 import TabBarView from '../../src/tab-bar/demo/index';
+import TabsView from '../../src/tabs/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -34,6 +35,7 @@ const docComponents: any = {
   'list': <ListView />,
   'collapse': <CollapseView />,
   'tab-bar': <TabBarView />,
+  'tabs': <TabsView />,
 };
 
 const BrowseIndex = (props: any) => {
