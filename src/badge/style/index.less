@@ -13,10 +13,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     position: absolute;
-    top: -1 * @v-spacing-sm;
-    height: @icon-size-xs;
-    line-height: @icon-size-xs;
-    min-width: @icon-size-xs / 2;
+    // top: -1 * @v-spacing-sm;
+    top: 0;
+    right: 0;
+    // min-height: @icon-size-xs;
+    line-height: 1.4;
+    min-width: 10px;
     border-radius: 2 * @v-spacing-sm;
     padding: 0 @h-spacing-sm;
     text-align: center;
@@ -49,7 +51,9 @@
     position: absolute;
     transform: translateX(-50%);
     transform-origin: 0 center;
-    top: -2 * @border-width-lg;
+    // top: -2 * @border-width-lg;
+    top: 0;
+    right: 0;
     height: 10px;
     width: 10px;
     border-radius: 100%;
@@ -69,16 +73,16 @@
   &-a-wrapper &-text,
   &-a-wrapper &-dot {
     top: 0;
-    right: 0;
+    // right: 0;
     transform: translate(30%, -30%);
   }
 
   &-corner {
-    width: 5 * @link-button-font-size;
-    padding: 0.5 * @link-button-font-size;
+    width: 80px;
+    padding: 3px;
     position: absolute;
-    right: -1.6 * @link-button-font-size;
-    top: 0.3 * @link-button-font-size;
+    right: -30px;
+    top: 0px;
     background-color: @brand-important;
     color: @color-text-base-inverse;
     white-space: nowrap;
@@ -93,7 +97,8 @@
 
 }
 
-.fam-tab-bar-badge .@{badgePrefixCls}-text,.@{badgePrefixCls}-dot {
+.fam-tab-bar-badge .@{badgePrefixCls}-text,
+.fam-tab-bar-badge .@{badgePrefixCls}-dot {
   top: 0;
   right: 0;
   transform: translate(75%, -10%);

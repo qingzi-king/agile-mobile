@@ -13,7 +13,6 @@ const Item: React.FC<TabBarItemPropsTypes> = props => {
     title,
     badge,
     dot,
-    children,
     fkey,
     activeKey,
     selectedColor,
