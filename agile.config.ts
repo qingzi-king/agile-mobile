@@ -139,7 +139,7 @@ export default {
           {
             key: "card",
             name: "卡片 Card",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "carousel",
