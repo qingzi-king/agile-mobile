@@ -30,3 +30,4 @@ export { default as List } from './list/index';
 export { default as Collapse } from './collapse/index';
 export { default as TabBar } from './tab-bar/index';
 export { default as Tabs } from './tabs/index';
+export { default as Card } from './card/index';

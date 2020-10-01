@@ -15,6 +15,7 @@ import ListView from '../../src/list/demo/index';
 import CollapseView from '../../src/collapse/demo/index';
 import TabBarView from '../../src/tab-bar/demo/index';
 import TabsView from '../../src/tabs/demo/index';
+import CardView from '../../src/card/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -36,6 +37,7 @@ const docComponents: any = {
   'collapse': <CollapseView />,
   'tab-bar': <TabBarView />,
   'tabs': <TabsView />,
+  'card': <CardView />,
 };
 
 const BrowseIndex = (props: any) => {

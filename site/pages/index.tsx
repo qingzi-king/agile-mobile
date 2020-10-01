@@ -17,6 +17,7 @@ import ListUnit from './list/index';
 import CollapseUnit from './collapse/index';
 import TabBarUnit from './tab-bar/index';
 import TabsUnit from './tabs/index';
+import CardUnit from './card/index';
 
 declare var global: any;
 export interface IProps {
@@ -39,6 +40,7 @@ const docComponents: any = {
   'collapse': <CollapseUnit />,
   'tab-bar': <TabBarUnit />,
   'tabs': <TabsUnit />,
+  'card': <CardUnit />,
 }
 
 const Home = (props: any) => {
