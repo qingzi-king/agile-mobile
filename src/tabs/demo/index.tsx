@@ -52,8 +52,8 @@ const Demo = () => {
         <h2 className="d-demo-block__title">顶部标签</h2>
         <Tabs tabs={tabs1}
           initialPage={1}
-          onChange={(tab: any) => { console.log('onChange', tab); }}
-          onTabClick={(tab: any) => { console.log('onTabClick', tab); }}
+          onChange={(tab, index) => { console.log('onChange', tab, index); }}
+          onTabClick={(tab) => { console.log('onTabClick', tab); }}
         >
           <div style={itemStyle}>标签1的内容...</div>
           <div style={itemStyle}>标签2的内容...</div>
@@ -104,6 +104,25 @@ const Demo = () => {
         <Tabs tabs={tabs3} renderTabBar={props => <Tabs.DefaultTabBar {...props} page={3} />}>
           { renderContent }
         </Tabs>
+
+        <h2 className="d-demo-block__title">分段器模式</h2>
+        <div style={{padding:5}}>
+          <Tabs tabs={tabs2}
+            initialPage={1}
+            onTabClick={(tab, index) => { console.log('onTabClick', tab, index); }}
+            mode="segmentedControl"
+          />
+        </div>
+
+        <h2 className="d-demo-block__title">分段器模式<small> - 自定义主题颜色</small></h2>
+        <div style={{padding:5}}>
+          <Tabs tabs={tabs2}
+            initialPage={0}
+            onTabClick={(tab, index) => { console.log('onTabClick', tab, index); }}
+            tintColor="red"
+            mode="segmentedControl"
+          />
+        </div>
 
       </section>
     </div>

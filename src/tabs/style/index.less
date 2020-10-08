@@ -2,6 +2,7 @@
 @import '../../style/mixins/hairline.less';
 
 @tabs-prefix-cls: fam-tabs;
+@tabs-card-prefix-cls: fam-tabs-card;
 @tabs-bar-prefix-cls: fam-tabs-bar;
 @badge-prefix-cls: fam-badge;
 
@@ -106,6 +107,32 @@
   &-left,
   &-right {
     flex-direction: row;
+  }
+
+}
+
+.@{tabs-card-prefix-cls} {
+  display: flex;
+  box-sizing: border-box;
+  &-item {
+    flex: 1;
+    text-align: center;
+    padding: 2px 15px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    &-active {
+      color: #FFF;
+      background-color: red;
+    }
+  }
+  :not(:last-child) {
+    border-right: 0;
+  }
+  :first-child {
+    border-radius: 5px 0 0 5px;
+  }
+  :last-child {
+    border-radius: 0 5px 5px 0;
   }
 }
 
