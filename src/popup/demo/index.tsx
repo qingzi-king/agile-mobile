@@ -35,7 +35,7 @@ const Demo = () => {
             <Button block onClick={() => handleVisiblePopup(true, 'top')}>再弹一个顶部popup</Button>
           </div>
           <div className="d-demo-block">
-            <Button type="primary" block onClick={() => handleClose()}>关闭</Button>
+            <Button type="primary" block onClick={() => handleVisiblePopup(false, position)}>关闭</Button>
           </div>
         </div>
       ),
