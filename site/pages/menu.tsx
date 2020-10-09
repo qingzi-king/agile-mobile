@@ -57,7 +57,7 @@ class MenuUnit extends Component<IProps> {
           {
             agileConfig.navMenus.commponentMenus.map((option: any) => {
               return (
-                <Menu.ItemGroup key={option.key} title={option.name}>
+                <Menu.ItemGroup key={option.key} title={<span>{option.name} . <small>{option.items.length}</small></span>}>
                   {
                     option.items.map((item: any) => {
                       return <Menu.Item key={item.key} disabled={item.disabled}>{item.name}</Menu.Item>

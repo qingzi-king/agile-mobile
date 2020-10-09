@@ -5,19 +5,17 @@
 
 .@{cardPrefixCls} {
   &:not(.@{cardPrefixCls}-full) {
-    .hairline('all', @border-color-base, @radius-md);
+    // .hairline('all', @border-color-base, @radius-md);
   }
 
   min-height: 96 * @su;
-  padding-bottom: @v-spacing-sm;
   display: flex;
   flex-direction: column;
-  background-color: @fill-base;
+  border-radius: 5px;
+  // background-color: @fill-base;
 
   &&-full {
     position: relative;
-    .hairline('top');
-    .hairline('bottom');
   }
 
   &-header {
@@ -25,6 +23,9 @@
     align-items: center;
     font-size: @font-size-heading;
     padding: @v-spacing-md @h-spacing-lg;
+    border-bottom: 1px solid @border-color-base;
+    background-color: @fill-base;
+    border-radius: 5px 5px 0 0;
 
     &-content {
       flex: 1;
@@ -48,20 +49,69 @@
 
   &-body {
     position: relative;
-    .hairline('top');
-    .hairline('bottom');
     padding: @v-spacing-md @h-spacing-lg;
     font-size: @font-size-subhead;
     color: @color-text-paragraph;
     min-height: 40 * @su;
     flex: 1;
+    background-color: @fill-base;
+  }
+
+  &-body-corner {
+    .@{cardPrefixCls}-body-item {
+      padding: @v-spacing-md @h-spacing-lg;
+      position: relative;
+      font-size: @font-size-subhead;
+      color: @color-text-paragraph;
+      // min-height: 40 * @su;
+      background: radial-gradient(circle at top left, transparent 6px, @fill-base 0) top left,
+          radial-gradient(circle at top right, transparent 6px, @fill-base 0) top right,
+          radial-gradient(circle at bottom right, transparent 6px, @fill-base 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 6px, @fill-base 0) bottom left;
+      background-size: 50% 60%;
+      background-repeat: no-repeat;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 6px;
+        right: 6px;
+        bottom: 0;
+        border-bottom: 1px solid @border-color-base;
+      }
+      &:first-child {
+        background: radial-gradient(circle at top left, transparent 0, @fill-base 0) top left,
+          radial-gradient(circle at top right, transparent 0, @fill-base 0) top right,
+          radial-gradient(circle at bottom right, transparent 6px, @fill-base 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 6px, @fill-base 0) bottom left;
+        background-size: 50% 60%;
+        background-repeat: no-repeat;
+      }
+      &:last-child {
+        border-bottom: 0;
+        background: radial-gradient(circle at top left, transparent 6px, @fill-base 0) top left,
+          radial-gradient(circle at top right, transparent 6px, @fill-base 0) top right,
+          radial-gradient(circle at bottom right, transparent 0, @fill-base 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 0, @fill-base 0) bottom left;
+        background-size: 50% 60%;
+        background-repeat: no-repeat;
+        &:before {
+          display: none;
+        }
+      }
+    }
   }
 
   &-footer {
+    display: flex;
+    position: relative;
+    top: -1px;
     font-size: @font-size-base;
     color: @color-text-caption;
-    padding: 2px @h-spacing-lg;
-    display: flex;
+    padding: 5px @h-spacing-lg;
+    background-color: @fill-base;
+    border-top: 1px solid @border-color-base;
+    border-radius: 0 0 5px 5px;
 
     &-content {
       flex: 1;

@@ -12,6 +12,11 @@ export interface CardHeaderPropsType {
   extra?: React.ReactNode;
 }
 
+export interface CardBodyPropsType {
+  className?: string;
+  corner?: boolean;
+}
+
 export interface CardFooterPropsType {
   content?: React.ReactNode;
   extra?: React.ReactNode;
