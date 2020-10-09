@@ -20,7 +20,7 @@ const Demo = () => {
       count--;
     }
 
-    Popup({
+    let res = Popup({
       visible,
       position,
       closable,
@@ -40,6 +40,12 @@ const Demo = () => {
         </div>
       ),
     });
+
+    const handleClose = () => {
+      if (res) {
+        res.close();
+      }
+    }
 
   }
 

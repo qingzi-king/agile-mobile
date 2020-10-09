@@ -13,7 +13,7 @@ const handleVisiblePopup = (
   overlay: boolean = true,
 ) => {
 
-  Popup({
+  let res = Popup({
     visible,
     position,
     closable,
@@ -32,6 +32,12 @@ const handleVisiblePopup = (
       </div>
     ),
   });
+
+  const handleClose = () => {
+    if (res) {
+      res.close();
+    }
+  }
 
 }
 ```
