@@ -63,7 +63,7 @@
       position: relative;
       font-size: @font-size-subhead;
       color: @color-text-paragraph;
-      min-height: 40 * @su;
+      // min-height: 40 * @su;
       background: radial-gradient(circle at top left, transparent 6px, @fill-base 0) top left,
           radial-gradient(circle at top right, transparent 6px, @fill-base 0) top right,
           radial-gradient(circle at bottom right, transparent 6px, @fill-base 0) bottom right,
@@ -103,12 +103,14 @@
   }
 
   &-footer {
+    display: flex;
+    position: relative;
+    top: -1px;
     font-size: @font-size-base;
     color: @color-text-caption;
     padding: 5px @h-spacing-lg;
-    display: flex;
-    border-top: 1px solid @border-color-base;
     background-color: @fill-base;
+    border-top: 1px solid @border-color-base;
     border-radius: 0 0 5px 5px;
 
     &-content {
