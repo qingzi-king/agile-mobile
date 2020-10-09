@@ -1,17 +1,31 @@
 import classnames from 'classnames';
 import * as React from 'react';
-
-export interface CardBodyProps extends React.HTMLProps<HTMLDivElement> {
-}
+import { CardBodyPropsType } from './PropsType';
 
 const prefixCls = 'fam-card';
 
-const CardBody: React.FC<CardBodyProps> = props => {
+const CardBody: React.FC<CardBodyPropsType> = props => {
 
-  const { className, ...restProps } = props;
-  const wrapCls = classnames(`${prefixCls}-body`, className);
+  const { className, children, corner, ...restProps } = props;
+  const wrapCls = classnames(className, {
+    [`${prefixCls}-body-corner`]: corner,
+    [`${prefixCls}-body`]: !corner,
+  });
 
-  return <div className={wrapCls} {...restProps} />;
+  return (
+    <div className={wrapCls} {...restProps}>
+      {
+        /* 多个子节点时强制转入div处理成块节点 */
+        children instanceof Array ?
+        (
+          children.map((n: any, i ) => {
+            return <div key={i} className={`${prefixCls}-body-item`}>{n}</div>;
+          })
+        )
+        : children
+      }
+    </div>
+  );
 
 }
 
