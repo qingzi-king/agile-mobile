@@ -168,12 +168,12 @@ renderTab | 替换TabBar的Tab | (tab: Models.TabData) => React.ReactNode | | fa
 page | Tab分页尺寸 | number | `5` | false
 onTabClick  | tab 被点击的回调 | (tab: Models.TabData, index: number) => void |  | false
 
-### segmentedControl 分段模式
+### Tabs segmentedControl 分段模式
 
 属性 | 说明 | 类型 | 默认值 | 必选
 ----|-----|------|------|------
-mode| 模式 | string | `egmentedControl` | true
 tabs| tab数据 | array | | true
+mode| 模式 | string | `segmentedControl` | false
 tintColor| 主题色 | string | `#268AF0` | false
 initialPage  | 初始化Tab, index or key | number \| string |  | false
 onTabClick  | tab 被点击的回调 | (tab: Models.TabData, index: number) => void |  | false

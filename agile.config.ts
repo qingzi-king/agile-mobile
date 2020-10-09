@@ -100,11 +100,11 @@ export default {
             name: "气泡 Popover",
             disabled: true,
           },
-          {
-            key: "segmented-control",
-            name: "分段器 SegmentedControl",
-            disabled: true,
-          },
+          // {
+          //   key: "segmented-control",
+          //   name: "分段器 SegmentedControl",
+          //   disabled: true,
+          // },
           {
             key: "tab-bar",
             name: "标签栏 TabBar",
