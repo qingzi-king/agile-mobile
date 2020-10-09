@@ -1,6 +1,6 @@
-import classnames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 import * as ReactDOM from 'react-dom';
+import classnames from 'classnames';
 import { Icon } from '../index';
 
 export interface PopupProps {
@@ -13,7 +13,12 @@ export interface PopupProps {
   visible?: boolean;
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  radius?: number | boolean;
   onClose?: () => void;
+}
+
+export interface StyleType {
+  minHeight?: React.CSSProperties;
 }
 
 const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
@@ -49,8 +54,9 @@ const Popup = (props: any) => {
     className,
     position = 'bottom',
     visible = false,
-    overlay = false,
+    overlay = true,
     closable = false,
+    radius = false,
     children,
     onClose,
     ...restProps
@@ -75,8 +81,9 @@ const Popup = (props: any) => {
   maskDiv = document.createElement('div');
 
   const timestamp = new Date().getTime();
+  const nodeID = `${prefixCls}-main-${timestamp}`;
 
-  div.id = `${prefixCls}-main-${timestamp}`;
+  div.id = nodeID;
 
   document.body.className = "fam-overfow-hidden"; // 针对弹出层滚动击穿，body隐藏处理
 
@@ -93,53 +100,92 @@ const Popup = (props: any) => {
 
     closed = true;
 
-    ReactDOM.unmountComponentAtNode(div);
-    ReactDOM.unmountComponentAtNode(maskDiv);
+    handleReander(position);
+    maskDiv.className += ` ${prefixCls}-mask-leave`;
 
-    if (div && div.parentNode) {
-      div.parentNode.removeChild(div);
-    }
+    setTimeout(() => {
 
-    if (maskDiv && maskDiv.parentNode) {
-      maskDiv.parentNode.removeChild(maskDiv);
-    }
+      ReactDOM.unmountComponentAtNode(div);
+      ReactDOM.unmountComponentAtNode(maskDiv);
 
-    document.body.className = ""; // 取消body溢出隐藏
+      if (div && div.parentNode) {
+        div.parentNode.removeChild(div);
+      }
 
-    onClose(div); // 关闭popup回调
+      if (maskDiv && maskDiv.parentNode) {
+        maskDiv.parentNode.removeChild(maskDiv);
+      }
 
-    divs.pop();
-    maskDivs.pop();
+      document.body.className = ""; // 取消body溢出隐藏
+
+      onClose(div); // 关闭popup回调
+
+      divs.pop();
+      maskDivs.pop();
+
+    }, 150)
 
   }
-
-  // 样式类合并
-  let wrapCls = classnames(prefixCls, className, {
-    [`${prefixCls}-top`]: position === 'top',
-    [`${prefixCls}-right`]: position === 'right',
-    [`${prefixCls}-bottom`]: position === 'bottom',
-    [`${prefixCls}-left`]: position === 'left',
-  });
-
-  const kids = React.Children.map(children, insertSpace);
 
   divs.push(div);
   maskDivs.push(maskDiv);
 
-  ReactDOM.render(
-    <div
-      className={wrapCls}
-      {...restProps}
-    >
-      <div className="fam-popup-warp">
-        {
-          closable && <Icon type="cross" className="fam-popup-close-icon" onClick={close} />
-        }
-        {kids}
-      </div>
-    </div>,
-    div,
-  );
+  function handleReander(position: any) {
+
+    // 子节点
+    const kids = React.Children.map(children, insertSpace);
+
+    // 样式类合并
+    let wrapCls = classnames(prefixCls, className, {
+      [`${prefixCls}-${position}`]: position,
+      [`${prefixCls}-${position}-leave`]: position && closed
+    });
+
+    // 圆角
+    let borderRadius = '';
+
+    if (radius) {
+
+      let initRadius = (radius instanceof Number) ? radius : 15;
+
+      switch (position) {
+        case 'top':
+          borderRadius = `0 0 ${initRadius}px ${initRadius}px`;
+          break;
+        case 'bottom':
+          borderRadius = `${initRadius}px ${initRadius}px 0 0`;
+          break;
+        case 'right':
+          borderRadius = `${initRadius}px 0 0 ${initRadius}px`;
+          break;
+        case 'left':
+          borderRadius = `0 ${initRadius}px ${initRadius}px 0`;
+          break;
+        default:
+          borderRadius = `${initRadius}px ${initRadius}px 0 0`;
+          break;
+      }
+
+    }
+
+    ReactDOM.render(
+      <div
+        className={wrapCls}
+        {...restProps}
+        style={{borderRadius}}
+      >
+        <div className="fam-popup-warp">
+          {
+            closable && <Icon type="cross" className="fam-popup-close-icon" onClick={close} />
+          }
+          {kids}
+        </div>
+      </div>,
+      div,
+    );
+  }
+
+  handleReander(position);
 
   div.appendChild(maskDiv);
 
