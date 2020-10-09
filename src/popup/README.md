@@ -13,7 +13,7 @@ const handleVisiblePopup = (
   overlay: boolean = true,
 ) => {
 
-  Popup({
+  let res = Popup({
     visible,
     position,
     closable,
@@ -27,11 +27,17 @@ const handleVisiblePopup = (
           <Button block onClick={() => handleVisiblePopup(true, 'top')}>再弹一个顶部popup</Button>
         </div>
         <div className="d-demo-block">
-          <Button type="warning" block onClick={() => handleVisiblePopup(false, position)}>关闭</Button>
+          <Button type="warning" block onClick={() => handleClose()}>关闭</Button>
         </div>
       </div>
     ),
   });
+
+  const handleClose = () => {
+    if (res) {
+      res.close();
+    }
+  }
 
 }
 ```
