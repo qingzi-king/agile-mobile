@@ -11,6 +11,7 @@ const handleVisiblePopup = (
   closable: boolean = false,
   radius: boolean = false,
   overlay: boolean = true,
+  maskClosable: boolean = true,
 ) => {
 
   let res = Popup({
@@ -19,6 +20,7 @@ const handleVisiblePopup = (
     closable,
     radius,
     overlay,
+    maskClosable,
     onClose: handleOncallback,
     children: (
       <div>
