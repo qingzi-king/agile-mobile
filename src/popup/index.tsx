@@ -142,7 +142,7 @@ const Popup = (props: any) => {
     const kids = React.Children.map(children, insertSpace);
 
     // 样式类合并
-    let wrapCls = classnames(prefixCls, className, {
+    const wrapCls = classnames(prefixCls, className, {
       [`${prefixCls}-${position}`]: position,
       [`${prefixCls}-${position}-leave`]: position && closed
     });
