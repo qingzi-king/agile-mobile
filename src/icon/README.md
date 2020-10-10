@@ -22,9 +22,9 @@
 
 | 属性        | 说明           | 类型            | 默认值       |
 |------------|----------------|----------------|--------------|
-| type    |   内置 icon 名称（必填）   | String   |
-| size    |   图标大小    | xxs、xs、sm、md、lg  | `md` |
-| color   | 图标颜色  | Color | 'red' |
+| type    |   内置 icon 名称（必填） | String | - |
+| size    |   图标大小，值：xxs、xs、sm、md、lg | String | `md` |
+| color   | 图标颜色  | String | - |
 
 ## 其他
 
