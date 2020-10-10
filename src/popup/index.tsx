@@ -57,6 +57,7 @@ const Popup = (props: any) => {
     overlay = true,
     closable = false,
     radius = false,
+    maskClosable = true,
     children,
     onClose,
     ...restProps
@@ -90,7 +91,10 @@ const Popup = (props: any) => {
   // 蒙层是否显示
   maskDiv.className = overlay ? `${prefixCls}-mask` : `${prefixCls}-mask-overlay`;
   maskDiv.onclick = () => {
-    close();
+    // 蒙层允许关闭
+    if (maskClosable) {
+      close();
+    }
   }
 
   document.body.appendChild(div);
@@ -100,9 +104,11 @@ const Popup = (props: any) => {
 
     closed = true;
 
-    handleReander(position);
+    handleReander(position); // 重新渲染
+
     maskDiv.className += ` ${prefixCls}-mask-leave`;
 
+    // 延时销毁
     setTimeout(() => {
 
       ReactDOM.unmountComponentAtNode(div);

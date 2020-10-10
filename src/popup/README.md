@@ -11,6 +11,7 @@ const handleVisiblePopup = (
   closable: boolean = false,
   radius: boolean = false,
   overlay: boolean = true,
+  maskClosable: boolean = true,
 ) => {
 
   let res = Popup({
@@ -19,6 +20,7 @@ const handleVisiblePopup = (
     closable,
     radius,
     overlay,
+    maskClosable,
     onClose: handleOncallback,
     children: (
       <div>
@@ -53,7 +55,7 @@ const handleVisiblePopup = (
 | 属性        | 说明           | 类型            | 默认值       |
 |------------|----------------|----------------|--------------|
 | visible    |   是否显示   | Boolean   | `true` |
-| position    |   图标大小    | top、bottom、left、right  | `bottom` |
+| position    |   弹出方位 top、bottom、left、right | String  | `bottom` |
 | className   | 扩展样式类  | String | - |
 | style   | 扩展样式  | String | - |
 | maskClosable   | 蒙层是否允许关闭  | Boolean | `true` |
