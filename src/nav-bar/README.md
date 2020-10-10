@@ -71,9 +71,9 @@
 | mode   | 模式`light`、`dark` | String |  `dark` |
 | title   | 标题（可直接采用容器模式） | ReactNode |  - |
 | icon   | 出现在最左边的图标占位符  | ReactNode |  - |
-| leftContent   | 导航左边内容 | any | - |
-| rightContent   | 导航右边内容 | any | - |
-| onLeftClick   | 导航左边点击回调 | Function | - |
-| fixed   | 是否固定在顶部 | Boolean | `false` |
-| placeholder   | 固定在顶部时，是否在标签位置生成一个等高的占位元素 | Boolean | `false` |
-| zIndex   | 元素 z-index（fixed下有效） | Number | `1` |
+| leftContent   | 导航左边内容 | any | 无 |
+| rightContent   | 导航右边内容 | any | 无 |
+| onLeftClick   | 导航左边点击回调 | Function | 无 |
+| fixed   | 是否固定在顶部 | Boolean | false |
+| placeholder   | 固定在顶部时，是否在标签位置生成一个等高的占位元素 | Boolean | false |
+| zIndex   | 元素 z-index（fixed下有效） | Number | 1 |

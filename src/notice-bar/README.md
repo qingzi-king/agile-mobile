@@ -30,8 +30,8 @@
 ----|-----|------|------
 | mode    | 提示类型，可选 `closable`,`link`   | String |  -  |
 | icon    | 在开始位置设置图标  |  ReactNode | `<Icon type="close-o" size="xs" />`|
-| onClick | 点击关闭或者操作区域的回调函数        | () => void | -  |
+| onClick | 点击关闭或者操作区域的回调函数        | (): void | -  |
 | action | 用于替换操作 icon 的文案 | ReactElement | - |
 | multiLine | 是否支持多行显示 | Boolean | `false` |
 | animateLoop | 是否允许文本溢出滚动 | Boolean | `false` |
-| animateSpeed | 滚动速度`fast`、`normal`、`slow`、number（仅`animateLoop`存在有效） | String或Number | `normal` |
+| animateSpeed | 滚动速度`fast`、`normal`、`slow`、number（仅`animateLoop`存在有效） | String/Number | `normal` |

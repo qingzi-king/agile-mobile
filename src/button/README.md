@@ -43,14 +43,14 @@
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| type    | 按钮类型，可选值为`default`、`danger`、`primary`、`success`、`warning`、`link`或者不设  | string | - |
+| type    | 按钮类型，可选值为`default`、`danger`、`primary`、`success`、`warning`、`link`或者不设  |   string   |   -  |
 | size    | 按钮大小，可选值为`default`、`large`、`small` | string | `default`|
-| disabled   | 设置禁用  | boolean | `false`  |
-| onClick    | 点击按钮的点击回调函数 | (e: Object): void | - |
-| style    | 自定义样式 |   Object  | - |
-| inline     | 是否设置为行内按钮  | boolean | `false` |
-| hairline     | 是否细边框按钮  | boolean | `false` |
-| className |  样式类名 | string | - |
+| disabled   | 设置禁用  | boolean |    false  |
+| onClick    | 点击按钮的点击回调函数 | (e: Object): void |   无  |
+| style    | 自定义样式 |   Object  | 无 |
+| inline     | 是否设置为行内按钮  | boolean |   false  |
+| hairline     | 是否细边框按钮  | boolean |   false  |
+| className |  样式类名 | string | 无 |
 
 <!-- | activeStyle  | ~~点击反馈的自定义样式 (设为 false 时表示禁止点击反馈)~~ | {}/false | {} | -->
 <!-- | activeClassName  | ~~点击反馈的自定义类名~~ | string |  | -->

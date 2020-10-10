@@ -97,23 +97,23 @@ Modal.operation({
 | message    | 	提示信息（必填）  |   String 或 React.Element   |   -  |
 | actions    | 按钮组`{text, onPress, color}` | Array | -|
 | className |  样式类名 | String | - |
-| transparent |  蒙层透明度 | Boolean |  `false` |
-| maskClosable |  蒙层是否支持关闭 | Boolean | `true` |
-| direction |  按钮组方向`horizontal` `vertical` | String | `horizontal` |
+| transparent |  蒙层透明度 | Boolean | false |
+| maskClosable |  蒙层是否支持关闭 | Boolean | true |
+| direction |  按钮组方向`horizontal` `vertical` | String | horizontal |
 
 ### Modal.operation
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | actions    | 按钮组`{text, onPress, color}`（必填） | Array | -|
 | className |  样式类名 | String | - |
-| transparent |  蒙层透明度 | Boolean | `false` |
-| maskClosable |  蒙层是否支持关闭 | Boolean | `true` |
-| direction |  按钮组方向`horizontal` `vertical` | String | `vertical` |
+| transparent |  蒙层透明度 | Boolean | false |
+| maskClosable |  蒙层是否支持关闭 | Boolean | true |
+| direction |  按钮组方向`horizontal` `vertical` | String | vertical |
 
 ### action
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| text    | 文本（必填） | String 或 React.Element | - |
+| text    | 文本（必填） | String 或 React.Element | -|
 | onPress |  回调 | () => void | - |
-| color |  文字颜色 | String | `#000` |
-| disabled |  是否禁用 | Boolean | `false` |
+| color |  文字颜色 | String | #000 |
+| disabled |  是否禁用 | Boolean | false |

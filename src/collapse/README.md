@@ -67,7 +67,7 @@ const Demo = () => {
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| activeKeys | 当前激活面板的 | Array | `[]` |
+| activeKeys | 当前激活面板的 | Array | [] |
 | accordion | 是否为`手风琴`模式 | Boolean | `false`  |
 | onChange | 切换面板的回调 | (keys: string): void |  -  |
 
@@ -75,9 +75,9 @@ const Demo = () => {
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| key  | 对应 activeKeys | String | - |
-| title | 标题 | React.Element or String | - |
-| extra | 右侧值 | React.Element or String | - |
+| key  | 对应 activeKeys | String | 无 |
+| title | 标题 | React.Element or String | 无 |
+| extra | 右侧值 | React.Element or String | 无 |
 | disabled | 是否禁用面板 | Boolean | `false` |
 | showArrow | 是否显示右侧图标 | Boolean | `false` |
 
