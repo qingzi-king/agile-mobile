@@ -64,33 +64,33 @@
       font-size: @font-size-subhead;
       color: @color-text-paragraph;
       // min-height: 40 * @su;
-      background: radial-gradient(circle at top left, transparent 6px, @fill-base 0) top left,
-          radial-gradient(circle at top right, transparent 6px, @fill-base 0) top right,
-          radial-gradient(circle at bottom right, transparent 6px, @fill-base 0) bottom right,
-          radial-gradient(circle at bottom left, transparent 6px, @fill-base 0) bottom left;
+      background: radial-gradient(circle at top left, transparent 4px, @fill-base 0) top left,
+          radial-gradient(circle at top right, transparent 4px, @fill-base 0) top right,
+          radial-gradient(circle at bottom right, transparent 4px, @fill-base 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 4px, @fill-base 0) bottom left;
       background-size: 50% 60%;
       background-repeat: no-repeat;
 
       &:before {
         content: '';
         position: absolute;
-        left: 6px;
-        right: 6px;
+        left: 4px;
+        right: 4px;
         bottom: 0;
         border-bottom: 1px solid @border-color-base;
       }
       &:first-child {
         background: radial-gradient(circle at top left, transparent 0, @fill-base 0) top left,
           radial-gradient(circle at top right, transparent 0, @fill-base 0) top right,
-          radial-gradient(circle at bottom right, transparent 6px, @fill-base 0) bottom right,
-          radial-gradient(circle at bottom left, transparent 6px, @fill-base 0) bottom left;
+          radial-gradient(circle at bottom right, transparent 4px, @fill-base 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 4px, @fill-base 0) bottom left;
         background-size: 50% 60%;
         background-repeat: no-repeat;
       }
       &:last-child {
         border-bottom: 0;
-        background: radial-gradient(circle at top left, transparent 6px, @fill-base 0) top left,
-          radial-gradient(circle at top right, transparent 6px, @fill-base 0) top right,
+        background: radial-gradient(circle at top left, transparent 4px, @fill-base 0) top left,
+          radial-gradient(circle at top right, transparent 4px, @fill-base 0) top right,
           radial-gradient(circle at bottom right, transparent 0, @fill-base 0) bottom right,
           radial-gradient(circle at bottom left, transparent 0, @fill-base 0) bottom left;
         background-size: 50% 60%;
