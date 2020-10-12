@@ -43,6 +43,7 @@
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | className | 自定义样式类 | String | - |
+| corner | 多个元素间是否显示缺角 | Boolean | `false` |
 
 ### Card.Footer
 
