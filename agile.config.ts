@@ -164,7 +164,7 @@ export default {
           {
             key: "steps",
             name: "步骤条 Steps",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "tag",

@@ -60,7 +60,7 @@ class Button extends React.Component<ButtonProps, any> {
       className,
       prefixCls,
       type,
-      size,
+      size = 'default',
       inline,
       block,
       hairline,
