@@ -111,7 +111,8 @@
           "libraryName": "antd",
           "style": "css"
         }
-      ]
+      ],
+      "@babel/plugin-syntax-dynamic-import"
     ]
   },
   "dependencies": {
@@ -122,6 +123,7 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@dking/markdown-webpack-loader": "^0.0.1",
+    "@loadable/component": "^5.13.2",
     "@svgr/webpack": "^4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
