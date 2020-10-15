@@ -1,6 +1,6 @@
 {
   "name": "agile-mobile",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "author": "funenc.com",
   "description": "Mobile UI Components built on React",
   "main": "lib/index.js",
@@ -117,6 +117,7 @@
   },
   "dependencies": {
     "@types/classnames": "^2.2.10",
+    "embla-carousel": "^4.0.5",
     "rmc-feedback": "^2.0.0",
     "rmc-tabs": "^1.2.29"
   },
