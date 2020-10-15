@@ -144,7 +144,7 @@ export default {
           {
             key: "carousel",
             name: "走马灯 Carousel",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "list",
