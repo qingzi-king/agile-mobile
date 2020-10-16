@@ -1,4 +1,5 @@
-libs/**/demo/*.*
+es/**/demo/*.*
+lib/**/demo/*.*
 node_modules/
 /build
 /public
@@ -7,3 +8,9 @@ node_modules/
 /site
 /packages
 /scripts
+
+agile.config.ts
+tsconfig.json
+*.md
+.babelrc
+.fatherrc.ts
