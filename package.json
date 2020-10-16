@@ -9,7 +9,7 @@
   "scripts": {
     "start": "PORT=1314 node scripts/start.js",
     "build": "node scripts/build.js",
-    "compile": "NODE_ENV=production father-build && cp src/index.d.ts es/",
+    "compile": "./scripts/compile.sh",
     "test": "node scripts/test.js"
   },
   "keywords": [
@@ -100,21 +100,6 @@
       "jest-watch-typeahead/testname"
     ]
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ],
-    "plugins": [
-      [
-        "import",
-        {
-          "libraryName": "antd",
-          "style": "css"
-        }
-      ],
-      "@babel/plugin-syntax-dynamic-import"
-    ]
-  },
   "dependencies": {
     "@types/classnames": "^2.2.10",
     "embla-carousel": "^4.0.5",
@@ -123,6 +108,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/runtime": "^7.12.1",
     "@dking/markdown-webpack-loader": "^0.0.1",
     "@loadable/component": "^5.13.2",
     "@svgr/webpack": "^4.3.3",
