@@ -17,6 +17,7 @@ const Carousel: React.FC<CarouselPropsType> = props => {
     loop = false,
     indicator = true,
     axis = 'x',
+    indicatorColor = '#268AF0',
     afterChange,
     children,
     ...restProps
@@ -133,11 +134,11 @@ const Carousel: React.FC<CarouselPropsType> = props => {
           <div className={dotWrapCls}>
             {
               newChildren.map((slide: any, index: number) => {
-                let dotClassName = `${prefixCls}-dot-item`;
+                let slideStyle: React.CSSProperties = {};
                 if (selectedIndex === index) {
-                  dotClassName += ` ${prefixCls}-dot-active`;
+                  slideStyle.backgroundColor = indicatorColor;
                 }
-                return <div key={index} className={dotClassName} />
+                return <div key={index} className={`${prefixCls}-dot-item`} style={slideStyle} />
               })
             }
           </div>
