@@ -98,6 +98,7 @@ Modal.operation({
 | actions    | 按钮组`{text, onPress, color}` | Array | -|
 | className |  样式类名 | String | - |
 | transparent |  蒙层透明度 | Boolean |  `false` |
+| animation |  是否显示动画 | Boolean |  `true` |
 | maskClosable |  蒙层是否支持关闭 | Boolean | `true` |
 | direction |  按钮组方向`horizontal` `vertical` | String | `horizontal` |
 
@@ -107,6 +108,7 @@ Modal.operation({
 | actions    | 按钮组`{text, onPress, color}`（必填） | Array | -|
 | className |  样式类名 | String | - |
 | transparent |  蒙层透明度 | Boolean | `false` |
+| animation |  是否显示动画 | Boolean |  `true` |
 | maskClosable |  蒙层是否支持关闭 | Boolean | `true` |
 | direction |  按钮组方向`horizontal` `vertical` | String | `vertical` |
 
