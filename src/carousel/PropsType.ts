@@ -9,6 +9,7 @@ export interface CarouselPropsType {
   speed?: number;
   loop?: boolean;
   indicator?: boolean;
+  indicatorColor?: string;
   indicatorDirection?: string;
   children: any[];
   afterChange?: (e:object) => void;

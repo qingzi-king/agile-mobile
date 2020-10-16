@@ -47,7 +47,7 @@ const Demo = () => {
       <section className="d-demo-content">
         <h2 className="d-demo-block__title">基本</h2>
         <div className="d-demo-block">
-          <Carousel loop activeIndex={scrollIndex} afterChange={handleAfterChange}>
+          <Carousel indicatorColor='#FFF' loop activeIndex={scrollIndex} afterChange={handleAfterChange}>
             { slideDOM }
           </Carousel>
 
@@ -57,14 +57,14 @@ const Demo = () => {
         <h2 className="d-demo-block__title">垂直</h2>
         <div className="d-demo-block">
           {/* 垂直必须设置明确的height */}
-          <Carousel axis="y" loop style={{height:150}} activeIndex={1}>
+          <Carousel indicatorColor='#FFF' axis="y" loop style={{height:150}} activeIndex={1}>
             { slideDOM }
           </Carousel>
         </div>
 
         <h2 className="d-demo-block__title">循环播放</h2>
         <div className="d-demo-block">
-          <Carousel autoplay loop >
+          <Carousel indicatorColor='#FFF' autoplay loop >
             { slideDOM }
           </Carousel>
         </div>

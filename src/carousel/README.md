@@ -76,10 +76,13 @@ const slideDOM = handleSlides();
 | autoplay | 是否自动播放 | Boolean | `false` |
 | loop | 是否循环滑动 | Boolean | `false` |
 | indicator | 是否显示指示器 | Boolean | `true` |
-| indicatorDirection | 指示器显示位置（indicator为`true`有效），垂直滑动默认为`left`，否则默认为`bottom` | Boolean | `left`or`bottom` |
+| indicatorColor | 指示器背景色 | String | `#268AF0` |
+| indicatorDirection | 指示器显示位置（indicator为`true`有效），垂直滑动默认为`left`，否则默认为`bottom` | Boolean | `left`或`bottom` |
 | duration | 自动播放停留时间（毫秒） | Number | `2000` |
 | activeIndex | 激活的卡片，从0开始 | Number | `0` |
 | speed | 滑动速度，值越大过渡越快 | Number | `10` |
 | afterChange | 滑动后触发后回调 | (e:object) => void | - |
 
-注：当卡片垂直滑动时，必须指定明确的`height`。
+### 注意事项
+
+当卡片垂直滑动时，必须指定明确的`height`。
