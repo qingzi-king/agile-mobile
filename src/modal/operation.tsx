@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import * as ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { Button } from '../index';
+import { OperationPropsType } from './PropsType';
 
 export interface Action<T> {
   text: string;
@@ -10,12 +11,13 @@ export interface Action<T> {
   style?: T | string;
 }
 
-export default function alert(props: any) {
+export default function alert(props: OperationPropsType) {
 
   const {
     className,
     transparent = true,
     maskClosable = true,
+    animation = true,
     direction = 'vertical', // horizontal vertical
     actions = [{ text: '确定' }],
   } = props;
@@ -34,7 +36,7 @@ export default function alert(props: any) {
   document.body.className = "fam-overfow-hidden"; // 针对弹出层滚动击穿，body隐藏处理
 
   // 蒙层是否显示
-  maskDiv.className = transparent ? `fam-modal-mask` : `fam-modal-mask-transparent`;
+  maskDiv.className = transparent ? `fam-modal-mask-transparent` : `fam-modal-mask`;
   document.body.appendChild(maskDiv);
 
   // 蒙层允许关闭
@@ -64,12 +66,14 @@ export default function alert(props: any) {
 
   let mainWarpClassName = prefixCls;
 
-  if (!transparent) {
+  if (transparent) {
     mainWarpClassName += ' fam-modal-boxshadow';
   }
 
   // 样式类合并
-  const wrapCls = classnames(mainWarpClassName, className, {});
+  const wrapCls = classnames(mainWarpClassName, className, {
+    [`${prefixCls}-animation-in`]: animation
+  });
 
   const footer = actions.map((button: Action<React.CSSProperties>) => {
 
@@ -100,9 +104,7 @@ export default function alert(props: any) {
   });
 
   ReactDOM.render(
-    <div
-      className={wrapCls}
-    >
+    <div className={wrapCls}>
       <div className={ direction === 'vertical' ? 'fam-modal-footer-vertical' : 'fam-modal-footer-horizontal' }>
         {
           footer.map((action: any, key: number) => {

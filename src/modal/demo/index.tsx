@@ -173,7 +173,7 @@ const Demo = () => {
       <section className="d-demo-content">
         <h2 className="d-demo-block__title">基础</h2>
         <div className="d-demo-block">
-          <Button block className="d-demo-margin-block" onClick={handleVisiblePopup0}>提示弹框</Button>
+          <Button block className="d-demo-margin-block" onClick={handleVisiblePopup0}>提示弹框<small>（背景不可关闭）</small></Button>
           <Button block className="d-demo-margin-block" onClick={handleVisiblePopup1}>确认弹框</Button>
           <Button block className="d-demo-margin-block" onClick={handleVisiblePopup2}>提示弹框<small>（无标题）</small></Button>
           <Button block className="d-demo-margin-block" onClick={handleVisiblePopup3}>提示弹框<small>（超过2个按钮）</small></Button>
