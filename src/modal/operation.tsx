@@ -15,7 +15,7 @@ export default function alert(props: OperationPropsType) {
 
   const {
     className,
-    transparent = true,
+    transparent = false,
     maskClosable = true,
     animation = true,
     direction = 'vertical', // horizontal vertical

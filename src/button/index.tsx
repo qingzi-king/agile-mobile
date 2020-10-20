@@ -105,16 +105,14 @@ class Button extends React.Component<ButtonProps, any> {
       >
         <button
           className={wrapCls}
-          {...restProps}
           onClick={disabled || loading ? undefined : onClick}
           aria-disabled={disabled}
           style={{borderStyle: dashed ? 'dashed' : 'solid'}}
+          {...restProps}
         >
-          <span style={{display:'flex', flex: 1}}>
-            { !loading && icon && <Icon type={icon} size="inherit" /> }
-            { loading && <Icon type="loading" size="inherit" /> }
-            {kids}
-          </span>
+          { !loading && icon && <Icon type={icon} size="inherit" /> }
+          { loading && <Icon type="loading" size="inherit" /> }
+          {kids}
         </button>
       </TouchFeedback>
     );
