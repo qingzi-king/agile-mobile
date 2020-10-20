@@ -11,6 +11,7 @@ export interface ButtonProps extends ButtonPropsType {
   inline?: boolean;
   block?: boolean;
   hairline?: boolean;
+  dashed?: boolean;
   icon?: React.ReactNode;
   activeClassName?: string;
   activeStyle?: boolean | React.CSSProperties;
@@ -67,6 +68,7 @@ class Button extends React.Component<ButtonProps, any> {
       disabled,
       icon,
       loading,
+      dashed = false,
       activeStyle,
       activeClassName,
       onClick,
@@ -80,8 +82,9 @@ class Button extends React.Component<ButtonProps, any> {
       [`${prefixCls}-danger`]: type === 'danger',
       [`${prefixCls}-default`]: type === 'default',
       [`${prefixCls}-link`]: type === 'link',
-      [`${prefixCls}-small`]: size === 'small',
-      [`${prefixCls}-large`]: size === 'large',
+      [`${prefixCls}-size-small`]: size === 'small',
+      [`${prefixCls}-size-large`]: size === 'large',
+      [`${prefixCls}-size-default`]: size === 'default',
       [`${prefixCls}-inline`]: inline,
       [`${prefixCls}-block`]: block,
       [`${prefixCls}-hairline`]: hairline,
@@ -105,8 +108,13 @@ class Button extends React.Component<ButtonProps, any> {
           {...restProps}
           onClick={disabled || loading ? undefined : onClick}
           aria-disabled={disabled}
+          style={{borderStyle: dashed ? 'dashed' : 'solid'}}
         >
-          { loading && <Icon type="loading" size="inherit" />} {kids}
+          <span style={{display:'flex', flex: 1}}>
+            { !loading && icon && <Icon type={icon} size="inherit" /> }
+            { loading && <Icon type="loading" size="inherit" /> }
+            {kids}
+          </span>
         </button>
       </TouchFeedback>
     );

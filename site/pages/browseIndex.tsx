@@ -18,6 +18,7 @@ import TabsView from '../../src/tabs/demo/index';
 import CardView from '../../src/card/demo/index';
 import StepsView from '../../src/steps/demo/index';
 import CarouselView from '../../src/carousel/demo/index';
+import ResultView from '../../src/result/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -42,6 +43,7 @@ const docComponents: any = {
   'card': <CardView />,
   'steps': <StepsView />,
   'carousel': <CarouselView />,
+  'result': <ResultView />,
 };
 
 const BrowseIndex = (props: any) => {

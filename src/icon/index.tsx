@@ -7,18 +7,35 @@ export interface IconProps extends IconPropsType {
 }
 
 export default (props: any) => {
-  const { type, className, color, size = 'md', ...restProps } = props;
+  const {
+    type,
+    className,
+    color,
+    style,
+    size = 'md',
+    ...restProps
+  } = props;
 
   const wrapCls = classnames(
     className,
     'fam-icon',
     `fam-icon-${type}`,
     {
-      [`fam-icon-${size  || 'md'}`]: size && (size !== 'inherit')
+      [`fam-icon-${size}`]: size && (size !== 'inherit')
     }
   );
 
+  let newStyles: React.CSSProperties = { ...style };
+
+  if (color) {
+    newStyles.color = color;
+  }
+
+  if (typeof size === 'number') {
+    newStyles.fontSize = size;
+  }
+
   return (
-    <i className={wrapCls} style={{color: color}} {...(restProps as any)}></i>
+    <i className={wrapCls} style={newStyles} {...(restProps as any)}></i>
   );
 };
