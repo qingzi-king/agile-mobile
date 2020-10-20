@@ -34,7 +34,7 @@ const LogContent = () => {
           <Button className="d-demo-margin" type="success" inline hairline>Success Hairline</Button>
           <Button className="d-demo-margin" type="warning" inline hairline>Warning Hairline</Button>
           <Button className="d-demo-margin" type="danger" inline hairline>Danger Hairline</Button>
-          <Button className="d-demo-margin" type="default" inline hairline>Default Hairline</Button>
+          <Button className="d-demo-margin" type="default" inline hairline dashed>Default Hairline</Button>
           <Button className="d-demo-margin" type="link" inline hairline>Link Hairline</Button>
         </div>
 

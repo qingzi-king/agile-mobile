@@ -115,11 +115,11 @@ export default {
             name: "标签页 Tabs",
             disabled: false,
           },
-          {
-            key: "drawer",
-            name: "抽屉 Drawer",
-            disabled: true,
-          }
+          // {
+          //   key: "drawer",
+          //   name: "抽屉 Drawer",
+          //   disabled: true,
+          // }
         ]
       },
       {
@@ -154,7 +154,7 @@ export default {
           {
             key: "notify",
             name: "消息通知 Notify",
-            disabled: false,
+            disabled: true,
           },
           {
             key: "notice-bar",
@@ -172,9 +172,9 @@ export default {
             disabled: false,
           },
           {
-            key: "empty",
-            name: "空状态 Empty",
-            disabled: true,
+            key: "result",
+            name: "结果反馈 Result",
+            disabled: false,
           }
         ]
       },

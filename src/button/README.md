@@ -50,6 +50,7 @@
 | style    | 自定义样式 |   Object  | - |
 | inline     | 是否设置为行内按钮  | boolean | `false` |
 | hairline     | 是否细边框按钮  | boolean | `false` |
+| dashed     | `hairline`存在时，边框是否虚线  | boolean | `false` |
 | className |  样式类名 | string | - |
 
 <!-- | activeStyle  | ~~点击反馈的自定义样式 (设为 false 时表示禁止点击反馈)~~ | {}/false | {} | -->

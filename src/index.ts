@@ -33,3 +33,4 @@ export { default as Tabs } from './tabs/index';
 export { default as Card } from './card/index';
 export { default as Steps } from './steps/index';
 export { default as Carousel } from './carousel/index';
+export { default as Result } from './result/index';
