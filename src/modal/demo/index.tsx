@@ -153,7 +153,7 @@ const Demo = () => {
           }
         },
         {
-          text: <span style={{color: 'violet'}}>按钮3</span>,
+          text: <span style={{color: '#fa541c'}}>按钮3<small>（自定义样式）</small></span>,
           color: 'red',
           onPress: () => {
             console.log('点击了按钮3');
