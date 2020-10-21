@@ -24,7 +24,7 @@
 ### 结果反馈
 ```tsx
 <Result
-  title="成功反馈"
+  title="成功状态"
   message="这是内容"
   imgType="result_svg_success"
 />

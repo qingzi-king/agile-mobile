@@ -59,6 +59,7 @@ class Button extends React.Component<ButtonProps, any> {
     const {
       children,
       className,
+      style,
       prefixCls,
       type,
       size = 'default',
@@ -107,12 +108,14 @@ class Button extends React.Component<ButtonProps, any> {
           className={wrapCls}
           onClick={disabled || loading ? undefined : onClick}
           aria-disabled={disabled}
-          style={{borderStyle: dashed ? 'dashed' : 'solid'}}
+          style={{ ...style, borderStyle: dashed ? 'dashed' : 'solid'}}
           {...restProps}
         >
-          { !loading && icon && <Icon type={icon} size="inherit" /> }
-          { loading && <Icon type="loading" size="inherit" /> }
-          {kids}
+          <div className={`${prefixCls}-content`}>
+            { !loading && icon && <Icon type={icon} size="inherit" /> }
+            { loading && <Icon type="loading" size="inherit" /> }
+            {kids}
+          </div>
         </button>
       </TouchFeedback>
     );
