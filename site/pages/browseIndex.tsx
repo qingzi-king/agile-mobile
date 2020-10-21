@@ -19,6 +19,7 @@ import CardView from '../../src/card/demo/index';
 import StepsView from '../../src/steps/demo/index';
 import CarouselView from '../../src/carousel/demo/index';
 import ResultView from '../../src/result/demo/index';
+import RadioView from '../../src/radio/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -44,6 +45,7 @@ const docComponents: any = {
   'steps': <StepsView />,
   'carousel': <CarouselView />,
   'result': <ResultView />,
+  'radio': <RadioView />,
 };
 
 const BrowseIndex = (props: any) => {
