@@ -16,7 +16,7 @@
 ```
 
 ### 基础按钮
- `notice` `setting` `persons` `department` `home` `notice` `ellipsis` `offline` `abnormal` `loading` `success` `cross` `plus` `time-o` `search-o` `refresh-o` `close` `check-o` `close-o` `check` `forbidden-o` `forbidden` `info` `info-o` `like-o` `like` `star-o` `star` `arrow-up` `arrow-left` `arrow-down` `arrow-right` `turning-left` `turning-right` `turning-up` `turning-down`
+ `notice` `setting` `persons` `department` `home` `notice` `ellipsis` `offline` `abnormal` `loading` `success` `cross` `plus` `time-o` `search-o` `refresh-o` `close` `check-o` `close-o` `check` `forbidden-o` `forbidden` `info` `info-o` `like-o` `like` `star-o` `star` `arrow-up` `arrow-left` `arrow-down` `arrow-right` `turning-left` `turning-right` `turning-up` `turning-down` `circle`
 
 ## API
 

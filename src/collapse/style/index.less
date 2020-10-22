@@ -120,9 +120,10 @@
   }
 
   &-icon-up {
-    .@{collapsePrefixCls}-item-header-icon {
+    .fam-icon {
       transform: rotate(0deg);
       transition: transform .5s;
+      transform-origin: 50% 50%;
     }
     .@{collapsePrefixCls}-item-header:after {
       border: 0;
@@ -130,9 +131,10 @@
   }
   
   &-icon-down {
-    .@{collapsePrefixCls}-item-header-icon {
+    .fam-icon {
       transform: rotate(-180deg);
       transition: transform .3s;
+      transform-origin: 50% 50%;
     }
     .@{collapsePrefixCls}-item-header:after {
       border: 0;

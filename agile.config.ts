@@ -185,7 +185,7 @@ export default {
           {
             key: "radio",
             name: "单选框 Radio",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "check-box",

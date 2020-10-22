@@ -21,6 +21,7 @@ import CardUnit from './card/index';
 import StepsUnit from './steps/index';
 import CarouselUnit from './carousel/index';
 import ResultUnit from './result/index';
+import RadioUnit from './radio/index';
 
 declare var global: any;
 export interface IProps {
@@ -47,6 +48,7 @@ const docComponents: any = {
   'steps': <StepsUnit />,
   'carousel': <CarouselUnit />,
   'result': <ResultUnit />,
+  'radio': <RadioUnit />,
 }
 
 const Home = (props: any) => {

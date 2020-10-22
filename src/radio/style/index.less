@@ -1,0 +1,58 @@
+@import '../../style/default.less';
+@radioPrefixCls: fam-radio;
+@radioGroupPrefixCls: fam-radio-group;
+@radioListPrefixCls: fam-radio-list;
+
+.@{radioPrefixCls} {
+
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-right: 12px;
+  cursor: pointer;
+
+  &-label {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+
+  &-unchecked .fam-icon {
+    color: @color-text-caption;
+  }
+
+  &-checked .fam-icon {
+    color: @brand-primary;
+  }
+
+  &-icon-transparent {
+    opacity: 0;
+  }
+
+  &-disabled,
+  &-disabled .fam-icon {
+    color: @color-text-disabled;
+  }
+
+}
+
+.@{radioGroupPrefixCls} {
+
+  &-vertical {
+    .@{radioPrefixCls} {
+      display: flex;
+    }
+  }
+
+}
+
+.@{radioListPrefixCls} {
+
+  &:active {
+    background-color: @fill-body;
+  }
+
+  .@{radioPrefixCls} {
+    margin: 0;
+  }
+
+}

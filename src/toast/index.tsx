@@ -68,14 +68,14 @@ function notice(props: any) {
 
   ReactDOM.render(
     !!iconType ? (
-      <div className={prefixCls}>
-        <div className={`${wrapCls}`}>
-          <div className={`${prefixCls}-text ${prefixCls}-icon`}>
+      <div className={`${prefixCls} ${wrapCls}`}>
+        <div className={`${prefixCls}-text ${prefixCls}-card`}>
+          <div className={`${prefixCls}-icon`}>
             {/* 允许自定义图标 */
               icon ? icon : <Icon type={iconType} size="lg" />
             }
-            {content}
           </div>
+          <div className={`${prefixCls}-desc`}>{content}</div>
         </div>
       </div>
     ) : (
