@@ -177,6 +177,10 @@ const LogContent = () => {
               <Icon type="home" />
               <span>home</span>
             </div>
+            <div className="d-demo-grid__item">
+              <Icon type="circle" />
+              <span>circle</span>
+            </div>
           </div>
 
         </div>
