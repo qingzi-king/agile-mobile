@@ -63,30 +63,30 @@ yarn start
 
 ```
 .
-├── CHANGELOG.zh-CN.md        # 变更日志
+├── CHANGELOG.zh-CN.md          # 变更日志
 ├── LICENSE
 ├── README.md
-├── build                     # 文档构建目录
-├── config                    # 文档构建配置目录
+├── agile.config.ts
+├── build                       # 文档构建目录
+├── config                      # 文档构建配置目录
 ├── package.json
-├── public                    # 文档入口
-├── scripts                   # 文档构建启动配置
-├── src                       # 组件库源文件
-├── site                      # 文档内容目录
-│   ├── assets                # 文档资源目录
-│   ├── components            # 文档公共组件
+├── public                      # 文档入口
+├── scripts                     # 文档构建启动配置
+├── site                        # 文档内容目录
+│   ├── assets                  # 文档资源目录
+│   ├── components              # 文档公共组件
 │   ├── index.tsx
 │   ├── pages
-│   │   ├── app.tsx           # 文档应用入口组件
-│   │   ├── browseIndex.tsx   # 示例预览入口
-│   │   ├── change-log        # 变更日志页面
+│   │   ├── app.tsx             # 文档应用入口组件
+│   │   ├── browseIndex.tsx     # 示例预览入口
+│   │   ├── index.tsx
 │   │   ├── *
 │   ├── react-app-env.d.ts
-│   ├── routes                # 文档路由
+│   ├── routes                  # 文档路由
 │   ├── serviceWorker.ts
 │   └── setupTests.ts
-├── agile.config.ts           # 组件配置文件
-├── tsconfig.json
+├── src                         # 组件库源文件
+├── tsconfig.json               # 组件配置文件
 └── yarn.lock
 ```
 
@@ -99,10 +99,8 @@ yarn start
 │   │   ├── README.md       # 文档
 │   │   ├── index.tsx       # 入口
 │   │   ├── demo            # 示例
-│   │   │   ├── index.tsx
 │   │   └── style           # 样式
-│   │   │   ├── index.ts
-│   │   │   ├── index.less
+│   │   └── test            # 测试
 ```
 
 ## 示例
