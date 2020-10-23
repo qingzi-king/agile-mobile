@@ -1,13 +1,13 @@
 import classnames from 'classnames';
 import * as React from 'react';
-import { RadioListPropsType } from './PropsType';
+import { CheckBoxListPropsType } from './PropsType';
 import { List } from '../index';
-import Radio from './Item';
+import CheckBox from './Item';
 
 const ListItem = List.Item;
-const prefixCls = 'fam-radio-list';
+const prefixCls = 'fam-checkbox-list';
 
-const RadioListItem: React.FC<RadioListPropsType> = props => {
+const CheckBoxListItem: React.FC<CheckBoxListPropsType> = props => {
 
   const {
     className,
@@ -41,7 +41,7 @@ const RadioListItem: React.FC<RadioListPropsType> = props => {
     <ListItem
       {...otherProps}
       className={wrapCls}
-      extra={<Radio mode="list" transparent={!checked} checked={checked} />}
+      extra={<CheckBox mode="list" transparent={!checked} checked={checked} />}
       describe={describe}
       onClick={handleChange}
       disabled={disabled}
@@ -51,4 +51,4 @@ const RadioListItem: React.FC<RadioListPropsType> = props => {
   )
 }
 
-export default RadioListItem;
+export default CheckBoxListItem;

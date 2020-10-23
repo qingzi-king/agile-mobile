@@ -1,16 +1,16 @@
 import classnames from 'classnames';
 import * as React from 'react';
-import { RadioPropsType } from './PropsType';
+import { CheckBoxPropsType } from './PropsType';
 import { Icon } from '../index';
 
-const prefixCls = 'fam-radio';
+const prefixCls = 'fam-checkbox';
 
-const RadioItem: React.FC<RadioPropsType> = props => {
+const CheckBoxItem: React.FC<CheckBoxPropsType> = props => {
 
   const {
     className,
     value,
-    selectedValue,
+    selectedValues = [],
     activeColor,
     mode,
     disabled = false,
@@ -29,7 +29,7 @@ const RadioItem: React.FC<RadioPropsType> = props => {
 
   }
 
-  const isChecked = ((mode === 'list' && checked) || (value && selectedValue === value)) ? true : false;
+  const isChecked = ((mode === 'list' && checked) || selectedValues.find((v: any) => { return v === value })) ? true : false;
 
   const wrapCls = classnames(prefixCls, className, {
     [`${prefixCls}-checked`]: isChecked,
@@ -69,4 +69,4 @@ const RadioItem: React.FC<RadioPropsType> = props => {
   )
 }
 
-export default RadioItem;
+export default CheckBoxItem;

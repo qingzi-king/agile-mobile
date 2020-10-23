@@ -2,6 +2,9 @@
 @listPrefixCls: fam-list;
 
 .@{listPrefixCls} {
+
+  color: @color-text-base;
+
   &-header {
     padding: @v-spacing-lg @h-spacing-lg @v-spacing-md @h-spacing-lg;
     font-size: @font-size-base;
@@ -60,7 +63,6 @@
 
     .@{listPrefixCls}-title {
       flex: 1;
-      color: @color-text-base;
       padding: 7 * @su 0;
       font-size: @font-size-caption;
       line-height: 1.5;
@@ -98,6 +100,14 @@
       visibility: visible;
       transform: rotate(270deg);
     }
+  }
+
+  &-disabled,
+  &-disabled .@{listPrefixCls}-line .@{listPrefixCls}-title,
+  &-disabled .@{listPrefixCls}-line .@{listPrefixCls}-describe,
+  &-disabled .@{listPrefixCls}-line .fam-icon {
+    color: @color-text-disabled;
+    background-color: @fill-body;
   }
 
 }

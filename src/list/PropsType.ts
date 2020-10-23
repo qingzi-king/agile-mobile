@@ -10,6 +10,7 @@ export interface ListItemPropsTypes {
   className?: string;
   extra?: React.ReactNode;
   describe?: React.ReactNode;
+  disabled?: boolean;
   arrow?: 'horizontal' | 'down' | 'up' | 'empty' | '';
   wrap?: boolean;
   onClick?: (e: React.SyntheticEvent) => void;

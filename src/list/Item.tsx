@@ -15,11 +15,13 @@ const Item: React.FC<ListItemPropsTypes> = props => {
     extra,
     describe,
     arrow,
+    disabled = false,
     onClick
   } = props;
 
   const wrapCls = classnames(`${prefixCls}-item`, className, {
     [`${prefixCls}-item-active`]: arrow,
+    [`${prefixCls}-item-disabled`]: disabled,
   });
 
   const lineCls = classnames(`${prefixCls}-line`, {
@@ -33,7 +35,7 @@ const Item: React.FC<ListItemPropsTypes> = props => {
   });
 
   const handleOnClick = (ev: React.MouseEvent<HTMLDivElement>) => {
-    if (onClick) {
+    if (!disabled && onClick) {
       onClick(ev);
     }
   }
