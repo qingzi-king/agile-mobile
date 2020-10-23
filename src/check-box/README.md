@@ -1,31 +1,31 @@
 
-# Radio 单选框
+# CheckBox 复选框
 
 ## 代码示例
 
 ### 基本
 
 ```tsx
-<Radio.Group onChange={handleChange} value={3}>
-  <Radio.Item value={1}>单选框1</Radio.Item>
-  <Radio.Item value={2}>单选框2</Radio.Item>
-  <Radio.Item value={3}>单选框3</Radio.Item>
-</Radio.Group>
+<CheckBox.Group onChange={handleChange} values={[3]}>
+  <CheckBox.Item value={1}>单选框1</CheckBox.Item>
+  <CheckBox.Item value={2}>单选框2</CheckBox.Item>
+  <CheckBox.Item value={3}>单选框3</CheckBox.Item>
+</CheckBox.Group>
 ```
 
 ### 纵向、禁用、自定义颜色
 
 ```tsx
-<Radio.Group
+<CheckBox.Group
   onChange={handleChange}
   activeColor="red"
-  value={2}
+  values={[2]}
   direction="vertical"
 >
-  <Radio.Item value={1}>单选框1</Radio.Item>
-  <Radio.Item value={2} disabled>单选框2</Radio.Item>
-  <Radio.Item value={3}>单选框3</Radio.Item>
-</Radio.Group>
+  <CheckBox.Item value={1}>单选框1</CheckBox.Item>
+  <CheckBox.Item value={2} disabled>单选框2</CheckBox.Item>
+  <CheckBox.Item value={3}>单选框3</CheckBox.Item>
+</CheckBox.Group>
 ```
 
 ### 与List结合
@@ -35,13 +35,15 @@
   {
     datas.map((data, i) => {
     return (
-        <Radio.ListItem
+        <CheckBox.ListItem
           key={data.value}
-          checked={value === data.value} describe={data.describe}
+          checked={values.includes(data.value)}
+          describe={data.describe}
           onChange={() => handleListChange(data.value)}
+          disabled={data.disabled || false}
         >
           {data.label}
-        </Radio.ListItem>
+        </CheckBox.ListItem>
       )
     })
   }
@@ -61,18 +63,18 @@ const handleListChange = (e?: any) => {
 
 ## API
 
-### Radio.Group
+### CheckBox.Group
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | name    |   name  | String |   -  |
-| value |   初始值   | String or Number  | -  |
-| selectedValue |   选中值   | String or Number  | -  |
+| values |   初始值   | Array(String or Number)  | -  |
+| selectedValues |   选中值   | Array(String or Number)  | -  |
 | activeColor    |   选中时颜色  | String  | `#268AF0` |
 | disabled      |  禁用  | Boolean |  `false`  |
-| onChange    | change 事件触发的回调函数 | (e: Object): void |   -  |
+| onChange    | change 事件触发的回调函数 | (e: Object) => void |   -  |
 
-### Radio.ListItem
+### CheckBox.ListItem
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
@@ -80,21 +82,21 @@ const handleListChange = (e?: any) => {
 | checked |   是否选中  | Boolean  | `false` |
 | disabled  |  禁用  | Boolean |  `false`  |
 | describe  |  描述  | React.ReactNode |  -  |
-| onChange  | change 事件触发的回调函数 | (e: Object): void |   -  |
+| onChange  | change 事件触发的回调函数 | (e: Object) => void |   -  |
 
-基于`List.Item`对`Radio`进行封装,`List.Item`的`extra`属性固定传入`Radio`,其他属性和`List.Item`一致。
+基于`List.Item`对`CheckBox`进行封装,`List.Item`的`extra`属性固定传入`CheckBox`,其他属性和`List.Item`一致。
 
-### Radio.Item
+### CheckBox.Item
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
 | name    |   name  | String |   -  |
-| value |   初始值   | String or Number  | -  |
-| selectedValue |   选中值   | String or Number  | -  |
+| values |   初始值   | Array(String or Number)  | -  |
+| selectedValues |   选中值   | Array(String or Number)  | -  |
 | checked    |   是否选中，仅List模式有效与value不冲突  | Boolean  | `false` |
 | disabled      |  禁用  | Boolean |  `false`  |
 | shape      |  形状，可选`round `、`square` | String |  `round`  |
-| onChange    | change 事件触发的回调函数 | (e: Object): void |   -  |
+| onChange    | change 事件触发的回调函数 | (e: Object) => void |   -  |
 
 <!-- 
 transparent?: boolean;

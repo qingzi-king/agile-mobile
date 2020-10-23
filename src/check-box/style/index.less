@@ -1,9 +1,9 @@
 @import '../../style/default.less';
-@radioPrefixCls: fam-radio;
-@radioGroupPrefixCls: fam-radio-group;
-@radioListPrefixCls: fam-radio-list;
+@checkboxPrefixCls: fam-checkbox;
+@checkboxGroupPrefixCls: fam-checkbox-group;
+@checkboxListPrefixCls: fam-checkbox-list;
 
-.@{radioPrefixCls} {
+.@{checkboxPrefixCls} {
 
   display: inline-flex;
   align-items: center;
@@ -38,6 +38,11 @@
     opacity: 0;
   }
 
+  &-disabled,
+  &-disabled .fam-icon {
+    color: @color-text-disabled;
+  }
+
   &-disabled &-icon-round,
   &-disabled &-icon-square {
     background-color: #EEE;
@@ -61,23 +66,23 @@
 
 }
 
-.@{radioGroupPrefixCls} {
+.@{checkboxGroupPrefixCls} {
 
   &-vertical {
-    .@{radioPrefixCls} {
+    .@{checkboxPrefixCls} {
       display: flex;
     }
   }
 
 }
 
-.@{radioListPrefixCls} {
+.@{checkboxListPrefixCls} {
 
   &:active {
     background-color: @fill-body;
   }
 
-  .@{radioPrefixCls} {
+  .@{checkboxPrefixCls} {
     margin: 0;
   }
 

@@ -20,6 +20,7 @@ import StepsView from '../../src/steps/demo/index';
 import CarouselView from '../../src/carousel/demo/index';
 import ResultView from '../../src/result/demo/index';
 import RadioView from '../../src/radio/demo/index';
+import CheckBoxView from '../../src/check-box/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -46,6 +47,7 @@ const docComponents: any = {
   'carousel': <CarouselView />,
   'result': <ResultView />,
   'radio': <RadioView />,
+  'check-box': <CheckBoxView />,
 };
 
 const BrowseIndex = (props: any) => {

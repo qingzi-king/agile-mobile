@@ -190,7 +190,7 @@ export default {
           {
             key: "check-box",
             name: "复选框 CheckBox",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "date-picker",
