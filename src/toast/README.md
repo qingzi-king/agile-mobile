@@ -78,7 +78,8 @@ const handleShowToast = (type: string, content: any, duration?: number, position
 ----|-----|------|------
 | content    | 提示内容 | React.Element or String    | - |
 | duration   | 自动关闭的延时，单位毫秒 | number | `2000` |
-| onClose    | 关闭后回调 |  Function | - |
+| onClose    | 关闭后回调 |  () => void | - |
+| mask    | 是否显示蒙层 |  Boolean | `false` |
 | position    | 消息显示的位置，`center` `top` `bottom` |  String  | `center` |
 | icon    | 图标，`info`模式除外 |  React.Element  | - |
 
