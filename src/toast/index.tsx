@@ -1,25 +1,11 @@
 import classnames from 'classnames';
-import React from 'react';
+import React, { Fragment } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Icon } from '../index';
+import { ToastProps, IToastConfig } from './PropsType';
 
 const SHORT = 2000;
 let timer: any;
-
-interface ToastProps {
-  content: React.ReactNode;
-  duration?: number;
-  position?: any;
-  onClose?: () => void;
-  mask?: boolean;
-  icon?: React.ReactNode;
-};
-
-interface IToastConfig {
-  duration: number;
-  mask: boolean;
-  position: string;
-}
 
 const config: IToastConfig = {
   duration: SHORT,
@@ -56,34 +42,45 @@ function notice(props: any) {
     offline: 'offline',
     loading: 'loading',
   };
+
   const iconType = iconTypes[type];
 
   warpDOM = document.createElement('div');
 
   let wrapCls = classnames({
-    [`${prefixCls}-mask`]: mask,
     [`${prefixCls}-top`]: position === 'top',
     [`${prefixCls}-bottom`]: position === 'bottom',
-  })
+  });
+
+  let isShowMask = (mask || type === 'loading') ? true : false;
+console.log(isShowMask);
 
   ReactDOM.render(
-    !!iconType ? (
-      <div className={`${prefixCls} ${wrapCls}`}>
-        <div className={`${prefixCls}-text ${prefixCls}-card`}>
-          <div className={`${prefixCls}-icon`}>
-            {/* 允许自定义图标 */
-              icon ? icon : <Icon type={iconType} size="lg" />
-            }
-          </div>
-          <div className={`${prefixCls}-desc`}>{content}</div>
-        </div>
-      </div>
-    ) : (
-      <div className={prefixCls}>
-        <div className={wrapCls}>
-          <div className={`${prefixCls}-text`}>{content}</div>
-        </div>
-      </div>
+    (
+      <Fragment>
+        {
+          !!iconType ? (
+            <Fragment>
+              <div className={`${prefixCls} ${wrapCls}`}>
+                <div className={`${prefixCls}-text ${prefixCls}-card`}>
+                  <div className={`${prefixCls}-icon`}>
+                    {/* 允许自定义图标 */
+                      icon ? icon : <Icon type={iconType} size="lg" />
+                    }
+                  </div>
+                  <div className={`${prefixCls}-desc`}>{content}</div>
+                </div>
+              </div>
+            </Fragment>
+          ) : (
+            <div className={`${prefixCls} ${wrapCls} ${prefixCls}-text`}>
+              {content}
+            </div>)
+        }
+        {
+          isShowMask && <div className={`${prefixCls}-mask`}></div>
+        }
+      </Fragment>
     ),
     warpDOM
   );

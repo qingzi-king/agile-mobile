@@ -22,6 +22,19 @@ const Demo = () => {
       case 'loading':
         Toast.loading({ content, duration, onClose: cb });
         break;
+      case 'countBackwards':
+        let count = 3;
+        Toast.info({ content: `${content}：${count}秒`, duration, onClose: cb, mask: true });
+        let resInterval: any = setInterval(() => {
+          count--;
+
+          if (count < 1) {
+            return clearInterval(resInterval);
+          }
+
+          Toast.info({ content: `${content}：${count}秒`, duration, onClose: cb, mask: true });
+        }, (duration || 1000) - 50)
+        break;
       default:
         Toast.info({ content, duration, position, onClose: cb });
         // setTimeout(() => {
@@ -61,6 +74,7 @@ const Demo = () => {
         <div className="d-demo-block">
           <Button block className="d-demo-margin-block" onClick={() => handleToast('', '这是顶部展示！', 500, 'top')}>顶部</Button>
           <Button block className="d-demo-margin-block" onClick={() => handleToast('', '这是底部展示！', 500, 'bottom')}>底部</Button>
+          <Button block className="d-demo-margin-block" onClick={() => handleToast('countBackwards', '即将开奖', 1000, 'bottom')}>3秒倒数</Button>
         </div>
 
       </section>
