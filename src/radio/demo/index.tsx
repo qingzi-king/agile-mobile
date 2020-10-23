@@ -4,7 +4,7 @@ import '../style/index.less';
 
 const Demo = () => {
 
-  const [value, setValue] = useState(1);
+  const [value, setValue] = useState(0);
 
   const handleChange = (e?: any) => {
     console.log('已选择：', e);
@@ -17,7 +17,7 @@ const Demo = () => {
 
   const datas = [
     { value: 0, label: '这是标题1' },
-    { value: 1, label: '这是标题2', describe: '这是内容2的描述...' },
+    { value: 1, label: '这是标题2', describe: '此项已被禁用', disabled: true },
     { value: 2, label: '这是标题3' },
   ];
 
@@ -70,6 +70,7 @@ const Demo = () => {
                   key={data.value}
                   checked={value === data.value} describe={data.describe}
                   onChange={() => handleListChange(data.value)}
+                  disabled={data.disabled || false}
                 >
                   {data.label}
                 </Radio.ListItem>

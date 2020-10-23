@@ -44,6 +44,7 @@ const RadioListItem: React.FC<RadioListPropsType> = props => {
       extra={<Radio mode="list" transparent={!checked} checked={checked} />}
       describe={describe}
       onClick={handleChange}
+      disabled={disabled}
     >
       {children}
     </ListItem>

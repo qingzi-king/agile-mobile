@@ -83,7 +83,7 @@ const handleShowToast = (type: string, content: any, duration?: number, position
 | position    | 消息显示的位置，`center` `top` `bottom` |  String  | `center` |
 | icon    | 图标，`info`模式除外 |  React.Element  | - |
 
-> **注：**  duration = 0 时，toast 不会消失；隐藏 toast 需要手动调用 hide方法
+> **注：**  duration = 0 时，toast 不会消失；隐藏 toast 需要手动调用 hide方法。`loading`方法下自动添加`mask`。
 
 还提供了全局配置和全局销毁方法：
 

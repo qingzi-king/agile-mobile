@@ -10,7 +10,7 @@ let timer: any;
 const config: IToastConfig = {
   duration: SHORT,
   position: 'center',
-  mask: true,
+  mask: false,
 };
 
 const prefixCls = 'fam-toast';
