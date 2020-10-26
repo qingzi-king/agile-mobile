@@ -272,7 +272,7 @@ export default {
           {
             key: "skeleton",
             name: "骨架屏 Skeleton",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "sticky",

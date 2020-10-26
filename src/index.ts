@@ -36,3 +36,4 @@ export { default as Carousel } from './carousel/index';
 export { default as Result } from './result/index';
 export { default as Radio } from './radio/index';
 export { default as CheckBox } from './check-box/index';
+export { default as Skeleton } from './skeleton/index';
