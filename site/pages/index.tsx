@@ -23,6 +23,7 @@ import CarouselUnit from './carousel/index';
 import ResultUnit from './result/index';
 import RadioUnit from './radio/index';
 import CheckBoxUnit from './check-box/index';
+import SkeletonUnit from './skeleton/index';
 
 declare var global: any;
 export interface IProps {
@@ -51,6 +52,7 @@ const docComponents: any = {
   'result': <ResultUnit />,
   'radio': <RadioUnit />,
   'check-box': <CheckBoxUnit />,
+  'skeleton': <SkeletonUnit />,
 }
 
 const Home = (props: any) => {
