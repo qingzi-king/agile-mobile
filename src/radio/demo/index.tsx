@@ -40,9 +40,9 @@ const Demo = () => {
         <h2 className="d-demo-block__subtitle">方块</h2>
         <div className="d-demo-block">
           <Radio.Group onChange={handleChange} value={3}>
-            <Radio.Item value={1} shape="square">复选框1</Radio.Item>
-            <Radio.Item value={2} shape="square">复选框2</Radio.Item>
-            <Radio.Item value={3} shape="square">复选框3</Radio.Item>
+            <Radio.Item value={1} shape="square">单选框1</Radio.Item>
+            <Radio.Item value={2} shape="square">单选框2</Radio.Item>
+            <Radio.Item value={3} shape="square">单选框3</Radio.Item>
           </Radio.Group>
         </div>
         <h2 className="d-demo-block__title">纵向</h2>
