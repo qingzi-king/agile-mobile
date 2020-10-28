@@ -16,7 +16,7 @@ const Demo = () => {
 
     let hasValue = newSelectedValues.findIndex((v: any) => { return v === e });
 
-    if (hasValue != -1) {
+    if (hasValue !== -1) {
       // 移除
       newSelectedValues.splice(hasValue, 1)
     } else {

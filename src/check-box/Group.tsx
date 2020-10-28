@@ -15,7 +15,7 @@ const Group: React.FC<CheckBoxGroupPropsType> = props => {
     activeColor,
     direction = 'horizontal',
     disabled = false,
-    maxCheckedCounts = 10000,
+    // maxCheckedCounts = 10000,
     onChange,
     children
   } = props;
@@ -44,7 +44,7 @@ const Group: React.FC<CheckBoxGroupPropsType> = props => {
 
     let hasValue = newSelectedValues.findIndex((v: any) => { return v === value });
 
-    if (hasValue != -1) {
+    if (hasValue !== -1) {
       // 移除
       newSelectedValues.splice(hasValue, 1)
     } else {
