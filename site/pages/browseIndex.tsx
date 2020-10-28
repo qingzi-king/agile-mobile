@@ -22,6 +22,7 @@ import ResultView from '../../src/result/demo/index';
 import RadioView from '../../src/radio/demo/index';
 import CheckBoxView from '../../src/check-box/demo/index';
 import SkeletonView from '../../src/skeleton/demo/index';
+import StickyView from '../../src/sticky/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -50,6 +51,7 @@ const docComponents: any = {
   'radio': <RadioView />,
   'check-box': <CheckBoxView />,
   'skeleton': <SkeletonView />,
+  'sticky': <StickyView />,
 };
 
 const BrowseIndex = (props: any) => {
