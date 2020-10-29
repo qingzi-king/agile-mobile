@@ -287,7 +287,7 @@ export default {
           {
             key: "share-sheet",
             name: "分享面板 ShareSheet",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "index-bar",

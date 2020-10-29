@@ -23,6 +23,7 @@ import RadioView from '../../src/radio/demo/index';
 import CheckBoxView from '../../src/check-box/demo/index';
 import SkeletonView from '../../src/skeleton/demo/index';
 import StickyView from '../../src/sticky/demo/index';
+import ShareSheetView from '../../src/share-sheet/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -52,6 +53,7 @@ const docComponents: any = {
   'check-box': <CheckBoxView />,
   'skeleton': <SkeletonView />,
   'sticky': <StickyView />,
+  'share-sheet': <ShareSheetView />,
 };
 
 const BrowseIndex = (props: any) => {

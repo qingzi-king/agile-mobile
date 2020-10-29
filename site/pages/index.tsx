@@ -25,6 +25,7 @@ import RadioUnit from './radio/index';
 import CheckBoxUnit from './check-box/index';
 import SkeletonUnit from './skeleton/index';
 import StickyUnit from './sticky/index';
+import ShareSheetUnit from './share-sheet/index';
 
 declare var global: any;
 export interface IProps {
@@ -55,6 +56,7 @@ const docComponents: any = {
   'check-box': <CheckBoxUnit />,
   'skeleton': <SkeletonUnit />,
   'sticky': <StickyUnit />,
+  'share-sheet': <ShareSheetUnit />,
 }
 
 const Home = (props: any) => {

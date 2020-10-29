@@ -1,0 +1,94 @@
+@import '../../style/default.less';
+@shareSheetPrefixCls: fam-share-sheet;
+
+.@{shareSheetPrefixCls} {
+
+  background-color: #F7F7F7;
+
+  &-header {
+
+    text-align: center;
+    padding: 12px 15px 4px 15px;
+    user-select: none;
+    background-color: #FFF;
+
+  }
+
+  &-title {
+    margin-top: 8px;
+    color: #323233;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &-description {
+    display: block;
+    margin-top: 8px;
+    color: #969799;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &-options {
+    position: relative;
+    display: flex;
+    padding: 16px 8px;
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box;
+    user-select: none;
+    background-color: #FFF;
+
+    &::-webkit-scrollbar {
+      height: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 0;
+      height: 1px;
+      background-color: #F7F7F7;
+    }
+
+  }
+
+  &-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    cursor: pointer;
+    padding: 5px;;
+
+    &:active {
+      opacity: .6;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+    }
+
+  }
+
+  &-icon {
+    width: 48px;
+    height: 48px;
+    margin: 0 16px;
+    border-radius: 50%;
+  }
+
+  &-name {
+    margin-top: 8px;
+    padding: 0 4px;
+    color: #646566;
+    font-size: 12px;
+  }
+
+  &-footer {
+    margin-top: 5px;
+  }
+
+}

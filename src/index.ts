@@ -38,3 +38,4 @@ export { default as Radio } from './radio/index';
 export { default as CheckBox } from './check-box/index';
 export { default as Skeleton } from './skeleton/index';
 export { default as Sticky } from './sticky/index';
+export { default as ShareSheet } from './share-sheet/index';
