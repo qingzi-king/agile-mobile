@@ -8,7 +8,7 @@ const Demo = () => {
 
   const handleVisiblePopup = (
     visible: boolean = true,
-    position: string = 'bottom',
+    position: any = 'bottom',
     closable: boolean = false,
     overlay: boolean = true,
     radius: boolean = false,

@@ -2,20 +2,7 @@ import React from 'react';
 import * as ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import { Icon } from '../index';
-
-export interface PopupProps {
-  prefixCls?: string;
-  position?: 'top' | 'bottom' | 'left' | 'right';
-  className?: string;
-  maskClosable?: boolean;
-  closable?: boolean;
-  overlay?: boolean;
-  visible?: boolean;
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
-  radius?: number | boolean;
-  onClose?: () => void;
-}
+import { PopupPropsType } from './PropsType';
 
 export interface StyleType {
   minHeight?: React.CSSProperties;
@@ -47,13 +34,13 @@ function insertSpace(child: any) {
 
 const divs:any = [], maskDivs:any = []; // 存在多个popup（实际不建议多个popup叠加）
 
-const Popup = (props: any) => {
+const Popup = (props: PopupPropsType) => {
 
   const {
     prefixCls = 'fam-popup',
     className,
     position = 'bottom',
-    visible = false,
+    visible = true,
     overlay = true,
     closable = false,
     radius = false,
@@ -124,7 +111,9 @@ const Popup = (props: any) => {
 
       document.body.className = ""; // 取消body溢出隐藏
 
-      onClose(div); // 关闭popup回调
+      if (onClose) {
+        onClose(div); // 关闭popup回调
+      }
 
       divs.pop();
       maskDivs.pop();
