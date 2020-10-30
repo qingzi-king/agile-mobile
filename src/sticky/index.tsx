@@ -125,7 +125,7 @@ const Sticky: React.FC<StickyPropsType> = props => {
         handleDOMTransform(0);
 
       }
-      
+
       if (fatherToPagTop < 0) {
 
         setIsFixed(false);

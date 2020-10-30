@@ -125,7 +125,7 @@ const Stepper: React.FC<StepperPropsType> = props => {
       if (max !== 'infinity' && formatValue > max) {
         formatValue = max;
       }
-      
+
       if (min !== 'infinity' && formatValue < min) {
         formatValue = min;
       }

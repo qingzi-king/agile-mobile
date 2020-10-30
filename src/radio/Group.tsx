@@ -6,7 +6,7 @@ const prefixCls = 'fam-radio-group';
 
 const Group: React.FC<RadioGroupPropsType> = props => {
 
-  const [selectedValue, setSelectedValue] = useState();
+  const [selectedValue, setSelectedValue] = useState<any>();
 
   const {
     className,

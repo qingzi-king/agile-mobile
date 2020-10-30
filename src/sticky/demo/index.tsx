@@ -16,7 +16,7 @@ class Demo extends React.Component<any, any> {
   }
 
   render() {
-    
+
     return (
       <div className="d-phone-simulator__content">
         <div className="d-demo-nav">
