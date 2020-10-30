@@ -13,6 +13,10 @@ const Demo = () => {
       <section className="d-demo-content">
         <h2 className="d-demo-block__title">基本</h2>
         <div className="d-demo-block d-demo-bg-white">
+          <Skeleton row={2} title />
+        </div>
+        <h2 className="d-demo-block__title">圆角</h2>
+        <div className="d-demo-block d-demo-bg-white">
           <Skeleton row={2} avatar title round />
         </div>
         <h2 className="d-demo-block__title">多实例</h2>

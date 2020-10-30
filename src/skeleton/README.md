@@ -5,17 +5,19 @@
 
 ## 代码示例
 
+### 基本
 ```tsx
-<section className="d-demo-content">
-  <h2 className="d-demo-block__title">基本</h2>
-  <div className="d-demo-block d-demo-bg-white">
-    <Skeleton row={2} avatar title />
-  </div>
-  <h2 className="d-demo-block__title">多实例</h2>
-  <div className="d-demo-block d-demo-bg-white">
-    <Skeleton row={3} avatar title loops={2} />
-  </div>
-</section>
+<Skeleton row={2} title />
+```
+
+### 圆角
+```tsx
+<Skeleton row={3} avatar title round />
+```
+
+### 多实例
+```tsx
+<Skeleton row={3} avatar title loops={2} />
 ```
 
 ## API
