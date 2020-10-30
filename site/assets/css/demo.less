@@ -110,16 +110,17 @@
 .d-demo-grid {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 
   .d-demo-grid__item {
-    text-align: center;
     width: 25%;
+    text-align: center;
 
     span {
       display: block;
-      height: 36px;
-      margin: -4px 0 4px;
-      padding: 0 5px;
+      min-height: 30px;
+      margin: 4px 0;
       color: #646566;
       font-size: 12px;
       line-height: 18px;

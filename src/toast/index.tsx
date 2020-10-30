@@ -53,7 +53,6 @@ function notice(props: any) {
   });
 
   let isShowMask = (mask || type === 'loading') ? true : false;
-console.log(isShowMask);
 
   ReactDOM.render(
     (

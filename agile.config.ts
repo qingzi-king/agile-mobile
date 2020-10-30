@@ -230,7 +230,7 @@ export default {
           {
             key: "stepper",
             name: "步进器 Stepper",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "switch",
