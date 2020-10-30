@@ -183,6 +183,13 @@ const LogContent = () => {
             </div>
           </div>
 
+          <div className="d-demo-grid">
+            <div className="d-demo-grid__item">
+              <Icon type="reduce" />
+              <span>reduce</span>
+            </div>
+          </div>
+
         </div>
         
         <h2 className="d-demo-block__title">尺寸、颜色</h2>

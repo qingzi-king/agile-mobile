@@ -24,6 +24,7 @@ import CheckBoxView from '../../src/check-box/demo/index';
 import SkeletonView from '../../src/skeleton/demo/index';
 import StickyView from '../../src/sticky/demo/index';
 import ShareSheetView from '../../src/share-sheet/demo/index';
+import StepperView from '../../src/stepper/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -54,6 +55,7 @@ const docComponents: any = {
   'skeleton': <SkeletonView />,
   'sticky': <StickyView />,
   'share-sheet': <ShareSheetView />,
+  'stepper': <StepperView />,
 };
 
 const BrowseIndex = (props: any) => {
