@@ -30,3 +30,16 @@ export function formatNumber(value: string, allowDot?: boolean) {
 
   return value.replace(regExp, '');
 }
+
+// 精度值格式化
+export function formatNumberPrecision(value: number | string | undefined, decimal: number | undefined) {
+
+  let defaultValue = value;
+
+  if (decimal && defaultValue) {
+    defaultValue = Number(defaultValue).toFixed(decimal);
+  }
+
+  return defaultValue;
+
+}

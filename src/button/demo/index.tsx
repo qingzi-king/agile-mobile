@@ -16,6 +16,7 @@ const LogContent = () => {
           <Button className="d-demo-margin" type="success" inline>Success</Button>
           <Button className="d-demo-margin" type="warning" inline>Warning</Button>
           <Button className="d-demo-margin" type="danger" inline>Danger</Button>
+          <Button className="d-demo-margin" type="dark" inline>Dark</Button>
           <Button className="d-demo-margin" type="default" inline>Default</Button>
           <Button className="d-demo-margin" type="link" inline>Link</Button>
         </div>
@@ -34,6 +35,7 @@ const LogContent = () => {
           <Button className="d-demo-margin" type="success" inline hairline>Success Hairline</Button>
           <Button className="d-demo-margin" type="warning" inline hairline>Warning Hairline</Button>
           <Button className="d-demo-margin" type="danger" inline hairline>Danger Hairline</Button>
+          <Button className="d-demo-margin" type="dark" inline hairline>Dark Hairline</Button>
           <Button className="d-demo-margin" type="default" inline hairline dashed>Default Hairline</Button>
           <Button className="d-demo-margin" type="link" inline hairline>Link Hairline</Button>
         </div>
@@ -43,7 +45,8 @@ const LogContent = () => {
           <Button className="d-demo-margin" type="primary" inline disabled>Primary</Button>
           <Button className="d-demo-margin" type="success" inline disabled>Success</Button>
           <Button className="d-demo-margin" type="warning" inline disabled>Warning</Button>
-          <Button className="d-demo-margin" type="danger" inline disabled hairline>Danger</Button>
+          <Button className="d-demo-margin" type="danger" inline disabled >Danger</Button>
+          <Button className="d-demo-margin" type="dark" inline disabled >Dark</Button>
           <Button className="d-demo-margin" type="default" inline disabled>Default</Button>
           <Button className="d-demo-margin" inline loading>Default</Button>
         </div>

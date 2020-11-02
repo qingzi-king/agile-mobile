@@ -105,28 +105,44 @@ const Sticky: React.FC<StickyPropsType> = props => {
     } else {
       setIsFixed(true);
       _isFixed = true;
-      handleDOMTransform(0);
+      if (!container.current) handleDOMTransform(0);
     }
 
+    // 限定容器节点
     if (container.current) {
 
       const fatherNode = container.current;
       const resFather = fatherNode.getBoundingClientRect();
 
-      const fatherToPagTop = resFather.top + resFather.height;
-      const childToPagTop = resChild.top + resChild.height;
+      if (!resFather || !resChild) return;
 
-      if (fatherToPagTop >= 0 && childToPagTop > fatherToPagTop) {
+      const Fh = resFather.height; // 父节点高
+      const Ft = resFather.top;    // 父节点距顶部距离
+      const Fb = Fh + Ft;          // 父节点距底部距离
 
-        handleDOMTransform(resChild.height - fatherToPagTop);
+      const Ch = resChild.height; // 子节点高
+      // const Ct = resChild.top;    // 子节点距顶部距离
+      // const Cb = Ch + Ct;         // 子节点距底部距离
 
-      } else {
-
-        handleDOMTransform(0);
-
+      // 1、Fh > Ch => 父节点比子节点要高
+      if (Fh < Ch) {
+        return false;
       }
 
-      if (fatherToPagTop < 0) {
+      // 2、Ft ≥ 0 && Fb ≥ Ch 或 Ft < 0 && Fb > 0 && Fb > Ch => 完全显示
+
+      if ((Ft >= 0 && Fb >= Ch) || (Ft < 0 && Fb > 0 && Fb > Ch)) {
+        handleDOMTransform(0);
+      }
+
+      // 3、Ft < 0 && Fb > 0 && Fb ≤ Ch => 部分显示（底部对齐），traslate(0, -(Ch-Fb)px, 0)
+
+      if (Ft < 0 && Fb > 0 && Fb <= Ch) {
+        handleDOMTransform(Ch - Fb);
+      }
+
+      // 4、Fb < 0 不显示
+      if (Fb < 0) {
 
         setIsFixed(false);
 
@@ -134,7 +150,7 @@ const Sticky: React.FC<StickyPropsType> = props => {
 
     }
 
-    if (onScroll) {
+    if (_isFixed && onScroll) {
       onScroll({ rect: resChild, isFixed: _isFixed });
     }
 
