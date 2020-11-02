@@ -35,29 +35,24 @@ const handleShowToast = (type: string, content: any, duration?: number, position
 }
 ```
 
-### JSX
-```jsx
-<section className="d-demo-content">
-  <h2 className="d-demo-block__title">基础类型</h2>
-  <div className="d-demo-block">
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('', '这是纯文本提示！', 1000)}>仅文本</Button>
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('loading', '数据加载中', 1000)}>加载</Button>
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('success', '处理成功', 1000)}>成功</Button>
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('fail', '处理失败', 1000)}>失败</Button>
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('offline', '网络异常', 1000)}>网络异常</Button>
-  </div>
+### 基础类型
+```tsx
+<Button block onClick={() => handleToast('', '这是纯文本提示！', 1000)}>仅文本</Button>
+<Button block onClick={() => handleToast('loading', '数据加载中', 1000)}>加载</Button>
+<Button block onClick={() => handleToast('success', '处理成功', 1000)}>成功</Button>
+<Button block onClick={() => handleToast('fail', '处理失败', 1000)}>失败</Button>
+<Button block onClick={() => handleToast('offline', '网络异常', 1000)}>网络异常</Button>
+```
 
-  <h2 className="d-demo-block__title">自定义图标</h2>
-  <div className="d-demo-block">
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('customIcon', '自定义图标', 500)}>自定义图标</Button>
-  </div>
+### 自定义图标
+```tsx
+<Button block onClick={() => handleToast('customIcon', '自定义图标', 500)}>自定义图标</Button>
+```
 
-  <h2 className="d-demo-block__title">自定义位置</h2>
-  <div className="d-demo-block">
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('', '这是顶部展示！', 500, 'top')}>顶部</Button>
-    <Button block className="d-demo-margin-block" onClick={() => handleToast('', '这是底部展示！', 500, 'bottom')}>底部</Button>
-  </div>
-</section>
+### 自定义位置
+```tsx
+<Button block onClick={() => handleToast('', '这是顶部展示！', 500, 'top')}>顶部</Button>
+<Button block onClick={() => handleToast('', '这是底部展示！', 500, 'bottom')}>底部</Button>
 ```
 
 ## API

@@ -77,15 +77,8 @@ class Button extends React.Component<ButtonProps, any> {
     } = this.props;
 
     const wrapCls = classnames(prefixCls, className, {
-      [`${prefixCls}-primary`]: type === 'primary',
-      [`${prefixCls}-warning`]: type === 'warning',
-      [`${prefixCls}-success`]: type === 'success',
-      [`${prefixCls}-danger`]: type === 'danger',
-      [`${prefixCls}-default`]: type === 'default',
-      [`${prefixCls}-link`]: type === 'link',
-      [`${prefixCls}-size-small`]: size === 'small',
-      [`${prefixCls}-size-large`]: size === 'large',
-      [`${prefixCls}-size-default`]: size === 'default',
+      [`${prefixCls}-${type}`]: type,
+      [`${prefixCls}-size-${size}`]: size,
       [`${prefixCls}-inline`]: inline,
       [`${prefixCls}-block`]: block,
       [`${prefixCls}-hairline`]: hairline,
@@ -112,8 +105,8 @@ class Button extends React.Component<ButtonProps, any> {
           {...restProps}
         >
           <div className={`${prefixCls}-content`}>
-            { !loading && icon && <Icon type={icon} size="inherit" /> }
-            { loading && <Icon type="loading" size="inherit" /> }
+            { !loading && icon && <Icon type={icon} size="inherit" style={{marginRight:2}} /> }
+            { loading && <Icon type="loading" size="inherit" style={{marginRight:2}} /> }
             {kids}
           </div>
         </button>

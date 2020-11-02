@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import { StepperPropsType } from './PropsType';
 import { Button, Icon } from '../index';
-import { formatNumber } from '../utils/format/number';
+import { formatNumber, formatNumberPrecision } from '../utils/format/number';
 
 const prefixCls = 'fam-stepper';
 
@@ -21,13 +21,15 @@ const Stepper: React.FC<StepperPropsType> = props => {
     min = 'infinity',
     max = 'infinity',
     integer = false,
+    decimal,
     onChange
   } = props;
 
   const newReadOnly = readOnly || disabled;
+  let newDefaultValue: number | string | undefined = formatNumberPrecision(defaultValue, decimal);
 
   const [isMount, setIsMount] = useState<boolean>(false);
-  const [currentValue, setCurrentValue] = useState<any>(defaultValue);
+  const [currentValue, setCurrentValue] = useState<any>(newDefaultValue);
   const [minusDisabled, setMinusDisabled] = useState<boolean>(disableMinus || disabled);
   const [plusDisabled, setPlusDisabled] = useState<boolean>(disablePlus || disabled);
 
@@ -36,7 +38,7 @@ const Stepper: React.FC<StepperPropsType> = props => {
     setIsMount(true);
 
     if (isMount && onChange) {
-      onChange({ minusDisabled, plusDisabled, currentValue });
+      onChange({ minusDisabled, plusDisabled, currentValue: Number(currentValue) });
     }
 
     // eslint-disable-next-line
@@ -44,7 +46,7 @@ const Stepper: React.FC<StepperPropsType> = props => {
 
   useEffect(() => {
 
-    if (value) handleChangeInput(value);
+    if (value) handleChangeInput(value); // 实时获取外部控制值的变化
 
     // eslint-disable-next-line
   }, [value])
@@ -54,15 +56,15 @@ const Stepper: React.FC<StepperPropsType> = props => {
 
     if (minusDisabled) return;
 
-    let newCurrentValue = Number(currentValue) - step;
+    let newCurrentValue: number | string | undefined = Math.round((Number(currentValue) - step) * 100) / 100;
 
     let res: any = handleDisableButton(newCurrentValue);
 
     if (res.isMinusDisabled) return;
 
-    if (min !== 'infinity' && newCurrentValue < min) {
-      return;
-    }
+    if (min !== 'infinity' && newCurrentValue < min) return;
+
+    newCurrentValue = formatNumberPrecision(newCurrentValue, decimal);
 
     setCurrentValue(newCurrentValue);
 
@@ -73,15 +75,15 @@ const Stepper: React.FC<StepperPropsType> = props => {
 
     if (plusDisabled) return;
 
-    let newCurrentValue = Number(currentValue) + step;
+    let newCurrentValue: number | string | undefined = Math.round((Number(currentValue) + step) * 100) / 100;
 
     let res: any = handleDisableButton(newCurrentValue);
 
     if (res.isPlusDisabled) return;
 
-    if (max !== 'infinity' && newCurrentValue > max) {
-      return;
-    }
+    if (max !== 'infinity' && newCurrentValue > max) return;
+
+    newCurrentValue = formatNumberPrecision(newCurrentValue, decimal);
 
     setCurrentValue(newCurrentValue);
 
@@ -117,7 +119,7 @@ const Stepper: React.FC<StepperPropsType> = props => {
   // 输入值
   const handleChangeInput = (v: any) => {
 
-    let inputValue = v ? v : v.target.value;
+    let inputValue = v ? v.target.value : v;
     let formatValue: string | number = formatNumber(String(inputValue), !integer);
 
     if (formatValue) {
@@ -125,12 +127,24 @@ const Stepper: React.FC<StepperPropsType> = props => {
       if (max !== 'infinity' && formatValue > max) {
         formatValue = max;
       }
-      
+
       if (min !== 'infinity' && formatValue < min) {
         formatValue = min;
       }
 
     }
+
+    setCurrentValue(formatValue);
+
+  }
+
+  // 焦点失去时，重新格式化（浮点数情况，保留位数，change中处理会导致无法录入小数部分）
+  const handleBlurInput = (v: any) => {
+
+    let inputValue = v ? v.target.value : v;
+    let formatValue: string | number | undefined = formatNumber(String(inputValue), !integer);
+
+    formatValue = formatNumberPrecision(formatValue, decimal);
 
     setCurrentValue(formatValue);
 
@@ -164,6 +178,7 @@ const Stepper: React.FC<StepperPropsType> = props => {
         readOnly={newReadOnly}
         value={currentValue}
         onChange={handleChangeInput}
+        onBlur={handleBlurInput}
       />
       <Button
         className={plusWrapCls}

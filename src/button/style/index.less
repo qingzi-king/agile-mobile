@@ -132,6 +132,20 @@
     }
   }
 
+  &-dark {
+    background-color: @brand-dark;
+    border: 1px solid @brand-dark;
+    color: #FFF;
+    &.@{buttonPrefixCls}-active {
+      color: fade(@color-text-base-inverse, 60%);
+      background-color: @dark-button-fill-tap;
+    }
+    &.@{buttonPrefixCls}-disabled {
+      color: fade(@color-text-base-inverse, 60%);
+      opacity: 0.4;
+    }
+  }
+
   &-link {
     background-color: transparent;
     color: @brand-primary;
@@ -197,6 +211,19 @@
       }
       &.@{buttonPrefixCls}-disabled {
         color: fade(@brand-danger, 80%);
+        opacity: 0.4;
+      }
+    }
+
+    &.@{buttonPrefixCls}-dark {
+      color: @brand-dark;
+      border: 1px solid @brand-dark;
+
+      &.@{buttonPrefixCls}-active {
+        background-color: @default-button-fill-tap;
+      }
+      &.@{buttonPrefixCls}-disabled {
+        color: fade(@brand-dark, 80%);
         opacity: 0.4;
       }
     }

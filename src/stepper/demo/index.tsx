@@ -15,7 +15,7 @@ const Demo = () => {
         <div className="d-demo-nav__title">Stepper</div>
       </div>
       <section className="d-demo-content">
-        <h2 className="d-demo-block__title">整数</h2>
+        <h2 className="d-demo-block__title">仅支持整数<small>（输入框仅读）</small></h2>
         <div className="d-demo-block" style={{background:'#FFF',padding:15}}>
           <Stepper
             defaultValue={3}
@@ -26,13 +26,14 @@ const Demo = () => {
             onChange={handleChange}
           />
         </div>
-        <h2 className="d-demo-block__title">浮点数</h2>
+        <h2 className="d-demo-block__title">支持浮点数</h2>
         <div className="d-demo-block" style={{background:'#FFF',padding:15}}>
           <Stepper
             defaultValue={2}
             max={9}
             min={1}
-            step={2}
+            step={0.05}
+            decimal={2}
             onChange={handleChange}
           />
         </div>

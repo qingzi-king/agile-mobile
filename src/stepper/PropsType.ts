@@ -11,6 +11,7 @@ export interface StepperPropsType {
   step?: number;
   min?: number | string;
   max?: number | string;
+  decimal?: number;
   integer?: boolean;
   onChange?: (e: object) => void;
 }

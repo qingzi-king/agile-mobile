@@ -19,7 +19,8 @@
   defaultValue={2}
   max={9}
   min={1}
-  step={2}
+  step={0.05}
+  decimal={2}
 />
 ```
 
@@ -65,4 +66,5 @@
 | min | 最小值 | Number | - |
 | max | 最大值 | Number | - |
 | integer | 是否整形数 | Boolean | `false` |
+| decimal | 小数位数 | Number | - |
 | onChange | 值变化回调 | (e: object) => void | - |
