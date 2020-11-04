@@ -25,6 +25,7 @@ import SkeletonView from '../../src/skeleton/demo/index';
 import StickyView from '../../src/sticky/demo/index';
 import ShareSheetView from '../../src/share-sheet/demo/index';
 import StepperView from '../../src/stepper/demo/index';
+import SwitchView from '../../src/switch/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -56,6 +57,7 @@ const docComponents: any = {
   'sticky': <StickyView />,
   'share-sheet': <ShareSheetView />,
   'stepper': <StepperView />,
+  'switch': <SwitchView />,
 };
 
 const BrowseIndex = (props: any) => {

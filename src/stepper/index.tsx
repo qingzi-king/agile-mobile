@@ -35,11 +35,11 @@ const Stepper: React.FC<StepperPropsType> = props => {
 
   useEffect(() => {
 
-    setIsMount(true);
-
     if (isMount && onChange) {
       onChange({ minusDisabled, plusDisabled, currentValue: Number(currentValue) });
     }
+
+    setIsMount(true);
 
     // eslint-disable-next-line
   }, [currentValue, minusDisabled, plusDisabled])

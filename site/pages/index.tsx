@@ -27,6 +27,7 @@ import SkeletonUnit from './skeleton/index';
 import StickyUnit from './sticky/index';
 import ShareSheetUnit from './share-sheet/index';
 import StepperUnit from './stepper/index';
+import SwitchUnit from './switch/index';
 
 declare var global: any;
 export interface IProps {
@@ -59,6 +60,7 @@ const docComponents: any = {
   'sticky': <StickyUnit />,
   'share-sheet': <ShareSheetUnit />,
   'stepper': <StepperUnit />,
+  'switch': <SwitchUnit />,
 }
 
 const Home = (props: any) => {
