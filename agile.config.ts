@@ -235,7 +235,7 @@ export default {
           {
             key: "switch",
             name: "滑动开关 Switch",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "textarea",

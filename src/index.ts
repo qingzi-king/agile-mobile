@@ -40,3 +40,4 @@ export { default as Skeleton } from './skeleton/index';
 export { default as Sticky } from './sticky/index';
 export { default as ShareSheet } from './share-sheet/index';
 export { default as Stepper } from './stepper/index';
+export { default as Switch } from './switch/index';
