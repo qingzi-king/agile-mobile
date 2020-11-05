@@ -1,0 +1,126 @@
+@import '../../style/default.less';
+@passwordInputPrefixCls: fam-password-input;
+
+.@{passwordInputPrefixCls} {
+
+  position: relative;
+  user-select: none;
+
+  ul {
+
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+    }
+
+  }
+
+  &-list {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 20px;
+    line-height: 1.2;
+    background-color: #fff;
+
+    &::after {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      top: -50%;
+      right: -50%;
+      bottom: -50%;
+      left: -50%;
+      border: 0 solid #ebedf0;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      border-left-width: 1px;
+    }
+
+  }
+
+  &-underline-item {
+    position: relative;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex: 1;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 20px;
+    line-height: 1.2;
+
+    &::after {
+      position: absolute;
+      box-sizing: border-box;
+      content: ' ';
+      pointer-events: none;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 0 solid #c5cad5;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+      border-bottom-width: 2px;
+    }
+
+  }
+
+  &-maskicon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  &-focus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1px;
+    height: 40%;
+    background-color: #323233;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-animation: 1s fam-cursor-flicker infinite;
+    animation: 1s fam-cursor-flicker infinite;
+  }
+
+}
+
+@keyframes fam-cursor-flicker {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

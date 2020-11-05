@@ -41,3 +41,5 @@ export { default as Sticky } from './sticky/index';
 export { default as ShareSheet } from './share-sheet/index';
 export { default as Stepper } from './stepper/index';
 export { default as Switch } from './switch/index';
+export { default as NumberKeyboard } from './number-keyboard/index';
+export { default as PasswordInput } from './password-input/index';

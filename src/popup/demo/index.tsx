@@ -10,7 +10,7 @@ const Demo = () => {
     visible: boolean = true,
     position: any = 'bottom',
     closable: boolean = false,
-    overlay: boolean = true,
+    transparent: boolean = true,
     radius: boolean = false,
     maskClosable: boolean = true,
   ) => {
@@ -25,7 +25,7 @@ const Demo = () => {
       visible,
       position,
       closable,
-      overlay,
+      transparent,
       radius,
       maskClosable,
       onClose: handleOncallback,
@@ -76,9 +76,9 @@ const Demo = () => {
         </div>
         <h2 className="d-demo-block__title">扩展</h2>
         <div className="d-demo-block">
-          <Button block className="d-demo-margin-block" onClick={() => handleVisiblePopup(true, 'bottom', false, false)}>底部弹出<small>（背景透明）</small></Button>
+          <Button block className="d-demo-margin-block" onClick={() => handleVisiblePopup(true, 'bottom', false, false)}>底部弹出<small>（蒙层透明）</small></Button>
           <Button block className="d-demo-margin-block" onClick={() => handleVisiblePopup(true, 'bottom', false, true, true)}>底部弹出<small>（边缘圆角）</small></Button>
-          <Button block className="d-demo-margin-block" onClick={() => handleVisiblePopup(true, 'bottom', false, true, true, false)}>底部弹出<small>（背景不可关闭）</small></Button>
+          <Button block className="d-demo-margin-block" onClick={() => handleVisiblePopup(true, 'bottom', false, true, true, false)}>底部弹出<small>（蒙层不可关闭）</small></Button>
         </div>
       </section>
     </div>
