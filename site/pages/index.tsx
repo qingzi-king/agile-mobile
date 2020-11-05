@@ -28,6 +28,8 @@ import StickyUnit from './sticky/index';
 import ShareSheetUnit from './share-sheet/index';
 import StepperUnit from './stepper/index';
 import SwitchUnit from './switch/index';
+import NumberKeyboardView from './number-keyboard/index';
+import PasswordInputUnit from './password-input/index';
 
 declare var global: any;
 export interface IProps {
@@ -61,6 +63,8 @@ const docComponents: any = {
   'share-sheet': <ShareSheetUnit />,
   'stepper': <StepperUnit />,
   'switch': <SwitchUnit />,
+  'number-keyboard': <NumberKeyboardView />,
+  'password-input': <PasswordInputUnit />,
 }
 
 const Home = (props: any) => {

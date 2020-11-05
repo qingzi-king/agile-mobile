@@ -40,7 +40,7 @@ const Demo = () => {
       onCancel: handleOnCancel,
       onSelect: handleOnSelect,
       maskClosable: false,
-      overlay: false,
+      transparent: true,
       radius: true,
       options: [
         [

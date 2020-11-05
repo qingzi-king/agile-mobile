@@ -42,6 +42,7 @@ const Popup = (props: PopupPropsType) => {
     position = 'bottom',
     visible = true,
     overlay = true,
+    transparent = false,
     closable = false,
     radius = false,
     maskClosable = true,
@@ -72,16 +73,22 @@ const Popup = (props: PopupPropsType) => {
   const nodeID = `${prefixCls}-main-${timestamp}`;
 
   div.id = nodeID;
-
-  document.body.className = "fam-overfow-hidden"; // 针对弹出层滚动击穿，body隐藏处理
+console.log(transparent, overlay);
 
   // 蒙层是否显示
-  maskDiv.className = overlay ? `${prefixCls}-mask` : `${prefixCls}-mask-overlay`;
-  maskDiv.onclick = () => {
-    // 蒙层允许关闭
-    if (maskClosable) {
-      close();
+  if (overlay) {
+
+    document.body.className = "fam-overfow-hidden"; // 针对弹出层滚动击穿，body隐藏处理
+
+    // 蒙层是否透明
+    maskDiv.className = transparent ? `${prefixCls}-mask-transparent` : `${prefixCls}-mask`;
+    maskDiv.onclick = () => {
+      // 蒙层允许关闭
+      if (maskClosable) {
+        close();
+      }
     }
+
   }
 
   document.body.appendChild(div);

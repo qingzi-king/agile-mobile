@@ -29,56 +29,56 @@ export default {
         name: "基础",
         items: [
           {
-            key: "flex",
-            name: "栅格 Flex",
-            disabled: false,
-          },
-          {
             key: "button",
-            name: "按钮 Button",
+            name: "Button 按钮",
             disabled: false,
           },
           {
             key: "icon",
-            name: "图标 Icon",
+            name: "Icon 图标",
             disabled: false,
           },
+          {
+            key: "flex",
+            name: "Flex 栅格",
+            disabled: false,
+          }
         ]
       },
       {
         key: "g2",
         name: "反馈",
         items: [
-          {
-            key: "toast",
-            name: "轻提示 Toast",
-            disabled: false,
-          },
           // {
           //   key: "action-sheet",
-          //   name: "动作面板 ActionSheet",
+          //   name: "ActionSheet 动作面板",
+          //   disabled: true,
+          // },
+          // {
+          //   key: "activity-indicator",
+          //   name: "ActivityIndicator 活动指示器",
           //   disabled: true,
           // },
           {
-            key: "popup",
-            name: "弹出层 Popup",
+            key: "modal",
+            name: "Modal 对话框",
             disabled: false,
           },
           {
-            key: "modal",
-            name: "对话框 Modal",
+            key: "popup",
+            name: "Popup 弹出层",
             disabled: false,
           },
           {
             key: "progress",
-            name: "进度条 Progress",
+            name: "Progress 进度条",
             disabled: false,
           },
-          // {
-          //   key: "activity-indicator",
-          //   name: "活动指示器 ActivityIndicator",
-          //   disabled: true,
-          // },
+          {
+            key: "toast",
+            name: "Toast 轻提示",
+            disabled: false,
+          }
         ]
       },
       {
@@ -87,37 +87,37 @@ export default {
         items: [
           {
             key: "DropdownMenu",
-            name: "下拉菜单 DropdownMenu",
+            name: "DropdownMenu 下拉菜单",
             disabled: true,
           },
           {
             key: "nav-bar",
-            name: "导航栏 NavBar",
+            name: "NavBar 导航栏",
             disabled: false,
           },
           {
             key: "popover",
-            name: "气泡 Popover",
+            name: "Popover 气泡",
             disabled: true,
           },
           // {
           //   key: "segmented-control",
-          //   name: "分段器 SegmentedControl",
+          //   name: "SegmentedControl 分段器",
           //   disabled: true,
           // },
           {
             key: "tab-bar",
-            name: "标签栏 TabBar",
+            name: "TabBar 标签栏",
             disabled: false,
           },
           {
             key: "tabs",
-            name: "标签页 Tabs",
+            name: "Tabs 标签页",
             disabled: false,
           },
           // {
           //   key: "drawer",
-          //   name: "抽屉 Drawer",
+          //   name: "Drawer 抽屉",
           //   disabled: true,
           // }
         ]
@@ -127,53 +127,53 @@ export default {
         name: "展示",
         items: [
           {
-            key: "collapse",
-            name: "折叠 Collapse",
-            disabled: false,
-          },
-          {
             key: "badge",
-            name: "微标数 Badge",
+            name: "Badge 微标数",
             disabled: false,
           },
           {
             key: "card",
-            name: "卡片 Card",
+            name: "Card 卡片",
             disabled: false,
           },
           {
             key: "carousel",
-            name: "走马灯 Carousel",
+            name: "Carousel 走马灯",
+            disabled: false,
+          },
+          {
+            key: "collapse",
+            name: "Collapse 折叠",
             disabled: false,
           },
           {
             key: "list",
-            name: "列表 List",
+            name: "List 列表",
             disabled: false,
           },
           {
             key: "notify",
-            name: "消息通知 Notify",
+            name: "Notify 消息通知",
             disabled: true,
           },
           {
             key: "notice-bar",
-            name: "通告栏 NoticeBar",
+            name: "NoticeBar 通告栏",
             disabled: false,
           },
           {
             key: "steps",
-            name: "步骤条 Steps",
+            name: "Steps 步骤条",
             disabled: false,
           },
           {
             key: "tag",
-            name: "标签 Tag",
+            name: "Tag 标签",
             disabled: false,
           },
           {
             key: "result",
-            name: "结果反馈 Result",
+            name: "Result 结果反馈",
             disabled: false,
           }
         ]
@@ -183,68 +183,73 @@ export default {
         name: "数据录入",
         items: [
           {
-            key: "radio",
-            name: "单选框 Radio",
-            disabled: false,
-          },
-          {
             key: "check-box",
-            name: "复选框 CheckBox",
+            name: "CheckBox 复选框",
             disabled: false,
           },
           {
             key: "date-picker",
-            name: "日期选择 DatePicker",
+            name: "DatePicker 日期选择",
             disabled: true,
           },
           {
             key: "image-picker",
-            name: "图片选择 ImagePicker",
+            name: "ImagePicker 图片选择",
             disabled: true,
           },
           {
             key: "input",
-            name: "文本输入 Input",
+            name: "Input 文本输入",
             disabled: true,
+          },
+          {
+            key: "number-keyboard",
+            name: "NumberKeyboard 数字键盘",
+            disabled: false,
+          },
+          {
+            key: "password-input",
+            name: "PasswordInput 密码输入",
+            disabled: false,
           },
           {
             key: "picker",
-            name: "选择器 Picker",
+            name: "Picker 选择器",
             disabled: true,
           },
           {
+            key: "radio",
+            name: "Radio 单选框",
+            disabled: false,
+          },
+          {
             key: "range",
-            name: "区域选择 Range",
+            name: "Range 区域选择",
             disabled: true,
           },
           {
             key: "search-bar",
-            name: "搜索栏 SearchBar",
+            name: "SearchBar 搜索栏",
             disabled: true,
           },
           {
             key: "slider",
-            name: "滑动输入 Slider",
+            name: "Slider 滑动输入",
             disabled: true,
           },
           {
             key: "stepper",
-            name: "步进器 Stepper",
+            name: "Stepper 步进器",
             disabled: false,
           },
           {
             key: "switch",
-            name: "滑动开关 Switch",
+            name: "Switch 滑动开关",
             disabled: false,
           },
           {
             key: "textarea",
-            name: "多行输入 Textarea",
-            disabled: true,
-          },
-          {
-            key: "password-input",
-            name: "密码输入 PasswordInput",
+            name: "Textarea 多行输入",
             disabled: true,
           }
         ]
@@ -255,12 +260,12 @@ export default {
         items: [
           {
             key: "pull-to-refresh",
-            name: "拉动刷新 PullToRefresh",
+            name: "PullToRefresh 拉动刷新",
             disabled: true,
           },
           {
             key: "swipe-action",
-            name: "滑动手势 SwipeAction",
+            name: "SwipeAction 滑动手势",
             disabled: true,
           }
         ]
@@ -270,33 +275,33 @@ export default {
         name: "其他",
         items: [
           {
-            key: "skeleton",
-            name: "骨架屏 Skeleton",
-            disabled: false,
-          },
-          {
-            key: "sticky",
-            name: "粘性布局 Sticky",
-            disabled: false,
-          },
-          {
             key: "count-down",
-            name: "倒计时 CountDown",
+            name: "CountDown 倒计时",
+            disabled: true,
+          },
+          {
+            key: "index-bar",
+            name: "IndexBar 索引栏",
             disabled: true,
           },
           {
             key: "share-sheet",
-            name: "分享面板 ShareSheet",
+            name: "ShareSheet 分享面板",
             disabled: false,
           },
           {
-            key: "index-bar",
-            name: "索引栏 IndexBar",
-            disabled: true,
+            key: "skeleton",
+            name: "Skeleton 骨架屏",
+            disabled: false,
+          },
+          {
+            key: "sticky",
+            name: "Sticky 粘性布局",
+            disabled: false,
           },
           {
             key: "timeline",
-            name: "时间轴 Timeline",
+            name: "Timeline 时间轴",
             disabled: true,
           }
         ]

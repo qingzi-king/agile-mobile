@@ -26,6 +26,8 @@ import StickyView from '../../src/sticky/demo/index';
 import ShareSheetView from '../../src/share-sheet/demo/index';
 import StepperView from '../../src/stepper/demo/index';
 import SwitchView from '../../src/switch/demo/index';
+import NumberKeyboardView from '../../src/number-keyboard/demo/index';
+import PasswordInputView from '../../src/password-input/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -58,6 +60,8 @@ const docComponents: any = {
   'share-sheet': <ShareSheetView />,
   'stepper': <StepperView />,
   'switch': <SwitchView />,
+  'number-keyboard': <NumberKeyboardView />,
+  'password-input': <PasswordInputView />,
 };
 
 const BrowseIndex = (props: any) => {

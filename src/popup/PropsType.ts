@@ -5,6 +5,7 @@ export interface PopupPropsType {
   maskClosable?: boolean;
   closable?: boolean;
   overlay?: boolean;
+  transparent?: boolean;
   visible?: boolean;
   children?: React.ReactNode;
   style?: React.CSSProperties;

@@ -38,7 +38,7 @@ class MenuUnit extends Component<IProps> {
       <div>
         <Menu
           onClick={this.handleMenu}
-          selectedKeys={defaultSelectedKey}
+          selectedKeys={[defaultSelectedKey]}
           mode="inline"
         >
           {

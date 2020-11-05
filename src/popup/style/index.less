@@ -48,7 +48,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
     animation: famSlideUpIn ease .3s;
     &-leave {
       animation: famSlideUpOut ease .3s;
@@ -94,7 +94,7 @@
   }
 }
 
-.fam-popup-mask-overlay {
+.fam-popup-mask-transparent {
   &:extend(.fam-popup-mask);
   background-color: rgba(0, 0, 0, 0);
 }
@@ -128,10 +128,14 @@
 @keyframes famSlideUpIn {
   0% {
     transform: translate(0, 100%);
+    height: 0;
+    overflow: hidden;
   }
 
   100% {
     transform: translate(0, 0);
+    height: auto;
+    overflow: auto;
   }
 }
 
