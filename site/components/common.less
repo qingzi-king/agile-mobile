@@ -10,7 +10,8 @@
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: #FFF;
+  background-color: #021c3b;
+  color: #FFF;
   padding: 0;
 }
 
@@ -19,6 +20,7 @@
   height: 100%;
   padding-top: 66px;
   overflow-y: hidden;
+  background-color: #f7f8fa;
 }
 
 .d-header {
@@ -32,6 +34,12 @@
 
   .ant-menu-horizontal {
     border-bottom: 1px solid #FFF;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 
   .d-logo {
@@ -50,51 +58,40 @@
   .d-header-company {
     font-size: 12px;
     padding-left: 10px;
-    color: gray;
+    color: rgb(194, 192, 192);
   }
 }
 
 .d-header-left {
-  display: flex;
-  align-items: center;
-  flex-grow: 0;
-  flex-shrink: 1;
-  /* flex-basis: 50vw; */
-  flex-direction: row;
   z-index: 5;
   padding-right: 16px;
   cursor: pointer;
 }
 
-.d-header-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: right;
-  z-index: 4;
-}
-
 .d-header-nav {
-  margin-right: 30px;
-}
+  flex: 1;
+  text-align: right;
 
-.d-navigation-custom-avatar {
-  min-width: 150px;
-
-  .d-navigation-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-
-    .d-navigation-menu-item {
-      height: 40px;
-      line-height: 40px;
-
-      &:hover {
-        color: red;
-        cursor: pointer;
-      }
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    // background-color: #FFF;
+    &:hover {
+      transform: scale(1.3);
+      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   }
+
+  &-item {
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  &-version {
+    padding: 6px 15px;
+    background-color: #1e2f4e;
+    border-radius: 10px;
+  }
+
 }

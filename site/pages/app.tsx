@@ -18,7 +18,7 @@ const App = (props: any) => {
   }
 
   const content = (
-    <div style={{padding:10}}>
+    <div style={{padding:10,minHeight:200,minWidth:200}}>
       <img src="http://docs.antjob.ink/agile-ui/qr-demo.png" alt="demo-qr" width="200" />
     </div>
   );
@@ -34,6 +34,11 @@ const App = (props: any) => {
           <Popover content={content} trigger="click" placement="bottom">
             <Button type="dashed" size="large" style={{marginLeft:15}}>扫码预览</Button>
           </Popover>
+          <div style={{display:'inline-block',marginLeft:15}}>
+            <a href={global.G_GITHUB_URL} target="_blank" rel="noreferrer">
+              <img src="http://img.shields.io/github/stars/qingzi-king/agile-mobile?style=social" alt="github-star"/>
+            </a>
+          </div>
         </div>
       </div>
     </div>

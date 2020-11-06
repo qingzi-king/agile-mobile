@@ -1,7 +1,5 @@
 import * as React from "react";
 import { Component } from "react";
-// import { Link } from 'react-router-dom';
-// import { Menu } from 'antd';
 import './common.less';
 
 export interface IProps {
@@ -19,36 +17,25 @@ class Home extends Component<IProps> {
     this.props.history.push('/');
   }
   render() {
-
-    // let realKeys = global.G_SPLIT_URL_PARAMS();
-    // let defaultSelectedKeys = realKeys[0];
-
     return (
       <div className="d-header">
         <div className="d-header-left" onClick={this.handleJumpToRoot}>
-          <div className="d-logo">
+          <span className="d-logo">
             <img src="http://docs.antjob.ink/agile-ui/agile-logo.svg" alt="logo" />
-          </div>
-          <div className="d-header-title">{ global.G_SYSTEM_TITLE.name }</div>
-          <div className="d-header-company">{ global.G_SYSTEM_TITLE.subName }</div>
+          </span>
+          <span className="d-header-title">{ global.G_SYSTEM_TITLE.name }</span>
+          <span className="d-header-company">{ global.G_SYSTEM_TITLE.subName }</span>
         </div>
-        {/*
-        <div className="d-header-right">
-          <Menu
-            theme="light"
-            mode="horizontal"
-            defaultSelectedKeys={defaultSelectedKeys}
-            className="d-header-nav"
-          >
-            <Menu.Item key="quick-start">
-              <Link to="/quick-start">文档</Link>
-            </Menu.Item>
-            <Menu.Item key="demo" disabled>
-              <Link to="/demo">组件</Link>
-            </Menu.Item>
-          </Menu>
-        </div>
-        */}
+        <ul className="d-header-nav">
+          <li className="d-header-nav-item">
+            <a href={global.G_GITHUB_URL} target="_blank" rel="noreferrer">
+              <img src="http://docs.antjob.ink/agile-ui/icon/github-logo.svg" alt="github" />
+            </a>
+          </li>
+          <li className="d-header-nav-item">
+            <span className="d-header-nav-version">{global.G_VERSION}</span>
+          </li>
+        </ul>
       </div>
     );
   }

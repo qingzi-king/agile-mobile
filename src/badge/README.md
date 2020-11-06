@@ -5,19 +5,15 @@
 
 ## 代码示例
 ```jsx
-
 <Badge dot>
   <div style={{ width: '30px', height: '30px', background: '#ddd' }} />
 </Badge>
-
 <Badge text={'new'} />
-
 <Badge text="减" />
 <Badge text="惠" />
 <Badge text="免" />
 <Badge text="反" />
 <Badge text="hot" />
-
 <Badge text="券" style={{ padding: '0 3px', backgroundColor: '#f19736', borderRadius: 2 }} />
 <Badge text="有机" style={{ padding: '0 3px', backgroundColor: '#21b68a', borderRadius: 2 }} />
 <Badge text="自动升级"
