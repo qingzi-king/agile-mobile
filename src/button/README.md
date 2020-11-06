@@ -3,7 +3,7 @@
 
 ### 基础按钮
 
-通过 `type` 设置方按钮类型，可选值有 `default` `danger ` `primary ` `success ` `warning ` `link` 默认可不填。
+通过 `type` 设置方按钮类型，可选值有 `default` `danger ` `primary ` `success ` `warning ` `link` `dark` 默认可不填。
 
 可通过 `inline` 设置行内元素，不设置为块元素。
 
@@ -15,6 +15,7 @@
 <Button type="danger">Danger</Button>
 <Button type="default" inline>Default</Button>
 <Button type="link" inline>Link</Button>
+<Button type="dark" inline>Dark</Button>
 ```
 
 ### 尺寸、边框
@@ -43,7 +44,7 @@
 
 属性 | 说明 | 类型 | 默认值
 ----|-----|------|------
-| type    | 按钮类型，可选值为`default`、`danger`、`primary`、`success`、`warning`、`link`或者不设  | string | - |
+| type    | 按钮类型，可选值为`default`、`danger`、`primary`、`success`、`warning`、`link`、`dark`或者不设  | string | - |
 | size    | 按钮大小，可选值为`default`、`large`、`small` | string | `default`|
 | disabled   | 设置禁用  | boolean | `false`  |
 | onClick    | 点击按钮的点击回调函数 | (e: Object): void | - |
