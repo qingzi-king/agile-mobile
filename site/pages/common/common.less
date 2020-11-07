@@ -88,3 +88,39 @@
     margin: 16px auto 20px;
   }
 }
+
+.d-welcome-cut {
+  width: 40%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.d-welcome-cut__city {
+  width: 40%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  #r1,#r3,#r5,#r10 {
+    animation: cityOpacity 3s ease infinite;
+  }
+
+  #r2,#r4,#r6,#r9 {
+    animation: cityOpacity 2s ease infinite;
+  }
+
+}
+
+@keyframes cityOpacity
+{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

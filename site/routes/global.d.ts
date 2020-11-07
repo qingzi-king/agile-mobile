@@ -10,6 +10,8 @@ globalAny.G_SERVER_HOST = 'http://127.0.0.1:5000';
 
 globalAny.G_GITHUB_URL = 'https://github.com/qingzi-king/agile-mobile';
 
+globalAny.G_GITHUB_STAR_URL = globalAny.G_GITHUB_URL + '/stargazers/';
+
 globalAny.G_VERSION = '0.2.0';
 
 globalAny.G_SYSTEM_TITLE = {
