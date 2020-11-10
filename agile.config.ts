@@ -277,7 +277,7 @@ export default {
           {
             key: "count-down",
             name: "CountDown 倒计时",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "index-bar",

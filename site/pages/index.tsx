@@ -30,6 +30,7 @@ import StepperUnit from './stepper/index';
 import SwitchUnit from './switch/index';
 import NumberKeyboardView from './number-keyboard/index';
 import PasswordInputUnit from './password-input/index';
+import CountDownUnit from './count-down/index';
 
 declare var global: any;
 export interface IProps {
@@ -65,6 +66,7 @@ const docComponents: any = {
   'switch': <SwitchUnit />,
   'number-keyboard': <NumberKeyboardView />,
   'password-input': <PasswordInputUnit />,
+  'count-down': <CountDownUnit />,
 }
 
 const Home = (props: any) => {
