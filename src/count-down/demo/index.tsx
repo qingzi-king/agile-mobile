@@ -46,19 +46,16 @@ const Demo = () => {
       <section className="d-demo-content">
         <h2 className="d-demo-block__title">基本</h2>
         <div className="d-demo-block">
-          <CountDown time={targetTimestamp1} millisecond />
+          <CountDown time={targetTimestamp1} />
         </div>
         <h2 className="d-demo-block__title">自定义格式</h2>
         <div className="d-demo-block">
-          <CountDown time={targetTimestamp3} millisecond format="DD:HH:mm:ss:SSS" />
-        </div>
-        <div className="d-demo-block">
           <CountDown time={targetTimestamp3} millisecond format="DD 天 HH 时 mm 分 ss 秒 SSS 毫秒" />
         </div>
-        {/* <h2 className="d-demo-block__title">自定义样式</h2>
+        <h2 className="d-demo-block__title">自定义样式</h2>
         <div className="d-demo-block">
-          <CountDown time={targetTimestamp1} millisecond freeStyle />
-        </div> */}
+          <CountDown className="d-demo-count-down" time={targetTimestamp1} millisecond freeStyle format="HH:mm:ss:SSS" />
+        </div>
         <h2 className="d-demo-block__title">外部控制</h2>
         <div className="d-demo-block">
           <CountDown time={targetTimestamp2} autoStart={false} format="mm:ss:SSS" millisecond onFinish={handleFinish} childRef={childRef} />

@@ -1,7 +1,8 @@
 
 # Sticky 粘性布局
 
-## 基本
+## 代码示例
+### 基本
 
 ```tsx
 <Sticky>
@@ -11,7 +12,7 @@
 </Sticky>
 ```
 
-## 吸顶距离
+### 吸顶距离
 
 ```tsx
 <Sticky offsetTop={30}>
@@ -21,7 +22,7 @@
 </Sticky>
 ```
 
-## 指定容器
+### 指定容器
 
 ```tsx
 const thisRef = React.createRef();
