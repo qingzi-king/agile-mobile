@@ -26,33 +26,58 @@ const initTime = {
   milliseconds: 0,
 }
 
+const initTimeFormat = {
+  days: {
+    isExist: false,
+    separator: '',
+  },
+  hours: {
+    isExist: false,
+    separator: '',
+  },
+  minutes: {
+    isExist: false,
+    separator: '',
+  },
+  seconds: {
+    isExist: false,
+    separator: '',
+  },
+  milliseconds: {
+    isExist: false,
+    separator: '',
+  }
+}
+
 const ShareSheet: React.FC<CountDownPropsType> = props => {
 
   const {
     className,
     childRef,
     autoStart = true,
-    // freeStyle = false,
+    freeStyle = false,
     time = 0,
     format = 'HH:mm:ss',
     millisecond,
     onChange,
-    onFinish,
-    children
+    onFinish
   } = props;
 
   let reqID: any;
   let nowDate = new Date();
   let nowTimestamp = nowDate.getTime() + time; // 毫秒
 
+  const [timeFormat, setTimeFormat] = useState<any>(initTimeFormat); // 结束时间
   const [endTime, setEndTime] = useState<any>(nowTimestamp); // 结束时间
-  const [currentTime, setCurrentTime] = useState<any>(''); // 格式化后的
-  const [currentHashTime, setCurrentHashTime] = useState<any>(initTime); // 原始hash形式
+  const [currentTime, setCurrentTime] = useState<any>(''); // 格式化后的时间
+  const [currentHashTime, setCurrentHashTime] = useState<any>(initTime); // hash形式
   const [isContinue, setIsContinue] = useState(autoStart); // 是否继续执行
   const [remain, setRemain] = useState(time); // 时间差（毫秒）
 
+  // 初始化
   useEffect(() => {
-    handleTick(time); // 初始化
+    handleTick(time);
+    handleFormat(format);
     // eslint-disable-next-line
   }, [])
 
@@ -78,11 +103,8 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
   useImperativeHandle(childRef, () => ({
     start: () => {
 
-      let nowTimestamp = (new Date()).getTime();
-      let endTimestamp = nowTimestamp + remain; // 最近一次时间差，毫秒
-
       setIsContinue(true);
-      setEndTime(endTimestamp);
+      handleSetRealEndTime(remain); // 最近一次时间差，毫秒
 
     },
     pause: () => {
@@ -90,16 +112,64 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
     },
     reset: () => {
 
-      let nowTimestamp = (new Date()).getTime();
-      let endTimestamp = nowTimestamp + time; // 初始时间差，毫秒
-      let remain = Math.max(time, 0);
+      let currentRemain = Math.max(time, 0);
 
       setIsContinue(false);
-      setEndTime(endTimestamp);
-      handleTick(remain);
+      handleSetRealEndTime(time); // 初始时间差，毫秒
+      handleTick(currentRemain);
 
     }
   }));
+
+  // 拆分格式
+  const handleFormat = (_format: string) => {
+
+    let Obj = {
+      days: {
+        isExist: _format.includes('DD'),
+        separator: handleSeparator(_format, 'DD','HH'),
+      },
+      hours: {
+        isExist: _format.includes('HH'),
+        separator: handleSeparator(_format, 'HH', 'mm'),
+      },
+      minutes: {
+        isExist: _format.includes('mm'),
+        separator: handleSeparator(_format, 'mm','ss'),
+      },
+      seconds: {
+        isExist: _format.includes('ss'),
+        separator: handleSeparator(_format, 'ss','SS'),
+      },
+      milliseconds: {
+        isExist: _format.includes('SS'), // 至少2个字符
+        separator: '',
+      },
+    };
+
+    setTimeFormat(Obj);
+
+  }
+
+  // 提取分隔符
+  const handleSeparator = (_format: string, firstStr: string, secondStr: string) => {
+
+    if (!_format || !firstStr || !secondStr) return '';
+
+    let firstStrIndex = _format.indexOf(firstStr) + firstStr.length;
+    let secondStrIndex = _format.indexOf(secondStr);
+
+    if (secondStrIndex <= firstStrIndex ) return '';
+
+    return _format.substring(firstStrIndex, secondStrIndex);
+
+  }
+
+  // 设置真实的结束时间戳
+  const handleSetRealEndTime = (_time = 0) => {
+    let endTimestamp = (new Date()).getTime() + _time; // 初始时间差，毫秒
+    setEndTime(endTimestamp);
+  }
 
   // 拆分解析时间
   const parseTimeData = (_time: number) => {
@@ -122,13 +192,13 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
   const parseFormat = (_format: string, _parseTime: TimeData) => {
     const { days } = _parseTime;
     let { hours, minutes, seconds, milliseconds } = _parseTime;
-  
+
     if (_format.indexOf('DD') === -1) {
       hours += days * 24;
     } else {
       _format = _format.replace('DD', padZero(days));
     }
-  
+
     if (_format.indexOf('HH') === -1) {
       minutes += hours * 60;
     } else {
@@ -201,14 +271,37 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
 
   }
 
-  if (children) {
-
-    console.log(currentTime);
-    
+  if (freeStyle) {
 
     return (
       <div className={wrapCls} ref={childRef}>
-        {}
+        {
+          timeFormat.days.isExist && <span className={`${prefixCls}-block`}>{padZero(currentHashTime.days)}</span>
+        }
+        {
+          timeFormat.days.isExist && timeFormat.hours.isExist && <span className={`${prefixCls}-colon`}>{timeFormat.days.separator}</span>
+        }
+        {
+          timeFormat.hours.isExist && <span className={`${prefixCls}-block`}>{padZero(currentHashTime.hours)}</span>
+        }
+        {
+          timeFormat.hours.isExist && timeFormat.minutes.isExist && <span className={`${prefixCls}-colon`}>{timeFormat.hours.separator}</span>
+        }
+        {
+          timeFormat.minutes.isExist && <span className={`${prefixCls}-block`}>{padZero(currentHashTime.minutes)}</span>
+        }
+        {
+          timeFormat.minutes.isExist && timeFormat.seconds.isExist && <span className={`${prefixCls}-colon`}>{timeFormat.minutes.separator}</span>
+        }
+        {
+          timeFormat.seconds.isExist && <span className={`${prefixCls}-block`}>{padZero(currentHashTime.seconds)}</span>
+        }
+        {
+          timeFormat.seconds.isExist && timeFormat.milliseconds.isExist && <span className={`${prefixCls}-colon`}>{timeFormat.seconds.separator}</span>
+        }
+        {
+          timeFormat.milliseconds.isExist && <span className={`${prefixCls}-block`}>{padZero(currentHashTime.milliseconds, 3)}</span>
+        }
       </div>
     )
 
@@ -216,7 +309,7 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
 
   return (
     <div className={wrapCls} ref={childRef}>
-      { currentTime }<br/>
+      { currentTime }
     </div>
   )
 }
