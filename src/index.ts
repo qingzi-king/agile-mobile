@@ -44,3 +44,4 @@ export { default as Switch } from './switch/index';
 export { default as NumberKeyboard } from './number-keyboard/index';
 export { default as PasswordInput } from './password-input/index';
 export { default as CountDown } from './count-down/index';
+export { default as SearchBar } from './search-bar/index';

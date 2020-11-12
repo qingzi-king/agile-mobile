@@ -230,7 +230,7 @@ export default {
           {
             key: "search-bar",
             name: "SearchBar 搜索栏",
-            disabled: true,
+            disabled: false,
           },
           {
             key: "slider",
