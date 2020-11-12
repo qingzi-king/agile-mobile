@@ -29,6 +29,7 @@ import SwitchView from '../../src/switch/demo/index';
 import NumberKeyboardView from '../../src/number-keyboard/demo/index';
 import PasswordInputView from '../../src/password-input/demo/index';
 import CountDownView from '../../src/count-down/demo/index';
+import SearchBarView from '../../src/search-bar/demo/index';
 
 import { Button } from '../../src/index';
 
@@ -64,6 +65,7 @@ const docComponents: any = {
   'number-keyboard': <NumberKeyboardView />,
   'password-input': <PasswordInputView />,
   'count-down': <CountDownView />,
+  'search-bar': <SearchBarView />,
 };
 
 const BrowseIndex = (props: any) => {
