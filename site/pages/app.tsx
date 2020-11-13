@@ -59,8 +59,8 @@ const CutCitySVG = () => {
     <svg className="d-welcome-cut__city" viewBox="0 0 507 481" version="1.1" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <linearGradient x1="50%" y1="0.554523601%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#EFF3F6" stop-opacity="0" offset="0%"></stop>
-            <stop stop-color="#EFF3F6" stop-opacity="0.654092002" offset="100%"></stop>
+            <stop stopColor="#EFF3F6" stopOpacity="0" offset="0%"></stop>
+            <stop stopColor="#EFF3F6" stopOpacity="0.654092002" offset="100%"></stop>
         </linearGradient>
         <polygon id="path-2" points="281.668027 326.208309 402.689315 396.570317 474.778355 455.043637 0 455.043637 43.7607084 388.464289"></polygon>
         <filter x="-5.4%" y="-17.5%" width="110.7%" height="139.6%" filterUnits="objectBoundingBox" id="filter-3">
@@ -69,15 +69,15 @@ const CutCitySVG = () => {
             <feColorMatrix values="0 0 0 0 0.937254902   0 0 0 0 0.952941176   0 0 0 0 0.964705882  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
         <linearGradient x1="50%" y1="9.08650235%" x2="50%" y2="100%" id="linearGradient-4">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#E4EAEF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="0%"></stop>
+            <stop stopColor="#E4EAEF" offset="100%"></stop>
         </linearGradient>
         <filter x="-11.8%" y="-1.6%" width="123.5%" height="103.2%" filterUnits="objectBoundingBox" id="filter-5">
             <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
         </filter>
         <linearGradient x1="50%" y1="9.08650235%" x2="50%" y2="100%" id="linearGradient-6">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#E4EAEF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="0%"></stop>
+            <stop stopColor="#E4EAEF" offset="100%"></stop>
         </linearGradient>
         <filter x="-11.8%" y="-1.5%" width="123.5%" height="103.0%" filterUnits="objectBoundingBox" id="filter-7">
             <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
@@ -89,8 +89,8 @@ const CutCitySVG = () => {
             <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
         </filter>
         <linearGradient x1="50%" y1="9.08650235%" x2="50%" y2="100%" id="linearGradient-10">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#E4EAEF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="0%"></stop>
+            <stop stopColor="#E4EAEF" offset="100%"></stop>
         </linearGradient>
         <filter x="-11.8%" y="-3.2%" width="123.5%" height="106.5%" filterUnits="objectBoundingBox" id="filter-11">
             <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
@@ -99,34 +99,34 @@ const CutCitySVG = () => {
             <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
         </filter>
         <linearGradient x1="50%" y1="9.08650235%" x2="50%" y2="124.929606%" id="linearGradient-13">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#E4EAEF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="0%"></stop>
+            <stop stopColor="#E4EAEF" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="9.08650235%" x2="50%" y2="124.929606%" id="linearGradient-14">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#E4EAEF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="0%"></stop>
+            <stop stopColor="#E4EAEF" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="9.08650235%" x2="50%" y2="124.301748%" id="linearGradient-15">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#E4EAEF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="0%"></stop>
+            <stop stopColor="#E4EAEF" offset="100%"></stop>
         </linearGradient>
         <linearGradient x1="50%" y1="9.08650235%" x2="50%" y2="168.26808%" id="linearGradient-16">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#E4EAEF" offset="100%"></stop>
+            <stop stopColor="#FFFFFF" offset="0%"></stop>
+            <stop stopColor="#E4EAEF" offset="100%"></stop>
         </linearGradient>
     </defs>
-    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="页面-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <g id="city" transform="translate(16.145330, 6.791691)">
             <g id="b1">
-                <use fill="black" fill-opacity="1" filter="url(#filter-3)"><polygon id="path-2" points="281.668027 326.208309 402.689315 396.570317 474.778355 455.043637 0 455.043637 43.7607084 388.464289"></polygon></use>
-                <use fill="url(#linearGradient-1)" fill-rule="evenodd"><polygon id="path-2" points="281.668027 326.208309 402.689315 396.570317 474.778355 455.043637 0 455.043637 43.7607084 388.464289"></polygon></use>
+                <use fill="black" fillOpacity="1" filter="url(#filter-3)"><polygon id="path-2" points="281.668027 326.208309 402.689315 396.570317 474.778355 455.043637 0 455.043637 43.7607084 388.464289"></polygon></use>
+                <use fill="url(#linearGradient-1)" fillRule="evenodd"><polygon id="path-2" points="281.668027 326.208309 402.689315 396.570317 474.778355 455.043637 0 455.043637 43.7607084 388.464289"></polygon></use>
             </g>
-            <rect id="r3" stroke="#EFF3F6" fill-opacity="0.53" fill="url(#linearGradient-4)" filter="url(#filter-5)" x="101.35467" y="57.7083092" width="50" height="371"></rect>
-            <path d="M162.35467,0.862550161 L212.35467,29.4981474 L212.35467,400.708309 L162.35467,400.708309 L162.35467,0.862550161 Z" id="r4" stroke="#EFF3F6" fill-opacity="0.53" fill="url(#linearGradient-6)" filter="url(#filter-7)"></path>
-            <rect id="r5" stroke="#EFF3F6" fill-opacity="0.53" fill="url(#linearGradient-4)" filter="url(#filter-8)" x="233.35467" y="64.7083092" width="50" height="371"></rect>
-            <path d="M342.35467,78.1197227 L342.35467,448.708309 L292.35467,448.708309 L292.35467,109.975441 L342.35467,78.1197227 Z" id="r6" stroke="#EFF3F6" fill-opacity="0.53" fill="url(#linearGradient-4)" filter="url(#filter-9)"></path>
-            <rect id="r7" stroke="#EFF3F6" fill-opacity="0.53" fill="url(#linearGradient-10)" filter="url(#filter-11)" x="389.35467" y="250.708309" width="50" height="185"></rect>
-            <rect id="r8" stroke="#EFF3F6" fill-opacity="0.53" fill="url(#linearGradient-10)" filter="url(#filter-12)" x="351.35467" y="269.708309" width="50" height="185"></rect>
+            <rect id="r3" stroke="#EFF3F6" fillOpacity="0.53" fill="url(#linearGradient-4)" filter="url(#filter-5)" x="101.35467" y="57.7083092" width="50" height="371"></rect>
+            <path d="M162.35467,0.862550161 L212.35467,29.4981474 L212.35467,400.708309 L162.35467,400.708309 L162.35467,0.862550161 Z" id="r4" stroke="#EFF3F6" fillOpacity="0.53" fill="url(#linearGradient-6)" filter="url(#filter-7)"></path>
+            <rect id="r5" stroke="#EFF3F6" fillOpacity="0.53" fill="url(#linearGradient-4)" filter="url(#filter-8)" x="233.35467" y="64.7083092" width="50" height="371"></rect>
+            <path d="M342.35467,78.1197227 L342.35467,448.708309 L292.35467,448.708309 L292.35467,109.975441 L342.35467,78.1197227 Z" id="r6" stroke="#EFF3F6" fillOpacity="0.53" fill="url(#linearGradient-4)" filter="url(#filter-9)"></path>
+            <rect id="r7" stroke="#EFF3F6" fillOpacity="0.53" fill="url(#linearGradient-10)" filter="url(#filter-11)" x="389.35467" y="250.708309" width="50" height="185"></rect>
+            <rect id="r8" stroke="#EFF3F6" fillOpacity="0.53" fill="url(#linearGradient-10)" filter="url(#filter-12)" x="351.35467" y="269.708309" width="50" height="185"></rect>
             <rect id="r2" stroke="#EFF3F6" fill="url(#linearGradient-13)" x="47.85467" y="237.208309" width="53" height="199"></rect>
             <rect id="r1" stroke="#EFF3F6" fill="url(#linearGradient-14)" x="8.85466998" y="336.208309" width="51" height="119"></rect>
             <path d="M177.35467,111.245513 L177.35467,454.708309 L127.35467,454.708309 L127.35467,180.370187 L177.35467,111.245513 Z" id="r9" stroke="#EFF3F6" fill="url(#linearGradient-15)"></path>
