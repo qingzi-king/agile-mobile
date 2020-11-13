@@ -14,7 +14,9 @@
   <a href="http://mobile.agile.antjob.ink/">中文文档</a>
 </p>
 
+<p align="center">
 🚀 项目正在持续开发中，随时欢迎您加入并提交您首个PR💋。
+</p>
 
 ## 📦 安装
 
