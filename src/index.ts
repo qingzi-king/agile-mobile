@@ -45,3 +45,4 @@ export { default as NumberKeyboard } from './number-keyboard/index';
 export { default as PasswordInput } from './password-input/index';
 export { default as CountDown } from './count-down/index';
 export { default as SearchBar } from './search-bar/index';
+// export { default as Picker } from './picker/index';

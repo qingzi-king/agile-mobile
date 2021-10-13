@@ -1,6 +1,6 @@
 {
   "name": "agile-mobile",
-  "version": "0.2.1-rc.2",
+  "version": "0.2.1",
   "author": "funenc.com",
   "description": "Mobile UI Components built on React",
   "main": "lib/index.js",

@@ -60,6 +60,7 @@ const Demo = () => {
               () => NumberKeyboard(
                 {
                   disorder: true,
+                  maskClosable: false,
                   onDelete: handleDelete,
                   onConfirm: handleConfirm,
                   onChange: handleChange
@@ -78,6 +79,7 @@ const Demo = () => {
                 {
                   type: 'simple',
                   disorder: true,
+                  maskClosable: false,
                   onDelete: handleDelete,
                   onConfirm: handleConfirm,
                   onChange: handleChange
@@ -95,6 +97,7 @@ const Demo = () => {
               () => NumberKeyboard(
                 {
                   disorder: true,
+                  maskClosable: false,
                   textRender: keyFormatter,
                   onDelete: handleDelete,
                   onConfirm: handleConfirm,
@@ -114,6 +117,7 @@ const Demo = () => {
                 {
                   type: 'simple',
                   disorder: true,
+                  maskClosable: false,
                   header: (
                     <Fragment>
                       <img src="http://docs.antjob.ink/agile-ui/icon/safety.svg" style={{width:16}} alt="icon" />

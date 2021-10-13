@@ -27,6 +27,7 @@
       title="标题"
     />
   </div>
+
   <h2 className="d-demo-block__title">深色 dark</h2>
   <div style={{margin:'15px 0'}}>
     <NavBar
@@ -38,6 +39,7 @@
       title="标题"
     />
   </div>
+
   <h2 className="d-demo-block__title">浅色 light 容器</h2>
   <div style={{margin:'15px 0'}}>
     <NavBar
@@ -50,6 +52,7 @@
       title="标题..."
     >标题</NavBar>
   </div>
+
   <h2 className="d-demo-block__title">浅色 light fixed</h2>
   <div style={{margin:'15px 0'}}>
     <NavBar
