@@ -12,6 +12,8 @@ NODE_ENV=production && \
 father-build && \
 
 cp src/index.d.ts es/
+cat src/index.d.ts src/index.ts > es/index.d.ts
+cat src/index.d.ts src/index.ts > lib/index.d.ts
 
 if [ -f ".babelrc_bak" ];then
   mv .babelrc_bak .babelrc

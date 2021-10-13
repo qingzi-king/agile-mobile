@@ -12,7 +12,7 @@ globalAny.G_GITHUB_URL = 'https://github.com/qingzi-king/agile-mobile';
 
 globalAny.G_GITHUB_STAR_URL = globalAny.G_GITHUB_URL + '/stargazers/';
 
-globalAny.G_VERSION = '0.2.1';
+globalAny.G_VERSION = '0.2.2';
 
 globalAny.G_SYSTEM_TITLE = {
   name: 'Agile Mobile UI',

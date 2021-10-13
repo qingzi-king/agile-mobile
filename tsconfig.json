@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "baseUrl": "./",
+    "paths": {
+      "antd-mobile": ["src/index.ts"],
+      "antd-mobile/src/*": ["src/*"],
+    },
+    "target": "ES6",
     "lib": [
       "dom",
       "dom.iterable",
