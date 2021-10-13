@@ -73,7 +73,6 @@ const Popup = (props: PopupPropsType) => {
   const nodeID = `${prefixCls}-main-${timestamp}`;
 
   div.id = nodeID;
-console.log(transparent, overlay);
 
   // 蒙层是否显示
   if (overlay) {

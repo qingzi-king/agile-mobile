@@ -51,7 +51,7 @@ const Demo = () => {
             title="标题..."
           >标题</NavBar>
         </div>
-        <h2 className="d-demo-block__title">浅色 light fixed</h2>
+        {/* <h2 className="d-demo-block__title">浅色 light fixed</h2>
         <div style={{margin:'15px 0'}}>
           <NavBar
             mode="light"
@@ -59,7 +59,7 @@ const Demo = () => {
             fixed
             placeholder
           />
-        </div>
+        </div> */}
       </section>
     </div>
   );

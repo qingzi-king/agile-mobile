@@ -3,11 +3,20 @@
  * @Author: qingzi.wang
  * @Date: 2020-09-01 10:52:44
  -->
-# agile-mobile
 
-富能通移动端组件库（agile mobile） —— 一个灵活、精巧的react移动端组件库
+<p align="center">
+  <img width="300px" src="http://docs.antjob.ink/agile-ui/agile-logo.svg" />
+</p>
 
-[中文文档](http://mobile.agile.antjob.ink/)
+<p align="center">一个灵活、精巧的react移动端组件库</p>
+
+<p align="center">
+  <a href="http://mobile.agile.antjob.ink/">中文文档</a>
+</p>
+
+<p align="center">
+🚀 项目正在持续开发中，随时欢迎您加入并提交您首个PR💋。
+</p>
 
 ## 📦 安装
 

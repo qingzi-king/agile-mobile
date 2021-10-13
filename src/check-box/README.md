@@ -7,9 +7,9 @@
 
 ```tsx
 <CheckBox.Group onChange={handleChange} values={[3]}>
-  <CheckBox.Item value={1}>单选框1</CheckBox.Item>
-  <CheckBox.Item value={2}>单选框2</CheckBox.Item>
-  <CheckBox.Item value={3}>单选框3</CheckBox.Item>
+  <CheckBox.Item value={1}>复选框1</CheckBox.Item>
+  <CheckBox.Item value={2}>复选框2</CheckBox.Item>
+  <CheckBox.Item value={3}>复选框3</CheckBox.Item>
 </CheckBox.Group>
 ```
 
@@ -22,9 +22,9 @@
   values={[2]}
   direction="vertical"
 >
-  <CheckBox.Item value={1}>单选框1</CheckBox.Item>
-  <CheckBox.Item value={2} disabled>单选框2</CheckBox.Item>
-  <CheckBox.Item value={3}>单选框3</CheckBox.Item>
+  <CheckBox.Item value={1}>复选框1</CheckBox.Item>
+  <CheckBox.Item value={2} disabled>复选框2</CheckBox.Item>
+  <CheckBox.Item value={3}>复选框3</CheckBox.Item>
 </CheckBox.Group>
 ```
 

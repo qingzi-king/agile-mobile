@@ -12,11 +12,11 @@ globalAny.G_GITHUB_URL = 'https://github.com/qingzi-king/agile-mobile';
 
 globalAny.G_GITHUB_STAR_URL = globalAny.G_GITHUB_URL + '/stargazers/';
 
-globalAny.G_VERSION = '0.2.0';
+globalAny.G_VERSION = '0.2.1';
 
 globalAny.G_SYSTEM_TITLE = {
   name: 'Agile Mobile UI',
-  subName: '富能通重庆研发中心',
+  subName: '富能通重庆研发组',
   welcome: {
     name: 'Agile Mobile UI',
     describe: '一个基于 React 的移动端 UI 组件库',

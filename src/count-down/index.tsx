@@ -72,6 +72,7 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
   const [currentTime, setCurrentTime] = useState<any>(''); // 格式化后的时间
   const [currentHashTime, setCurrentHashTime] = useState<any>(initTime); // hash形式
   const [isContinue, setIsContinue] = useState(autoStart); // 是否继续执行
+  const [isExecuted, setIsExecuted] = useState(false); // 是否执行过
   const [remain, setRemain] = useState(time); // 时间差（毫秒）
 
   // 初始化
@@ -101,15 +102,18 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
   const wrapCls = classnames(prefixCls, className);
 
   useImperativeHandle(childRef, () => ({
+    // 开始
     start: () => {
 
       setIsContinue(true);
       handleSetRealEndTime(remain); // 最近一次时间差，毫秒
 
     },
+    // 暂停
     pause: () => {
       setIsContinue(false);
     },
+    // 重置
     reset: () => {
 
       let currentRemain = Math.max(time, 0);
@@ -204,19 +208,19 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
     } else {
       _format = _format.replace('HH', padZero(hours));
     }
-  
+
     if (_format.indexOf('mm') === -1) {
       seconds += minutes * 60;
     } else {
       _format = _format.replace('mm', padZero(minutes));
     }
-  
+
     if (_format.indexOf('ss') === -1) {
       milliseconds += seconds * 1000;
     } else {
       _format = _format.replace('ss', padZero(seconds));
     }
-  
+
     if (_format.indexOf('S') !== -1) {
       const ms = padZero(milliseconds, 3);
   
@@ -228,19 +232,22 @@ const ShareSheet: React.FC<CountDownPropsType> = props => {
         _format = _format.replace('S', ms.charAt(0));
       }
     }
-  
+
     return _format;
   }
 
+  // 时间控制
   const handleTime = () => {
 
     if (!isContinue) {
 
-      if (onFinish) onFinish(time);
+      if (isExecuted && onFinish) onFinish(time); // 执行过才出发终止回调（可能暂停，也可能终止，也可能重置）
 
       return;
 
     }
+
+    setIsExecuted(true);
 
     let nowDate = (new Date()).getTime();
 

@@ -76,6 +76,7 @@ const Demo = () => {
       title: '标题',
       message: '这里是内容区域...',
       direction: 'vertical',
+      maskClosable: false,
       actions: [
         {
           text: '按钮1',
@@ -97,7 +98,7 @@ const Demo = () => {
           onPress: () => {
             console.log('点击了按钮3');
             return new Promise((resolve) => {
-              setTimeout(resolve, 1000);
+              setTimeout(resolve, 2000);
             })
           }
         }
@@ -111,6 +112,7 @@ const Demo = () => {
     Modal.alert({
       title: '标题',
       message: '这里是内容区域...',
+      maskClosable: false,
       actions: [
         {
           text: '取消',
@@ -124,7 +126,7 @@ const Demo = () => {
           onPress: () => {
             console.log('点击了确认');
             return new Promise((resolve) => {
-              setTimeout(resolve, 1000);
+              setTimeout(resolve, 2000);
             })
           }
         }
@@ -146,7 +148,7 @@ const Demo = () => {
         },
         {
           text: <span>按钮2<small>（禁用）</small></span>,
-          color: 'red',
+          color: 'black',
           disabled: true,
           onPress: () => {
             console.log('点击了按钮2');
