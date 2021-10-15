@@ -6,6 +6,7 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "es/index.d.ts",
+  "sideEffects": true,
   "scripts": {
     "start": "PORT=1314 node scripts/start.js",
     "build": "node scripts/build.js",
