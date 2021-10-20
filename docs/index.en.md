@@ -1,5 +1,18 @@
-🔥🔥🔥 ~ 当前正在改版中，请不要使用，后续会出稳定版本V1 ~ 🔥🔥🔥
+---
+title: Agile Mobile UI - 富能通科技
+hero:
+  image: http://docs.antjob.ink/agile-ui/agile-logo.svg
+  title: Agile Mobile UI
+  desc: v1 beta (Funenc CQ R&D Team)
+  actions:
+    - text: 快速上手
+      link: /zh/guide/quick-start
+    - text: 组件列表
+      link: /zh/components
+footer: Open-source MIT Licensed | Copyright © 2020-present funenc.com<br />Powered by [funenc](http://funenc.com/)
+---
 
+🔥🔥🔥 ~ It is currently being revised. Please do not use it，stable version V1 on the way ~ 🔥🔥🔥
 
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/qingzi-king/agile-mobile)
 &nbsp;
@@ -13,7 +26,7 @@
 🚀 项目正在持续开发中，随时欢迎您加入并提交您首个PR💋。
 </p>
 
-## 📦 安装
+## 📦 Installation
 
 ```
 npm install agile-mobile
@@ -22,7 +35,7 @@ npm install agile-mobile
 yarn add agile-mobile
 ```
 
-## 🔨 使用
+## 🔨 Use
 
 ```
 import { Button } from 'agile-mobile';
@@ -34,7 +47,7 @@ const App = () => (
 );
 ```
 
-## 💄 开发环境
+## 💄 Develp
 
 包含本地文档及示例展示。
 
@@ -42,7 +55,7 @@ const App = () => (
 yarn start
 ```
 
-## 🧩 按需加载
+## 🧩 Loader
 `babel-plugin-import`是一个用于按需加载组件代码和样式的 babel 插件。新建`.babelrc`或直接在`package.json`中引入如下配置。
 ```
 {
@@ -62,7 +75,8 @@ yarn start
   ]
 }
 ```
-## 💍 目录结构
+
+## 💍 Directory Structure
 
 ```
 .
@@ -97,7 +111,7 @@ yarn start
 └── yarn.lock
 ```
 
-## 🥷 组件结构
+## 🥷 Component structure
 ```
 .
 ├── src

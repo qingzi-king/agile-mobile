@@ -1,3 +1,17 @@
+---
+title: Agile Mobile UI - 富能通科技
+hero:
+  image: http://docs.antjob.ink/agile-ui/agile-logo.svg
+  title: Agile Mobile UI
+  desc: v1 beta (富能通重庆研发组)
+  actions:
+    - text: 快速上手
+      link: /zh/guide/quick-start
+    - text: 组件列表
+      link: /zh/components
+footer: Open-source MIT Licensed | Copyright © 2020-present funenc.com<br />Powered by [funenc](http://funenc.com/)
+---
+
 🔥🔥🔥 ~ 当前正在改版中，请不要使用，后续会出稳定版本V1 ~ 🔥🔥🔥
 
 
@@ -62,6 +76,7 @@ yarn start
   ]
 }
 ```
+
 ## 💍 目录结构
 
 ```

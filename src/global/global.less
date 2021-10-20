@@ -1,0 +1,38 @@
+@import './theme.less';
+
+:root {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  color: var(--fam-color-text);
+  font-size: var(--fam-font-size);
+  font-family: var(--fam-font-family);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/********************* 以下为演示样式 **************************/
+
+.d-demo-content {
+  box-sizing: border-box;
+  min-height: calc(100vh - 56px);
+  padding: 20px 5px;
+  background-color: #f6f8fa;
+  overflow: auto;
+}
+
+.d-demo-block {
+  margin: 15px 0;
+}
+
+.d-demo-block__title {
+  margin: 0;
+  padding: 32px 12px 12px 8px;
+  color: rgba(69, 90, 100, 0.6);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+}
