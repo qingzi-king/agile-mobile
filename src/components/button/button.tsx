@@ -1,7 +1,6 @@
 import * as React from 'react'
 import classnames from 'classnames'
-import TouchFeedback from 'rmc-feedback'
-import Icon, { IconProps } from '../icon'
+import Icon from '../icon'
 
 export interface ButtonPropsType {
   type?: 'default' | 'primary' | 'warning' | 'success' | 'danger' | 'dark'
@@ -19,7 +18,6 @@ export interface ButtonProps extends ButtonPropsType {
   block?: boolean
   hairline?: boolean
   dashed?: boolean
-  iconType?: IconProps["type"]
   icon?: React.ReactNode
   activeClassName?: string
   activeStyle?: boolean | React.CSSProperties
@@ -77,7 +75,6 @@ class Button extends React.Component<ButtonProps, any> {
       fill,
       disabled,
       icon,
-      iconType,
       loading,
       dashed = false,
       activeStyle,
@@ -106,7 +103,7 @@ class Button extends React.Component<ButtonProps, any> {
         style={{ ...style, borderStyle: dashed ? 'dashed' : 'solid'}}
         {...restProps}
       >
-        { loading && !icon && <Icon type={iconType || 'loading'} size="xs" style={{marginRight:2}} /> }
+        { loading && !icon && <Icon.SpinOutline style={{marginRight:2}} /> }
         { icon && icon }
         {kids}
       </button>

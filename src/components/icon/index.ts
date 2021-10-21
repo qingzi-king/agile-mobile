@@ -1,5 +1,3 @@
 import './styles/icon.less'
-import Icon from './icon'
-export type { IconProps } from './icon'
-
+import * as Icon from './icon'
 export default Icon
