@@ -1,0 +1,72 @@
+@class-prefix-switch: ~'fam-switch';
+
+.@{class-prefix-switch} {
+
+  --width: 2em;
+  --height: 1em;
+  --node-size: 1em;
+  --size: 30px;
+
+  position: relative;
+  display: flex;
+  box-sizing: content-box;
+  width: var(--width);
+  height: var(--height);
+  font-size: var(--size);
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  align-items: center;
+
+  &-node {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 1em;
+    height: 1em;
+    background-color: #FFF;
+    border-radius: 100%;
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s cubic-bezier(0.3, 1.05, 0.4, 1.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-inner {
+    font-size: calc(var(--size) / 2);
+    margin-left: calc(var(--width) * 1.2);
+    color: #CCC;
+  }
+
+  &-on {
+
+    background-color: var(--fam-color-primary);
+
+    .@{class-prefix-switch}-node {
+      transform: translateX(calc(var(--width) - var(--node-size)));
+    }
+
+    .@{class-prefix-switch}-inner {
+      margin-left: calc(var(--width) / 3);
+      color: #FFF;
+    }
+
+  }
+
+  &-loading {
+    cursor: default;
+    svg {
+      font-size: calc(var(--size) / 2);
+    }
+  }
+
+  &-disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+
+}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Icon, ElasticBox } from 'agile-mobile'
+import { ElasticBox, Button, Icon } from 'agile-mobile'
 
 const DemoUnit = () => {
   return (
@@ -53,8 +53,8 @@ const DemoUnit = () => {
 
       <h2 className="d-demo-block__title">按钮块</h2>
       <ElasticBox wrap>
-        <Button size="default" type="danger" loading>Default</Button>
-        <Button type="success" icon={<Icon type="loading" size="xxs" />}>Default</Button>
+        <Button type="danger" size="default" disabled loading>加载中</Button>
+        <Button type="primary" icon={<Icon.HomeOutline style={{marginRight: 2}} />}>首页</Button>
       </ElasticBox>
     </section>
   );

@@ -1,17 +1,17 @@
 import React, { Component } from 'react'
-import { Button, Icon, ElasticBox } from 'agile-mobile'
+import { Button, ElasticBox } from 'agile-mobile'
 
 const DemoUnit = () => {
   return (
     <section className="d-demo-content">
       <h2 className="d-demo-block__title">基础类型</h2>
       <ElasticBox wrap>
-        <Button type="default">1</Button>
-        <Button type="default">2</Button>
-        <Button type="default">3</Button>
-        <Button type="default">4</Button>
-        <Button type="default">5</Button>
-        <Button type="default">6</Button>
+        <Button>1</Button>
+        <Button>2</Button>
+        <Button>3</Button>
+        <Button>4</Button>
+        <Button>5</Button>
+        <Button>6</Button>
       </ElasticBox>
 
       <h2 className="d-demo-block__title">换行</h2>

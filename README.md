@@ -1,15 +1,22 @@
+<p align="center">
+  <img width="300px" src="http://docs.antjob.ink/agile-ui/agile-logo.svg" />
+</p>
+
+<p align="center">
 🔥🔥🔥 ~ 当前正在改版中，请不要使用，后续会出稳定版本V1 ~ 🔥🔥🔥
+</p>
 
-
+<p align="center">
 ![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/qingzi-king/agile-mobile)
 &nbsp;
 ![GitHub](https://img.shields.io/github/license/qingzi-king/agile-mobile)
 &nbsp;
 ![GitHub](http://img.shields.io/github/stars/qingzi-king/agile-mobile?style=social)
+</p>
 
-<p>一个灵活、精巧的react移动端组件库</p>
+<p align="center">一个灵活、精巧的react移动端组件库</p>
 
-<p>
+<p align="center">
 🚀 项目正在持续开发中，随时欢迎您加入并提交您首个PR💋。
 </p>
 

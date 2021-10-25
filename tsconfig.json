@@ -13,9 +13,9 @@
     "typeRoots": ["./src/typings", "./node_modules/@types"],
     "lib": ["ES2015", "DOM"],
     "paths": {
-      "antd-mobile": ["src/index.ts"],
-      "antd-mobile/src/*": ["src/*"],
-      "antd-mobile/es/*": ["src/*"],
+      "agile-mobile": ["src/index.ts"],
+      "agile-mobile/src/*": ["src/*"],
+      "agile-mobile/es/*": ["src/*"],
       "demos": ["src/demos/index.ts"],
       "testing": ["src/tests/testing"]
     },

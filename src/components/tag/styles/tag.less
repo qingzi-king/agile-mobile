@@ -1,0 +1,59 @@
+@class-prefix-tag: ~'fam-tag';
+
+.@{class-prefix-tag} {
+
+  padding: 2px 4px;
+  font-size: 12px;
+  background-color: var(--color);
+  color: #FFF;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 2px;
+  border: 0.5px solid var(--color);
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  &-outline {
+    background: transparent;
+    color: var(--color);
+  }
+
+  &-disabled {
+    background-color: var(--fam-color-gray);
+    border: 1px solid var(--fam-color-gray);
+    color: #FFF;
+  }
+
+  &-round {
+    border-radius: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  &-icon {
+    display: inline;
+    margin-right: 2px;
+  }
+
+  &-icon-close {
+    display: inline;
+    margin-left: 2px;
+    cursor: pointer;
+  }
+
+  &-lg {
+    padding: 4px 8px;
+    font-size: 16px;
+  }
+
+  &-md {
+    padding: 1px 6px;
+    font-size: 14px;
+  }
+
+  &-xs {
+    padding: 1px 4px;
+    font-size: 12px;
+  }
+
+}

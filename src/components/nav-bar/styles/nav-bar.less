@@ -1,0 +1,65 @@
+@class-prefix-navbar: ~'fam-navbar';
+
+.@{class-prefix-navbar} {
+
+  --height: 45px;
+  --border-bottom: none;
+  --background-color: var(--fam-color-white);
+
+  display: flex;
+  align-items: center;
+  height: var(--height);
+  padding: 0 12px;
+  white-space: nowrap;
+  border-bottom: var(--border-bottom);
+  background-color: var(--background-color);
+
+  &-left,
+  &-right {
+    flex: 1;
+  }
+
+  &-dark {
+    color: #FFF;
+    --background-color: var(--fam-color-primary);
+  }
+
+  &-title {
+    flex: auto;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &-left {
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+  }
+
+  &-title {
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 18px;
+    padding: 0 12px;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &-placeholder {
+    width: 100%;
+    height: var(--height);
+  }
+
+}

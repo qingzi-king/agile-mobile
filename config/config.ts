@@ -170,7 +170,7 @@ export default {
     hd: {
       rules: [
         {
-          mode: 'vw',
+          mode: 'vl',
           options: [100, 750]
         }
       ],
