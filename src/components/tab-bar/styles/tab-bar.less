@@ -1,0 +1,36 @@
+@class-prefix-tabbar: ~'fam-tabbar';
+
+.@{class-prefix-tabbar} {
+
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-item {
+
+    flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 2px;
+
+    &-icon {
+      text-rendering: auto;
+      line-height: 1.2;
+      font-size: 18px;
+    }
+
+    &-title {
+      width: 100%;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    &-active {
+      color: var(--fam-color-primary);
+    }
+
+  }
+
+}

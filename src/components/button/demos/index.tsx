@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Icon, ElasticBox } from 'agile-mobile'
+import { ElasticBox, Button, Icon } from 'agile-mobile'
 
 const DemoUnit = () => {
   return (

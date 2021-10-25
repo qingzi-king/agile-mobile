@@ -1,6 +1,6 @@
 import * as React from "react";
 
-function RightOutline(props: any) {
+function LeftOutline(props: any) {
   return React.createElement("svg", Object.assign({
         width: "1em",
         height: "1em",
@@ -15,12 +15,12 @@ function RightOutline(props: any) {
         className: ['agile-mobile-icon', props.className].filter(Boolean).join(' ')
       }),
     React.createElement("path", {
-      d: "M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z",
-      id: "RightOutline-1",
+      d: "M641.18633191 978.92627308L174.26005882 512l466.92627309-466.92627308 75.82792581 75.82792579L325.91591045 512l391.09834727 391.09834729z",
+      id: "LeftOutline-1",
       fill: "currentColor",
       fillRule: "nonzero"
     })
   );
 }
 
-export default RightOutline;
+export default LeftOutline;

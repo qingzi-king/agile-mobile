@@ -15,7 +15,7 @@ function TurnDownFill(props: any) {
         className: ['agile-mobile-icon', props.className].filter(Boolean).join(' ')
       }),
     React.createElement("path", {
-      d: "M768 384l-256 256-256-256z",
+      d: "M941.01231019 297.49384493l-429.01231019 429.01231014-429.01231019-429.01231014z",
       id: "TurnDownFill-1",
       fill: "currentColor",
       fillRule: "nonzero"

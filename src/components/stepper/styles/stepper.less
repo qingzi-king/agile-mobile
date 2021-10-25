@@ -1,0 +1,67 @@
+@class-prefix-stepper: ~'fam-stepper';
+
+.@{class-prefix-stepper} {
+
+  &-icon {
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    color: #323233;
+  }
+
+  .@{class-prefix-stepper} {
+
+    &-minus,
+    &-plus {
+      width: 28px;
+      height: 28px;
+      margin: 0;
+      padding: 0;
+      color: #323233;
+      background-color: #f2f3f5;
+  
+      &:active {
+        background-color: #e8e8e8;
+      }
+
+      &-disabled {
+        opacity: .3;
+        cursor: not-allowed;
+  
+        &:active {
+          background-color: #f2f3f5;
+        }
+      }
+
+    }
+
+    &-input {
+      min-width: 35px;
+      max-width: 50px;
+      height: 28px;
+      background-color: #f2f3f5;
+      margin: 0 2px;
+      padding: 0 2px;
+      font-size: 14px;
+      line-height: normal;
+      text-align: center;
+      vertical-align: middle;
+      box-sizing: border-box;
+      border: 0;
+      border-width: 1px 0;
+      border-radius: 0;
+      -webkit-appearance: none;
+      outline: none;
+    }
+
+    &-disabled {
+      .@{class-prefix-stepper}-input {
+        color: #c8c9cc;
+        background-color: #f2f3f5;
+        -webkit-text-fill-color: currentColor;
+      }
+    }
+
+  }
+}

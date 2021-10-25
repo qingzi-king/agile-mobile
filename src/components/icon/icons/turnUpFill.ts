@@ -15,7 +15,7 @@ function TurnUpFill(props: any) {
         className: ['agile-mobile-icon', props.className].filter(Boolean).join(' ')
       }),
     React.createElement("path", {
-      d: "M256.32 640l256-256 256 256z",
+      d: "M83.52395521 726.50615507l429.01231019-429.01231014 429.01231017 429.01231014z",
       id: "TurnUpFill-1",
       fill: "currentColor",
       fillRule: "nonzero"

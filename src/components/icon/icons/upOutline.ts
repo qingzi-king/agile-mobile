@@ -15,7 +15,7 @@ function UpOutline(props: any) {
         className: ['agile-mobile-icon', props.className].filter(Boolean).join(' ')
       }),
     React.createElement("path", {
-      d: "M745.376 662.624L512 429.248l-233.376 233.376-45.248-45.248L512 338.752l278.624 278.624z",
+      d: "M903.09834729 764.42011801L512 373.32177073l-391.09834729 391.09834728-75.82792579-75.82792583L512 221.66591908l466.92627308 466.9262731z",
       id: "UpOutline-1",
       fill: "currentColor",
       fillRule: "nonzero"

@@ -3902,6 +3902,18 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
+embla-carousel-react@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/embla-carousel-react/-/embla-carousel-react-5.0.1.tgz#91fb27ad92d5cd7a4ba9626dc75f4b5e89bb1ecd"
+  integrity sha512-zR9kmMVxh3TNza7Anj/McBQLeFD7nB0vVMmahyDl6XmH1K6o3X6T6Wwhh4fUeRH9nJhAn7yyRqT22qqGjd66oA==
+  dependencies:
+    embla-carousel "5.0.1"
+
+embla-carousel@5.0.1:
+  version "5.0.1"
+  resolved "https://registry.npmjs.org/embla-carousel/-/embla-carousel-5.0.1.tgz#6c25d889e7287a032b6b31c458481bb648f098d8"
+  integrity sha512-pFvUI9mI/pxU92+4VDkPx0yP4Bs3VqJuRX/aw6ESYJdRBtzLx+6X2kXMu9aXK+SwO2zYsD2WURb1SeBaAv6zQA==
+
 emittery@^0.8.1:
   version "0.8.1"
   resolved "https://registry.npmjs.org/emittery/-/emittery-0.8.1.tgz#bb23cc86d03b30aa75a7f734819dee2e1ba70860"
@@ -5244,11 +5256,6 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
-
-husky@^7.0.2:
-  version "7.0.2"
-  resolved "https://registry.npmjs.org/husky/-/husky-7.0.2.tgz#21900da0f30199acca43a46c043c4ad84ae88dff"
-  integrity sha512-8yKEWNX4z2YsofXAMT7KvA1g8p+GxtB1ffV8XtpAEGuXNAbCV5wdNKH+qTpw8SM9fh4aMPDR+yQuKfgnreyZlg==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"

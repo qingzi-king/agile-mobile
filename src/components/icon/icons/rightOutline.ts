@@ -15,7 +15,7 @@ function RightOutline(props: any) {
         className: ['agile-mobile-icon', props.className].filter(Boolean).join(' ')
       }),
     React.createElement("path", {
-      d: "M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z",
+      d: "M382.86729462 978.92627308l-75.8279258-75.82792579L698.08408955 512l-391.09834727-391.09834729 75.82792581-75.82792579L849.79356773 512z",
       id: "RightOutline-1",
       fill: "currentColor",
       fillRule: "nonzero"

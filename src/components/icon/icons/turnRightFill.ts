@@ -15,7 +15,7 @@ function TurnRightFill(props: any) {
         className: ['agile-mobile-icon', props.className].filter(Boolean).join(' ')
       }),
     React.createElement("path", {
-      d: "M384 256l256 256-256 256z",
+      d: "M297.49384493 82.98768981l429.01231014 429.01231019-429.01231014 429.01231019z",
       id: "TurnRightFill-1",
       fill: "currentColor",
       fillRule: "nonzero"

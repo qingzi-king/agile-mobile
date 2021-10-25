@@ -15,7 +15,7 @@ function DownOutline(props: any) {
         className: ['agile-mobile-icon', props.className].filter(Boolean).join(' ')
       }),
     React.createElement("path", {
-      d: "M512 685.248l-278.624-278.624 45.248-45.248L512 594.752l233.376-233.376 45.248 45.248z",
+      d: "M512 802.33408092l-466.92627308-466.9262731 75.82792579-75.82792583L512 650.67822927l391.09834729-391.09834728 75.82792579 75.82792583z",
       id: "DownOutline-1",
       fill: "currentColor",
       fillRule: "nonzero"

@@ -1,0 +1,82 @@
+@class-prefix-check-box: ~'fam-checkbox';
+@class-prefix-check-box-group: ~'fam-checkbox-group';
+
+.@{class-prefix-check-box} {
+
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-right: 12px;
+  cursor: pointer;
+
+  &-label {
+    padding-left: 5px;
+    font-size: 16px;
+  }
+
+  &-unchecked svg {
+    color: var(--fam-color-dark);
+    opacity: 0;
+  }
+
+  &-checked svg {
+    color: var(--fam-color-primary);
+  }
+
+  &-checked &-icon-round,
+  &-checked &-icon-square {
+    svg {
+      color: #FFF;
+    }
+    background-color: var(--fam-color-primary);
+    border: 1px solid var(--fam-color-primary);
+  }
+
+  &-icon-transparent {
+    opacity: 0;
+  }
+
+  &-disabled,
+  &-disabled svg {
+    color: #BBB;
+  }
+
+  &-disabled &-icon-round,
+  &-disabled &-icon-square {
+    background-color: #EEE;
+    border-color: #DDD;
+  }
+
+  &-icon-round {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #CCC;
+    text-align: center;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-icon-square {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #CCC;
+    text-align: center;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.@{class-prefix-check-box-group} {
+
+  &-vertical {
+    .@{class-prefix-check-box} {
+      display: flex;
+    }
+  }
+
+}

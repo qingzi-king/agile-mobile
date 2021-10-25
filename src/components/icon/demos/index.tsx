@@ -37,10 +37,10 @@ const DemoUnit = () => {
 
       <h2 className="d-demo-block__title">尺寸、颜色</h2>
       <ElasticBox wrap>
-        <Icons.InfoFill style={{ fontSize: 50, color: '#FF3141' }} />
-        <Icons.InfoFill style={{ fontSize: 40, color: '#268AF0' }} />
-        <Icons.InfoFill style={{ fontSize: 30, color: '#F59A23' }} />
-        <Icons.InfoFill style={{ fontSize: 20, color: '#CCC' }} />
+        <Icons.InfoCircleFill style={{ fontSize: 50, color: '#FF3141' }} />
+        <Icons.InfoCircleFill style={{ fontSize: 40, color: '#268AF0' }} />
+        <Icons.InfoCircleFill style={{ fontSize: 30, color: '#F59A23' }} />
+        <Icons.InfoCircleFill style={{ fontSize: 20, color: '#CCC' }} />
       </ElasticBox>
 
     </section>

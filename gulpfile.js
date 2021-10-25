@@ -88,7 +88,7 @@ function umdWebpack() {
       webpackStream(
         {
           output: {
-            filename: 'agile-mobile-beta.js',
+            filename: 'agile-mobile.js',
             library: {
               type: 'umd',
               name: 'agileMobile',

@@ -1,0 +1,80 @@
+@class-prefix-notice-bar: ~'fam-notice-bar';
+
+// 单行显示
+.@{class-prefix-notice-bar} {
+
+  --fill: #FEFCEC;
+  --height: 36px;
+  --color: #F76A24;
+
+  background-color: var(--fill);
+  height: var(--height);
+  overflow: hidden;
+  font-size: var(--fam-font-size);
+  line-height: var(--height);
+  color: var(--color);
+  display: flex;
+
+  &-content {
+    flex: 1;
+    width: 100%;
+    margin: auto 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &-icon {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+
+    & + div {
+      margin-left: 5px;
+    }
+  }
+
+  &-operation {
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+  }
+}
+
+// 多行情况
+.@{class-prefix-notice-bar}-multi-line {
+
+  --fill: #fefcec;
+  --height: 36px;
+  --color: #f76a24;
+
+  background-color: var(--fill);
+  min-height: var(--height);
+  overflow: hidden;
+  font-size: var(--fam-font-size);
+  color: var(--color);
+  display: flex;
+
+  &-content {
+    flex: 1;
+    width: 100%;
+    margin: 5px 15px;
+  }
+
+  &-icon {
+    margin-left: 15px;
+    display: flex;
+    align-items: top;
+
+    & + div {
+      margin-left: 5px;
+    }
+  }
+
+  &-operation {
+    display: flex;
+    padding-right: 8px;
+    padding-top: 5px;
+  }
+
+}
