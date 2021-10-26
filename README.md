@@ -6,19 +6,17 @@
 🔥🔥🔥 ~ 当前正在改版中，请不要使用，后续会出稳定版本V1 ~ 🔥🔥🔥
 </p>
 
-<p align="center">
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/qingzi-king/agile-mobile)
-&nbsp;
-![GitHub](https://img.shields.io/github/license/qingzi-king/agile-mobile)
-&nbsp;
-![GitHub](http://img.shields.io/github/stars/qingzi-king/agile-mobile?style=social)
-</p>
-
 <p align="center">一个灵活、精巧的react移动端组件库</p>
 
 <p align="center">
 🚀 项目正在持续开发中，随时欢迎您加入并提交您首个PR💋。
 </p>
+
+![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/qingzi-king/agile-mobile)
+&nbsp;
+![GitHub](https://img.shields.io/github/license/qingzi-king/agile-mobile)
+&nbsp;
+![GitHub](http://img.shields.io/github/stars/qingzi-king/agile-mobile?style=social)
 
 ## 📦 安装
 
@@ -47,27 +45,6 @@ const App = () => (
 
 ```
 yarn start
-```
-
-## 🧩 按需加载
-`babel-plugin-import`是一个用于按需加载组件代码和样式的 babel 插件。新建`.babelrc`或直接在`package.json`中引入如下配置。
-```
-{
-  "presets": [
-    "react-app"
-  ],
-  "plugins": [
-    [
-      "import",
-      {
-        "libraryName": "agile-mobile",
-        "libraryDirectory": "es",
-        "style": true
-      },
-      "agile-mobile"
-    ]
-  ]
-}
 ```
 ## 💍 目录结构
 

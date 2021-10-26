@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import classnames from 'classnames'
 
 const prefixCls = 'fam-navbar'
@@ -36,9 +36,7 @@ export default (props: NavBarProps) => {
   })
 
   return (
-    <div
-      className={(fixed && placeholder) ? `${prefixCls}-placeholder` : ''}
-    >
+    <Fragment>
       <div
         className={wrapCls}
         style={{zIndex: fixed ? zIndex : 0}}
@@ -64,7 +62,8 @@ export default (props: NavBarProps) => {
         <div className={`${prefixCls}-title`}>{ children || title }</div>
         <div className={`${prefixCls}-right`}>{ rightContent }</div>
       </div>
-    </div>
+      <div className={(fixed && placeholder) ? `${prefixCls} ${prefixCls}-placeholder` : ''} />
+    </Fragment>
   )
 
 }
