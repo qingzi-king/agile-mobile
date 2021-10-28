@@ -12,11 +12,11 @@
 🚀 项目正在持续开发中，随时欢迎您加入并提交您首个PR💋。
 </p>
 
-![GitHub (Pre-)Release Date](https://img.shields.io/github/release-date-pre/qingzi-king/agile-mobile)
-&nbsp;
-![GitHub](https://img.shields.io/github/license/qingzi-king/agile-mobile)
-&nbsp;
-![GitHub](http://img.shields.io/github/stars/qingzi-king/agile-mobile?style=social)
+<p align="center">
+  <img src="https://img.shields.io/github/release-date-pre/qingzi-king/agile-mobile" alt="GitHub" />
+  <img src="https://img.shields.io/github/license/qingzi-king/agile-mobile" alt="GitHub" />
+  <img src="http://img.shields.io/github/stars/qingzi-king/agile-mobile?style=social" alt="GitHub" />
+</p>
 
 ## 📦 安装
 

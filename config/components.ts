@@ -26,8 +26,8 @@ export const components = {
     // '/components/date-picker',
     // '/components/image-picker',
     // '/components/input',
-    // '/components/number-keyboard',
-    // '/components/password-input',
+    '/components/number-keyboard',
+    '/components/password-input',
     '/components/radio',
     // '/components/range',
     '/components/search',
@@ -38,9 +38,9 @@ export const components = {
   ],
   feedback: [
     // '/components/modal',
-    // '/components/popup',
-    // '/components/progress',
-    // '/components/toast',
+    '/components/popup',
+    '/components/progress',
+    '/components/toast',
   ],
   gesture: [
     // '/components/pull-to-refresh',

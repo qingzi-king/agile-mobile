@@ -1,0 +1,31 @@
+@class-prefix-progress: ~'fam-progress';
+
+.@{class-prefix-progress} {
+
+  display: flex;
+  width: 100%;
+  align-items: center;
+  &-outer {
+    background-color: var(--fam-color-gray);
+    width: inherit;
+    border-radius: 10px;
+  }
+
+  &-hide-outer {
+    background-color: transparent;
+  }
+
+  &-text {
+    flex: 1 auto;
+    min-width: 40px;
+    text-align: center;
+  }
+
+  &-bar {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--fam-color-primary);
+    transition: all .3s linear 0s;
+  }
+}
+  
