@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CheckBox, ElasticBox } from 'agile-mobile'
+import { CheckBox } from 'agile-mobile'
 
 const DemoUnit = () => {
 
@@ -38,38 +38,38 @@ const DemoUnit = () => {
       <h2 className="d-demo-block__title">横向</h2>
       <h2 className="d-demo-block__subtitle">圆角</h2>
       <CheckBox.Group onChange={handleChange} values={[3]}>
-        <CheckBox.Item value={1}>复选框1</CheckBox.Item>
-        <CheckBox.Item value={2}>复选框2</CheckBox.Item>
-        <CheckBox.Item value={3} disabled>复选框3</CheckBox.Item>
+        <CheckBox value={1}>复选框1</CheckBox>
+        <CheckBox value={2}>复选框2</CheckBox>
+        <CheckBox value={3} disabled>复选框3</CheckBox>
       </CheckBox.Group>
 
       <h2 className="d-demo-block__subtitle">方块</h2>
       <CheckBox.Group onChange={handleChange} values={[3]}>
-        <CheckBox.Item value={1} shape="square">复选框1</CheckBox.Item>
-        <CheckBox.Item value={2} shape="square">复选框2</CheckBox.Item>
-        <CheckBox.Item value={3} shape="square">复选框3</CheckBox.Item>
+        <CheckBox value={1} shape="square">复选框1</CheckBox>
+        <CheckBox value={2} shape="square">复选框2</CheckBox>
+        <CheckBox value={3} shape="square">复选框3</CheckBox>
       </CheckBox.Group>
 
       <h2 className="d-demo-block__title">纵向</h2>
       <CheckBox.Group onChange={handleChange} activeColor="red" values={[2]} direction="vertical">
-        <CheckBox.Item value={1} shape="square">复选框1</CheckBox.Item>
-        <CheckBox.Item value={2} shape="square">复选框2</CheckBox.Item>
-        <CheckBox.Item value={3} shape="square">复选框3</CheckBox.Item>
+        <CheckBox value={1} shape="square">复选框1</CheckBox>
+        <CheckBox value={2} shape="square">复选框2</CheckBox>
+        <CheckBox value={3} shape="square">复选框3</CheckBox>
       </CheckBox.Group>
 
       <h2 className="d-demo-block__title">禁用</h2>
       <h2 className="d-demo-block__subtitle">部分禁用</h2>
       <CheckBox.Group onChange={handleChange} values={[1]}>
-        <CheckBox.Item value={1}>复选框1</CheckBox.Item>
-        <CheckBox.Item value={2} disabled>复选框2</CheckBox.Item>
-        <CheckBox.Item value={3} shape="square">复选框3</CheckBox.Item>
+        <CheckBox value={1}>复选框1</CheckBox>
+        <CheckBox value={2} disabled>复选框2</CheckBox>
+        <CheckBox value={3} shape="square">复选框3</CheckBox>
       </CheckBox.Group>
 
       <h2 className="d-demo-block__subtitle">全部禁用</h2>
       <CheckBox.Group onChange={handleChange} activeColor="red" disabled values={[2]}>
-        <CheckBox.Item value={1}>复选框1</CheckBox.Item>
-        <CheckBox.Item value={2} shape="square">复选框2</CheckBox.Item>
-        <CheckBox.Item value={3}>复选框3</CheckBox.Item>
+        <CheckBox value={1}>复选框1</CheckBox>
+        <CheckBox value={2}>复选框2</CheckBox>
+        <CheckBox value={3}>复选框3</CheckBox>
       </CheckBox.Group>
     </section>
   );

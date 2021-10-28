@@ -18,6 +18,7 @@ export const components = {
     '/components/tag',
     '/components/result',
     '/components/tab-bar',
+    '/components/steps',
   ],
   dataEntry: [
     '/components/check-box',
