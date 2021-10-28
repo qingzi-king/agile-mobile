@@ -8,7 +8,7 @@ export const components = {
   dataDisplay: [
     '/components/badge',
     '/components/nav-bar',
-    // '/components/card',
+    '/components/card',
     // '/components/image',
     '/components/collapse',
     '/components/carousel',
