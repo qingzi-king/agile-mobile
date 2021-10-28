@@ -18,6 +18,7 @@ export const components = {
     '/components/tag',
     '/components/result',
     '/components/tab-bar',
+    '/components/tabs',
     '/components/steps',
   ],
   dataEntry: [

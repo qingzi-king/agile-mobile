@@ -45,6 +45,7 @@
     "rc-tooltip": "^5.1.1",
     "react-transition-group": "^4.4.2",
     "rmc-feedback": "^2.0.0",
+    "rmc-tabs": "^1.2.29",
     "staged-components": "^1.1.1",
     "use-async-memo": "^1.2.3"
   },
