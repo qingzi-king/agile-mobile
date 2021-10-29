@@ -37,7 +37,7 @@ export const components = {
     // '/components/text-area',
   ],
   feedback: [
-    // '/components/modal',
+    '/components/dialog',
     '/components/popup',
     '/components/progress',
     '/components/toast',
