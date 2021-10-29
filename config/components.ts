@@ -49,7 +49,7 @@ export const components = {
   other: [
     '/components/count-down',
     // '/components/index-bar',
-    // '/components/share-sheet',
+    '/components/share-sheet',
     '/components/skeleton',
     '/components/sticky',
     // '/components/timeline',
