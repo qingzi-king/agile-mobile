@@ -1,0 +1,125 @@
+@class-prefix-card: ~'fam-card';
+
+.@{class-prefix-card} {
+
+  --border-color: #ebedf0;
+
+  &:not(.@{class-prefix-card}-full) {
+    // .hairline('all', var(--border-color), @radius-md);
+  }
+
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  // background-color: var(--fam-color-white);
+
+  &-full {
+    position: relative;
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--fam-color-white);
+    border-radius: 5px 5px 0 0;
+
+    &-content {
+      flex: 1;
+      text-align: left;
+      color: var(--fam-color-default);
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-right: 5px;
+      }
+    }
+
+    &-extra {
+      flex: 1;
+      text-align: right;
+      font-size: 16px;
+      color: var(--fam-color-placeholder);
+    }
+  }
+
+  &-body {
+    position: relative;
+    padding: 8px 15px;
+    font-size: 15px;
+    color: var(--fam-color-dark);
+    min-height: 40px;
+    flex: 1;
+    background-color: var(--fam-color-white);
+  }
+
+  &-body-corner {
+    .@{class-prefix-card}-body-item {
+      padding: 8px 15px;
+      position: relative;
+      font-size: 15px;
+      color: var(--fam-color-dark);
+      // min-height: 40px;
+      background: radial-gradient(circle at top left, transparent 4px, var(--fam-color-white) 0) top left,
+          radial-gradient(circle at top right, transparent 4px, var(--fam-color-white) 0) top right,
+          radial-gradient(circle at bottom right, transparent 4px, var(--fam-color-white) 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 4px, var(--fam-color-white) 0) bottom left;
+      background-size: 50% 60%;
+      background-repeat: no-repeat;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        bottom: 0;
+        border-bottom: 1px solid var(--border-color);
+      }
+      &:first-child {
+        background: radial-gradient(circle at top left, transparent 0, var(--fam-color-white) 0) top left,
+          radial-gradient(circle at top right, transparent 0, var(--fam-color-white) 0) top right,
+          radial-gradient(circle at bottom right, transparent 4px, var(--fam-color-white) 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 4px, var(--fam-color-white) 0) bottom left;
+        background-size: 50% 60%;
+        background-repeat: no-repeat;
+      }
+      &:last-child {
+        border-bottom: 0;
+        background: radial-gradient(circle at top left, transparent 4px, var(--fam-color-white) 0) top left,
+          radial-gradient(circle at top right, transparent 4px, var(--fam-color-white) 0) top right,
+          radial-gradient(circle at bottom right, transparent 0, var(--fam-color-white) 0) bottom right,
+          radial-gradient(circle at bottom left, transparent 0, var(--fam-color-white) 0) bottom left;
+        background-size: 50% 60%;
+        background-repeat: no-repeat;
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+    color: var(--fam-color-placeholder);
+    padding: 5px 15px;
+    background-color: var(--fam-color-white);
+    border-top: 1px solid var(--border-color);
+    border-radius: 0 0 5px 5px;
+
+    &-content {
+      flex: 1;
+    }
+
+    &-extra {
+      flex: 1;
+      text-align: right;
+    }
+  }
+}

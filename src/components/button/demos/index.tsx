@@ -6,55 +6,55 @@ const DemoUnit = () => {
     <section className="d-demo-content">
       <h2 className="d-demo-block__title">基础类型</h2>
       <ElasticBox wrap>
-        <Button type="primary">Primary</Button>
-        <Button type="success">Success</Button>
-        <Button type="warning">Warning</Button>
-        <Button type="danger">Danger</Button>
-        <Button type="dark">Dark</Button>
-        <Button type="default">Default</Button>
+        <Button color="primary">Primary</Button>
+        <Button color="success">Success</Button>
+        <Button color="warning">Warning</Button>
+        <Button color="danger">Danger</Button>
+        <Button color="dark">Dark</Button>
+        <Button color="default">Default</Button>
       </ElasticBox>
 
       <h2 className="d-demo-block__title">尺寸</h2>
       <ElasticBox wrap align='center'>
-        <Button type="primary" size="large">Large</Button>
-        <Button type="primary" size="default">Default</Button>
-        <Button type="primary" size="small">Small</Button>
+        <Button color="primary" size="large">Large</Button>
+        <Button color="primary" size="default">Default</Button>
+        <Button color="primary" size="small">Small</Button>
       </ElasticBox>
 
       <h2 className="d-demo-block__title">填充</h2>
       <ElasticBox wrap align='center'>
-        <Button type="primary" fill="solid">Solid</Button>
-        <Button type="primary" fill="outline">Outline</Button>
-        <Button type="primary" fill="none">None</Button>
+        <Button color="primary" fill="solid">Solid</Button>
+        <Button color="primary" fill="outline">Outline</Button>
+        <Button color="primary" fill="none">None</Button>
       </ElasticBox>
 
       <h2 className="d-demo-block__title">按钮块</h2>
-      <Button type="primary" block size="large">block</Button>
+      <Button color="primary" block size="large">block</Button>
 
       <h2 className="d-demo-block__title">细边框</h2>
       <ElasticBox wrap>
-        <Button type="primary" fill="outline">Primary</Button>
-        <Button type="success" fill="outline">Success</Button>
-        <Button type="warning" fill="outline">Warning</Button>
-        <Button type="danger" fill="outline">Danger</Button>
-        <Button type="dark" fill="outline">Dark</Button>
-        <Button type="default" fill="outline" dashed>Default</Button>
+        <Button color="primary" fill="outline">Primary</Button>
+        <Button color="success" fill="outline">Success</Button>
+        <Button color="warning" fill="outline">Warning</Button>
+        <Button color="danger" fill="outline">Danger</Button>
+        <Button color="dark" fill="outline">Dark</Button>
+        <Button color="default" fill="outline" dashed>Default</Button>
       </ElasticBox>
 
       <h2 className="d-demo-block__title">禁用</h2>
       <ElasticBox wrap>
-        <Button type="primary" disabled>Primary</Button>
-        <Button type="success" disabled>Success</Button>
-        <Button type="warning" disabled>Warning</Button>
-        <Button type="danger" disabled >Danger</Button>
-        <Button type="dark" disabled >Dark</Button>
-        <Button type="default" disabled>Default</Button>
+        <Button color="primary" disabled>Primary</Button>
+        <Button color="success" disabled>Success</Button>
+        <Button color="warning" disabled>Warning</Button>
+        <Button color="danger" disabled >Danger</Button>
+        <Button color="dark" disabled >Dark</Button>
+        <Button color="default" disabled>Default</Button>
       </ElasticBox>
 
-      <h2 className="d-demo-block__title">按钮块</h2>
+      <h2 className="d-demo-block__title">自定义图标</h2>
       <ElasticBox wrap>
-        <Button type="danger" size="default" disabled loading>加载中</Button>
-        <Button type="primary" icon={<Icon.HomeOutline style={{marginRight: 2}} />}>首页</Button>
+        <Button color="danger" size="default" disabled loading>加载中</Button>
+        <Button color="primary" icon={<Icon.HomeOutline style={{marginRight: 2}} />}>首页</Button>
       </ElasticBox>
     </section>
   );

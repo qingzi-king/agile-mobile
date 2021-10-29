@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'classnames';
-import Item from './item';
 
 const prefixCls = 'fam-tabbar';
 
@@ -25,8 +24,6 @@ export default class TabBar extends React.Component<TabBarProps, any> {
       selectedColor
     };
   }
-
-  static Item = Item;
 
   static getDerivedStateFromProps(nextProps: any, prevState: any) {
 

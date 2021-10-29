@@ -1,0 +1,126 @@
+@class-prefix-toast: ~'fam-toast';
+
+.@{class-prefix-toast} {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+
+  box-sizing: content-box;
+  min-width: 88px;
+  max-width: 70%;
+  min-height: 88px;
+  padding: 5px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  text-align: center;
+  word-wrap: break-word;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 8px;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  // animation: fadeInAnimation ease .2s;
+  // animation-iteration-count: 1;
+  // animation-fill-mode: forwards;
+
+  &-text {
+    width: -webkit-fit-content;
+    width: fit-content;
+    min-width: 50px;
+    min-height: 0;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+
+  &-icon {
+    margin: 5px auto;
+    font-size: 3em;
+  }
+
+  &-desc {
+    margin-top: 10px;
+  }
+
+  &-card {
+    min-width: 100px;
+    min-height: 100px;
+    padding-top: 10px;
+    box-sizing: border-box;
+  }
+
+  &-remove {
+    animation: fadeOutAnimation ease-out .2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  &-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 90;
+  }
+
+  &-top {
+    top: 10%;
+  }
+
+  &-bottom {
+    bottom: 10%;
+    top: auto;
+  }
+
+  &-notice-content {
+    .@{class-prefix-toast}-text {
+      min-width: 60px;
+      border-radius: 3px;
+      color: var(--fam-color-white);
+      background-color: rgba(58, 58, 58, 0.9);
+      line-height: 1.5;
+      padding: 8px 15px;
+
+      &.@{class-prefix-toast}-text-icon {
+        border-radius: 5px;
+        padding: 15px 21px;
+
+        .@{class-prefix-toast}-text-info {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 import classnames from 'classnames'
-import Panel from './panel'
 
 const prefixCls = 'fam-collapse'
 
@@ -37,8 +36,6 @@ export default class Collapse extends React.Component<CollapseProps, any> {
       activeKeys: initActiveKeys
     }
   }
-
-  static Panel = Panel
 
   handleActiveKeyChange = (k: string) => {
     const { onChange, accordion } = this.props

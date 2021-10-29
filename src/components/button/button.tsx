@@ -3,7 +3,7 @@ import classnames from 'classnames'
 import Icon from '../icon'
 
 export interface ButtonPropsType {
-  type?: 'default' | 'primary' | 'warning' | 'success' | 'danger' | 'dark'
+  color?: 'default' | 'primary' | 'warning' | 'success' | 'danger' | 'dark'
   size?: 'large' | 'default' | 'small'
   fill?: 'solid' | 'outline' | 'none'
   disabled?: boolean
@@ -52,7 +52,7 @@ function insertSpace(child: any) {
 class Button extends React.Component<ButtonProps, any> {
   static defaultProps = {
     prefixCls: 'fam-button',
-    type: 'default',
+    color: 'default',
     size: 'default', // small default large
     inline: false,
     block: false,
@@ -68,7 +68,7 @@ class Button extends React.Component<ButtonProps, any> {
       className,
       style,
       prefixCls,
-      type,
+      color,
       size = 'default',
       inline,
       block,
@@ -84,7 +84,7 @@ class Button extends React.Component<ButtonProps, any> {
     } = this.props
 
     const wrapCls = classnames(prefixCls, className, {
-      [`${prefixCls}-${type}`]: type,
+      [`${prefixCls}-${color}`]: color,
       [`${prefixCls}-size-${size}`]: size,
       [`${prefixCls}-block`]: block,
       [`${prefixCls}-fill-outline`]: fill === 'outline',

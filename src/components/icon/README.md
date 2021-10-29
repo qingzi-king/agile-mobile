@@ -1,29 +1,28 @@
 
 # Icon 图标
 
-<code src="./demos/index.tsx"></code>
-
-## 图标的命名规范
-
 为每个图标赋予了语义化的命名，命名规则如下:
 
 - 采用大驼峰形式，如：AbnormalOutline
 
 - 命名顺序：`[icon名][形状可选][分类]`。
 
-## 如何使用
+<code src="./demos/index.tsx"></code>
+
+## 可选图标
+
+包含在Icon对象中。
 
 ```tsx
-
 import { Icon } from 'agile-mobile'
 
-const { BookFill } = Icon
+const { BookFill } = Icon;
 
 <BookFill />
 
 ```
 
-## 可选图标
+可选值：
 
 `BookFill`
 

@@ -94,7 +94,7 @@ const DemoUnit = () => {
             img={<Icon.InfoCircleOutline style={{fontSize: 80, color: 'red'}} />}
             title="这是标题"
             message="可以自定义扩展元素（刷新、触发其他逻辑事件）"
-            expandNode={<Button type="default" dashed size="small" style={{marginTop:5}} icon={<Icon.RefreshOutline />} onClick={handleRefresh}>立即刷新</Button>}
+            expandNode={<Button color="default" dashed size="small" style={{marginTop:5}} icon={<Icon.RefreshOutline />} onClick={handleRefresh}>立即刷新</Button>}
           />
         </div>
     </section>

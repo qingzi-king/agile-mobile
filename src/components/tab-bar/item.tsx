@@ -1,6 +1,5 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import Icon from '../icon';
 import Badge from '../badge';
 
 const prefixCls = 'fam-tabbar-item';

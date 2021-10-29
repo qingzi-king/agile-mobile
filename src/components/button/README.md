@@ -1,11 +1,6 @@
-
 # Button 按钮
 
 <code src="./demos/index.tsx"></code>
-
-## 基础按钮
-
-通过 `type` 设置按钮类型，可选值有 `default` `danger ` `primary ` `success ` `warning ` `dark` ，缺省值为 `default`。
 
 ## API
 

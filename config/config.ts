@@ -65,10 +65,10 @@ export default {
         title: 'CSS Variables',
         path: '/guide/css-variables',
       },
-      // {
-      //   title: 'FAQ',
-      //   path: '/guide/faq',
-      // }
+      {
+        title: 'FAQ',
+        path: '/guide/faq',
+      }
     ],
     '/zh/guide': [
       {
@@ -79,10 +79,10 @@ export default {
         title: 'CSS 变量',
         path: '/zh/guide/css-variables',
       },
-      // {
-      //   title: 'FAQ',
-      //   path: '/zh/guide/faq',
-      // }
+      {
+        title: 'FAQ',
+        path: '/zh/guide/faq',
+      }
     ],
     '/components': [
       {

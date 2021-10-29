@@ -8,14 +8,14 @@
   --border-radius: 3px;
   --border-width: 1px;
   --border-style: solid;
-  --border-color: #ebedf0;
+  --border-color: var(--fam-color-gray);
 
   color: var(--text-color);
   background-color: var(--background-color);
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  height: auto;
+  min-height: auto;
   padding: 7px 16px;
   margin: 0;
   font-size: 15px;
@@ -54,9 +54,9 @@
   &-default {
 
     &.@{class-prefix-button}-fill-outline {
-      --text-color: var(--fam-color-dark);
+      --text-color: var(--fam-color-default);
       --background-color: transparent;
-      --border-color: var(--fam-color-dark);
+      --border-color: var(--fam-color-gray);
     }
     &.@{class-prefix-button}-fill-none {
       --background-color: transparent;
@@ -111,7 +111,7 @@
 
   /* 主题颜色 */
   &-default {
-    border: 1px solid var(--fam-color-gray);
+    --color: var(--fam-color-gray);
   }
 
   &-primary {
