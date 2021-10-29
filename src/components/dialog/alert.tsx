@@ -156,13 +156,17 @@ const FooterButton = (props: any) => {
     props.onPress()
   }
 
+  const style: any = {
+    '--text-color': props.color || '#333'
+  }
+
  return (
     <Button
       block
       size="large"
       loading={loading}
       disabled={props.disabled || loading}
-      style={{'--text-color': props.color || '#333'}}
+      style={style}
       onClick={handleButton}
     >
       { props.text }

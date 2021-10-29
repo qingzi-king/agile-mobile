@@ -39,11 +39,13 @@ const Steps: React.FC<StepsProps> = props => {
             return child
           }
 
-          return React.cloneElement(child, {
+          let childProps = {
             _status: status,
             _index: index,
             _current: current
-          })
+          }
+
+          return React.cloneElement(child, childProps)
         })
       }
     </div>

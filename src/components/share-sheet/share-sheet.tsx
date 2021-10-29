@@ -1,21 +1,21 @@
-import React, { Fragment } from 'react';
-import classnames from 'classnames';
-import Popup from '../popup';
-import Icon from '../icon';
-import Button from '../button';
+import React, { Fragment } from 'react'
+import classnames from 'classnames'
+import Popup from '../popup'
+import Icon from '../icon'
+import Button from '../button'
 import { PopupProps } from '../popup'
 
-const prefixCls = 'fam-share-sheet';
+const prefixCls = 'fam-share-sheet'
 
 export interface ShareSheetProps extends PopupProps {
-  className?: string;
-  style?: object;
-  options?: Array<object>;
-  title?: React.ReactNode;
-  description?: React.ReactNode;
-  cancelText?: string;
-  onCancel?: () => void;
-  onSelect?: (e: object) => void;
+  className?: string
+  style?: object
+  options?: Array<object>
+  title?: React.ReactNode
+  description?: React.ReactNode
+  cancelText?: string
+  onCancel?: () => void
+  onSelect?: (e: object) => void
 }
 
 const ShareSheet = (props: ShareSheetProps) => {
@@ -29,30 +29,34 @@ const ShareSheet = (props: ShareSheetProps) => {
     onCancel,
     onSelect,
     ...restProps
-  } = props;
+  } = props
 
-  let res: any;
+  let res: any
 
   const handleClose = () => {
 
     if (res) {
-      res.close();
-      res = '';
+      res.close()
+      res = ''
     }
 
-    if (onCancel) onCancel();
+    if (onCancel) onCancel()
 
   }
 
   const handleSelect = (option: object) => {
 
-    if (onSelect) onSelect(option);
+    if (onSelect) onSelect(option)
 
-    handleClose();
+    handleClose()
 
   }
 
-  const wrapCls = classnames(prefixCls, className);
+  const wrapCls = classnames(prefixCls, className)
+
+  const style: any = {
+    '--border-color': 'transparent'
+  }
 
   res = Popup({
     ...restProps,
@@ -107,13 +111,13 @@ const ShareSheet = (props: ShareSheetProps) => {
             </div>
         }
         <div className={`${prefixCls}-footer`}>
-          <Button block onClick={handleClose} style={{'--border-color': 'transparent'}}>{cancelText}</Button>
+          <Button block onClick={handleClose} style={style}>{cancelText}</Button>
         </div>
       </div>
     ),
-  });
+  })
 
   return {}
 }
 
-export default ShareSheet;
+export default ShareSheet
