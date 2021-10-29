@@ -12,7 +12,7 @@ export const components = {
     // '/components/image',
     '/components/collapse',
     '/components/carousel',
-    // '/components/list',
+    '/components/list',
     // '/components/notify',
     '/components/notice-bar',
     '/components/tag',

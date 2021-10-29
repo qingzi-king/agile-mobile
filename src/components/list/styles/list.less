@@ -1,0 +1,114 @@
+@class-prefix-list: ~'fam-list';
+
+.@{class-prefix-list} {
+
+  --item-height: 35px;
+  --border-color: #f3f3f3;
+
+  color: var(--fam-color-default);
+
+  &-header {
+    padding: 15px 15px 9px 15px;
+    font-size: 14px;
+    color: var(--fam-color-dark);
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &-footer {
+    padding: 9px 15px 15px 15px;
+    font-size: 14px;
+    color: var(--fam-color-dark);
+  }
+
+  &-body {
+    position: relative;
+    background-color: #FFF;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    div:not(:last-child) {
+      .@{class-prefix-list}-line {
+        border-bottom: 1px solid var(--border-color);
+      }
+    }
+  }
+
+  &-thumb {
+    padding-right: 5px;
+  }
+}
+
+.@{class-prefix-list}-item {
+  position: relative;
+  display: flex;
+  padding: 0 15px;
+  min-height: var(--item-height);
+  background-color: #FFF;
+  vertical-align: middle;
+  // overflow: hidden;
+  transition: background-color 200ms;
+  align-items: center;
+  flex: 1 1;
+
+  &-active:active {
+    background-color: #f5f5f9;
+  }
+
+  .@{class-prefix-list}-line {
+    position: relative;
+    display: flex;
+    flex: 1;
+    width: 100%;
+    align-self: stretch; // 定义flex子项单独在侧轴（纵轴）方向上的对齐方式。
+    align-items: center;
+    flex-wrap: wrap;
+
+    .@{class-prefix-list}-title {
+      width: 50%;
+      padding: 7px 0;
+      line-height: 1.5;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .@{class-prefix-list}-extra {
+      flex: 1;
+      padding: 7px 0;
+      text-align: right;
+    }
+
+    .@{class-prefix-list}-describe {
+      width: 100%;
+      padding: 7px 0;
+      color: var(--fam-color-placeholder);
+      line-height: 1.3;
+    }
+  }
+
+  .@{class-prefix-list}-arrow {
+    color: #A8A8A8;
+    &-horizontal {
+      visibility: visible;
+    }
+
+    &-vertical {
+      visibility: visible;
+      transform: rotate(90deg);
+    }
+
+    &-vertical-up {
+      visibility: visible;
+      transform: rotate(270deg);
+    }
+  }
+
+  &-disabled,
+  &-disabled .@{class-prefix-list}-line .@{class-prefix-list}-title,
+  &-disabled .@{class-prefix-list}-line .@{class-prefix-list}-describe,
+  &-disabled .@{class-prefix-list}-line .fam-icon {
+    color: var(--fam-color-disabled);
+    background-color: #f5f5f9;
+  }
+
+}
