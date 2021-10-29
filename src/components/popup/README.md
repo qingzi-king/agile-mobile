@@ -19,3 +19,7 @@
 | radius   | 是否显示对应方向圆角 | Boolean 或 Number | `false` |
 | children   | 内容节点  | React.Element | - |
 | onClose   | 点击 x 或 mask 回调  | () => void | - |
+
+## 其他
+
+手动调用`close()`时注意函数组件的作用域问题。

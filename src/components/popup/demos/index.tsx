@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Popup, Button, ElasticBox } from 'agile-mobile'
 
-let count = 0;
+let count = 0
 
 const DemoUnit = () => {
 
@@ -18,6 +18,21 @@ const DemoUnit = () => {
       count++;
     } else {
       count--;
+    }
+
+    const handleClose = () => {
+      if (res) {
+        res.close();
+      }
+    }
+
+    const handleOncallback = (e: any) => {
+      console.log('关闭了popup：', e);
+      if (count < 1) {
+        count = 0;
+      } else {
+        count--;
+      }
     }
 
     let res = Popup({
@@ -40,21 +55,6 @@ const DemoUnit = () => {
       ),
     });
 
-    const handleClose = () => {
-      if (res) {
-        res.close();
-      }
-    }
-
-  }
-
-  const handleOncallback = (e: any) => {
-    console.log('关闭了popup：', e);
-    if (count < 1) {
-      count = 0;
-    } else {
-      count--;
-    }
   }
 
   return (

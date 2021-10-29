@@ -51,7 +51,7 @@ const DemoUnit = () => {
         <Button color="default" disabled>Default</Button>
       </ElasticBox>
 
-      <h2 className="d-demo-block__title">按钮块</h2>
+      <h2 className="d-demo-block__title">自定义图标</h2>
       <ElasticBox wrap>
         <Button color="danger" size="default" disabled loading>加载中</Button>
         <Button color="primary" icon={<Icon.HomeOutline style={{marginRight: 2}} />}>首页</Button>

@@ -3,12 +3,12 @@ import * as ReactDOM from 'react-dom';
 import classnames from 'classnames';
 import Icon from '../icon';
 
+const prefixCls = 'fam-popup';
 export interface StyleType {
   minHeight?: React.CSSProperties;
 }
 
 export interface PopupProps {
-  prefixCls?: string;
   position?: 'top' | 'bottom' | 'left' | 'right';
   className?: string;
   maskClosable?: boolean;
@@ -51,7 +51,6 @@ const divs:any = [], maskDivs:any = []; // 存在多个popup（实际不建议�
 const Popup = (props: PopupProps) => {
 
   const {
-    prefixCls = 'fam-popup',
     className,
     position = 'bottom',
     visible = true,
