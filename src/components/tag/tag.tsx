@@ -23,6 +23,7 @@ export interface TagProps {
   size?: 'lg' | 'md' | 'xs'
   disabled?: boolean
   style?: object
+  onClick?: () => void
   onClose?: () => void
 }
 

@@ -7,7 +7,7 @@ const defaultIcon = <span className={`${prefixCls}-icon-dot`} />
 export interface StepProps {
   style?: object
   icon?: React.ReactNode
-  title?: string
+  title?: React.ReactNode
   description?: string
   _index?: number
   _current?: number

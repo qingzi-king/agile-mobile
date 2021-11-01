@@ -15,6 +15,7 @@ export interface NavBarProps {
   fixed?: boolean
   placeholder?: boolean
   zIndex?: number
+  style?: React.CSSProperties
 }
 
 export default (props: NavBarProps) => {
@@ -29,6 +30,7 @@ export default (props: NavBarProps) => {
     fixed = false,
     placeholder = false,
     zIndex = 9,
+    style
   } = props
 
   const wrapCls = classnames(prefixCls, `${prefixCls}-${mode}`, {
@@ -39,7 +41,7 @@ export default (props: NavBarProps) => {
     <Fragment>
       <div
         className={wrapCls}
-        style={{zIndex: fixed ? zIndex : 0}}
+        style={{zIndex: fixed ? zIndex : 0, ...style}}
       >
         <div
           className={`${prefixCls}-left`}
