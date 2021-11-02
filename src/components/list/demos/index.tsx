@@ -12,8 +12,9 @@ const DemoUnit = () => {
   return (
     <section className="d-demo-content" style={{padding: 0}}>
       <List renderHeader={() => '基础样式'}>
-        <Item extra={'这是值内容'}>这是标题</Item>
-        <Item extra={'这是值内容'} arrow="horizontal" onClick={() => handleToast('这是列表链接')}>这是标题</Item>
+        <Item extra={'这是值内容这是值内容这是值内容这是值内容这是值内容'}>这是标题</Item>
+        <Item arrow="horizontal">这是标题这是标题这是标题这是标题这是标题这是标题</Item>
+        <Item extra={'这是值内容'} arrow="horizontal" onClick={() => handleToast('这是列表链接')}>这是标题这是标题这是标题这是标题这是标题这是标题</Item>
         <Item extra={'这是值内容'} describe={'这里是描述内容区域....'}>这是标题</Item>
         <Item disabled extra={'已禁用'}>这是标题</Item>
         <Item thumb={<Icon.CheckCircleFill style={{color:'#f3f3f3', fontSize: 24}} />} extra={'这是值内容'}>Title</Item>
