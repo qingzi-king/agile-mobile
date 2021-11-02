@@ -62,9 +62,13 @@
     align-self: stretch; // 定义flex子项单独在侧轴（纵轴）方向上的对齐方式。
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     .@{class-prefix-list}-title {
-      width: 50%;
+      min-width: 50%;
+      flex: 1;
       padding: 7px 0;
       line-height: 1.5;
       overflow: hidden;
@@ -73,9 +77,12 @@
     }
 
     .@{class-prefix-list}-extra {
-      flex: 1;
       padding: 7px 0;
       text-align: right;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      flex: 1;
     }
 
     .@{class-prefix-list}-describe {
