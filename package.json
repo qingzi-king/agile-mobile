@@ -11,6 +11,7 @@
     "publish": "npm publish ./lib",
     "publish:beta": "npm publish ./lib --tag beta"
   },
+  "description": "The agile-mobile is mobile ui components built on react. Focusing on agile development and based on simple design always look for extensibility and perfomance and ease.",
   "main": "./cjs/index.js",
   "module": "./es/index.js",
   "types": "./es/index.d.ts",
