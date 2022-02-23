@@ -3,10 +3,8 @@
 </p>
 
 <p align="center">
-🔥🔥🔥 ~ 当前正在改版中，请不要使用，后续会出稳定版本V1 ~ 🔥🔥🔥
+🔥🔥🔥 一个灵活、精巧的react移动端组件库 🔥🔥🔥
 </p>
-
-<p align="center">一个灵活、精巧的react移动端组件库</p>
 
 <p align="center">
 🚀 项目正在持续开发中，随时欢迎您加入并提交您首个PR💋。
@@ -34,7 +32,7 @@ import { Button } from 'agile-mobile';
 
 const App = () => (
   <>
-    <Button type="primary">Hello Agile！</Button>
+    <Button color="primary">Hello Agile！</Button>
   </>
 );
 ```

@@ -4,6 +4,7 @@ import Icon from '../icon'
 
 export interface ButtonPropsType {
   color?: 'default' | 'primary' | 'warning' | 'success' | 'danger' | 'dark'
+  type?: 'submit' | 'reset' | 'button'
   size?: 'large' | 'default' | 'small'
   fill?: 'solid' | 'outline' | 'none'
   disabled?: boolean
@@ -53,6 +54,7 @@ class Button extends React.Component<ButtonProps, any> {
   static defaultProps = {
     prefixCls: 'fam-button',
     color: 'default',
+    type: 'button',
     size: 'default', // small default large
     inline: false,
     block: false,
@@ -69,6 +71,7 @@ class Button extends React.Component<ButtonProps, any> {
       style,
       prefixCls,
       color,
+      type,
       size = 'default',
       inline,
       block,
@@ -97,6 +100,7 @@ class Button extends React.Component<ButtonProps, any> {
 
     return (
       <button
+        type={type}
         className={wrapCls}
         onClick={disabled || loading ? undefined : onClick}
         aria-disabled={disabled}

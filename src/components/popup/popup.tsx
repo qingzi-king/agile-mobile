@@ -1,31 +1,31 @@
-import React from 'react';
-import * as ReactDOM from 'react-dom';
-import classnames from 'classnames';
-import Icon from '../icon';
+import React from 'react'
+import * as ReactDOM from 'react-dom'
+import classnames from 'classnames'
+import Icon from '../icon'
 
-const prefixCls = 'fam-popup';
+const prefixCls = 'fam-popup'
 export interface StyleType {
-  minHeight?: React.CSSProperties;
+  minHeight?: React.CSSProperties
 }
 
 export interface PopupProps {
-  position?: 'top' | 'bottom' | 'left' | 'right';
-  className?: string;
-  maskClosable?: boolean;
-  closable?: boolean;
-  overlay?: boolean;
-  transparent?: boolean;
-  visible?: boolean;
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
-  radius?: any;
-  onClose?: (e?: any) => void;
+  position?: 'top' | 'bottom' | 'left' | 'right'
+  className?: string
+  maskClosable?: boolean
+  closable?: boolean
+  overlay?: boolean
+  transparent?: boolean
+  visible?: boolean
+  children?: React.ReactNode
+  style?: React.CSSProperties
+  radius?: any
+  onClose?: (e?: any) => void
 }
 
-const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/;
-const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar);
+const rxTwoCNChar = /^[\u4e00-\u9fa5]{2}$/
+const isTwoCNChar = rxTwoCNChar.test.bind(rxTwoCNChar)
 function isString(str: any) {
-  return typeof str === 'string';
+  return typeof str === 'string'
 }
 
 // Insert one space between two chinese characters automatically.
@@ -35,18 +35,18 @@ function insertSpace(child: any) {
       child,
       {},
       child.props.children.split('').join(' '),
-    );
+    )
   }
   if (isString(child)) {
     if (isTwoCNChar(child)) {
-      child = child.split('').join(' ');
+      child = child.split('').join(' ')
     }
-    return <span>{child}</span>;
+    return <span>{child}</span>
   }
-  return child;
+  return child
 }
 
-const divs:any = [], maskDivs:any = []; // 存在多个popup（实际不建议多个popup叠加）
+const divs:any = [], maskDivs:any = [] // 存在多个popup（实际不建议多个popup叠加）
 
 const Popup = (props: PopupProps) => {
 
@@ -62,16 +62,16 @@ const Popup = (props: PopupProps) => {
     children,
     onClose,
     ...restProps
-  } = props;
+  } = props
 
-  let closed = false;
-  let div: any = divs[divs.length > 0 ? (divs.length - 1) : 0], maskDiv: any = maskDivs[maskDivs.length > 0 ? (maskDivs.length - 1) : 0];
+  let closed = false
+  let div: any = divs[divs.length > 0 ? (divs.length - 1) : 0], maskDiv: any = maskDivs[maskDivs.length > 0 ? (maskDivs.length - 1) : 0]
 
   if (!visible) {
-    // console.log('Must specify either an alert title, or message, or both');
+    // console.log('Must specify either an alert title, or message, or both')
 
     if (!closed && div) {
-      close();
+      close()
     }
 
     return {
@@ -79,105 +79,105 @@ const Popup = (props: PopupProps) => {
     }
   }
 
-  div = document.createElement('div');
-  maskDiv = document.createElement('div');
+  div = document.createElement('div')
+  maskDiv = document.createElement('div')
 
-  const timestamp = new Date().getTime();
-  const nodeID = `${prefixCls}-main-${timestamp}`;
+  const timestamp = new Date().getTime()
+  const nodeID = `${prefixCls}-main-${timestamp}`
 
-  div.id = nodeID;
+  div.id = nodeID
 
   // 蒙层是否显示
   if (overlay) {
 
-    document.body.className = "fam-overfow-hidden"; // 针对弹出层滚动击穿，body隐藏处理
+    document.body.className = "fam-overfow-hidden" // 针对弹出层滚动击穿，body隐藏处理
 
     // 蒙层是否透明
-    maskDiv.className = transparent ? `${prefixCls}-mask-transparent` : `${prefixCls}-mask`;
+    maskDiv.className = transparent ? `${prefixCls}-mask-transparent` : `${prefixCls}-mask`
     maskDiv.onclick = () => {
       // 蒙层允许关闭
       if (maskClosable) {
-        close();
+        close()
       }
     }
 
   }
 
-  document.body.appendChild(div);
+  document.body.appendChild(div)
 
   // 关闭popup
   function close() {
 
-    closed = true;
+    closed = true
 
-    handleReander(position); // 重新渲染
+    handleReander(position) // 重新渲染
 
-    maskDiv.className += ` ${prefixCls}-mask-leave`;
+    maskDiv.className += ` ${prefixCls}-mask-leave`
 
     // 延时销毁
     setTimeout(() => {
 
-      ReactDOM.unmountComponentAtNode(div);
-      ReactDOM.unmountComponentAtNode(maskDiv);
+      ReactDOM.unmountComponentAtNode(div)
+      ReactDOM.unmountComponentAtNode(maskDiv)
 
       if (div && div.parentNode) {
-        div.parentNode.removeChild(div);
+        div.parentNode.removeChild(div)
       }
 
       if (maskDiv && maskDiv.parentNode) {
-        maskDiv.parentNode.removeChild(maskDiv);
+        maskDiv.parentNode.removeChild(maskDiv)
       }
 
-      document.body.className = ""; // 取消body溢出隐藏
+      document.body.className = "" // 取消body溢出隐藏
 
       if (onClose) {
-        onClose(div); // 关闭popup回调
+        onClose(div) // 关闭popup回调
       }
 
-      divs.pop();
-      maskDivs.pop();
+      divs.pop()
+      maskDivs.pop()
 
     }, 150)
 
   }
 
-  divs.push(div);
-  maskDivs.push(maskDiv);
+  divs.push(div)
+  maskDivs.push(maskDiv)
 
   function handleReander(position: any) {
 
     // 子节点
-    const kids = React.Children.map(children, insertSpace);
+    const kids = React.Children.map(children, insertSpace)
 
     // 样式类合并
     const wrapCls = classnames(prefixCls, className, {
       [`${prefixCls}-${position}`]: position,
       [`${prefixCls}-${position}-leave`]: position && closed
-    });
+    })
 
     // 圆角
-    let borderRadius = '';
+    let borderRadius = ''
 
     if (radius) {
 
-      let initRadius = (radius instanceof Number) ? radius : 15;
+      let initRadius = (radius instanceof Number) ? radius : 15
 
       switch (position) {
         case 'top':
-          borderRadius = `0 0 ${initRadius}px ${initRadius}px`;
-          break;
+          borderRadius = `0 0 ${initRadius}px ${initRadius}px`
+          break
         case 'bottom':
-          borderRadius = `${initRadius}px ${initRadius}px 0 0`;
-          break;
+          borderRadius = `${initRadius}px ${initRadius}px 0 0`
+          break
         case 'right':
-          borderRadius = `${initRadius}px 0 0 ${initRadius}px`;
-          break;
+          borderRadius = `${initRadius}px 0 0 ${initRadius}px`
+          break
         case 'left':
-          borderRadius = `0 ${initRadius}px ${initRadius}px 0`;
-          break;
+          borderRadius = `0 ${initRadius}px ${initRadius}px 0`
+          break
         default:
-          borderRadius = `${initRadius}px ${initRadius}px 0 0`;
-          break;
+          borderRadius = `${initRadius}px ${initRadius}px 0 0`
+          break
       }
 
     }
@@ -196,16 +196,16 @@ const Popup = (props: PopupProps) => {
         </div>
       </div>,
       div,
-    );
+    )
   }
 
-  handleReander(position);
+  handleReander(position)
 
-  div.appendChild(maskDiv);
+  div.appendChild(maskDiv)
 
   return {
     close
   }
 }
 
-export default Popup;
+export default Popup

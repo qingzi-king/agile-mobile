@@ -19,7 +19,7 @@ import { Button } from 'agile-mobile';
 
 const App = () => (
   <>
-    <Button type="primary">Hello Agile！</Button>
+    <Button color="primary">Hello Agile！</Button>
   </>
 );
 ```
